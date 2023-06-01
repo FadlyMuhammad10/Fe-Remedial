@@ -9,9 +9,9 @@ export default function Header() {
       <header id="header" className="fixed-top header-inner-pages">
         <div className="container d-flex align-items-center justify-content-between">
           {/* Uncomment below if you prefer to use an image logo */}
-          <a href="index.html" className="logo">
+          <NavLink to="/" className="logo">
             <img src="src/assets/img/logo.png" alt="" className="img-fluid" />
-          </a>
+          </NavLink>
 
           <nav id="navbar" className="navbar">
             <ul>
