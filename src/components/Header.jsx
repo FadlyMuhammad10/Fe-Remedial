@@ -5,8 +5,8 @@ import { BsChevronDown, BsSearch } from "react-icons/bs";
 export default function Header() {
   return (
     <>
-      <header id="header" class="fixed-top header-inner-pages">
-        <div className="container d-flex align-items-center justify-content-between bg-dark">
+      <header id="header" className="fixed-top header-inner-pages">
+        <div className="container d-flex align-items-center justify-content-between">
           <a href="#" className="logo">
             <img src="src/assets/img/logo.png" alt="Remedial Logo" />
           </a>
