@@ -13,6 +13,7 @@ import Login from "./pages/Login";
 function App() {
   return (
     <>
+
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -26,6 +27,7 @@ function App() {
           <Route path="/login" element={<Login />} />
         </Routes>
       </Router>
+
     </>
   );
 }
