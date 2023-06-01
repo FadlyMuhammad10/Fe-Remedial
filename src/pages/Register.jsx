@@ -1,11 +1,8 @@
 import "../assets/css/style.css";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
 
 export default function Register() {
   return (
     <>
-      <Header />
       <main id="main">
         <section className="h-100 gradient-custom">
           <div className="container py-5 h-100">
@@ -103,8 +100,6 @@ export default function Register() {
         </section>
       </main>
       {/* <!-- End #main --> */}
-
-      <Footer />
     </>
   );
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { IoIosArrowDown } from "react-icons/io";
 
 export default function Header() {
   return (
@@ -26,37 +27,37 @@ export default function Header() {
               </li>
               <li className="dropdown">
                 <a href="#program">
-                  <span>Program</span> <i className="bi bi-chevron-down"></i>
+                  <span className="me-1">Program</span> <IoIosArrowDown fontSize="1.2rem" />
                 </a>
                 <ul>
                   <li>
-                    <a href="program_ofline.html">Kelas Ofline</a>
+                    <a href="/program-ofline">Kelas Ofline</a>
                   </li>
                   <li>
-                    <a href="program_online.html">Kelas Online</a>
+                    <a href="/program-online">Kelas Online</a>
                   </li>
                 </ul>
               </li>
               <li className="dropdown">
                 <a href="#seni">
-                  <span>Seni</span> <i className="bi bi-chevron-down"></i>
+                  <span className="me-1">Seni</span> <IoIosArrowDown fontSize="1.2rem" />
                 </a>
                 <ul>
                   <li>
-                    <a href="fundamental.html">Fundamental Seni</a>
+                    <a href="/fundamental-seni">Fundamental Seni</a>
                   </li>
                   <li>
-                    <a href="teori.html">Teori Seni</a>
+                    <a href="/teori-seni">Teori Seni</a>
                   </li>
                   <li>
-                    <a href="praktik.html">Praktik Seni</a>
+                    <a href="/praktik-seni">Praktik Seni</a>
                   </li>
                 </ul>
               </li>
               <li>
-                <a className="nav-link scrollto" href="artikel.html">
+                <NavLink to="/artikel" className="nav-link scrollto">
                   Semua Artikel
-                </a>
+                </NavLink>
               </li>
               <li>
                 <a href="#!">

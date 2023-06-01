@@ -5,7 +5,7 @@ import Header from "../components/Header";
 export default function Home() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       {/* ======= Hero Section ======= */}
       <section id="hero">
         <div id="heroCarousel" data-bs-interval="5000" className="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -569,7 +569,7 @@ export default function Home() {
         {/*End Artikel Section */}
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
