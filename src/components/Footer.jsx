@@ -1,4 +1,4 @@
-import "../assets/css/style.css";
+import React from "react";
 import { IoChevronForward } from "react-icons/io5";
 import { AiOutlineTwitter, AiFillFacebook, AiFillInstagram } from "react-icons/ai";
 
@@ -63,7 +63,12 @@ export default function Footer() {
                       <img src="src/assets/img/logo.png" alt="" />
                       <span></span>
                     </a>
-                    <p>Remedial merupakan kegiatan yang akan Serrum lakukan selama 1 tahun di 2019.Dengan metode saling silang informasi yang menghasilkan pengetahuan dan pendekatan seni dan literasi.</p>
+                    <p>
+                      Remedial merupakan kegiatan yang akan Serrum lakukan
+                      selama 1 tahun di 2019.Dengan metode saling silang
+                      informasi yang menghasilkan pengetahuan dan pendekatan
+                      seni dan literasi.
+                    </p>
                     <div className="social-links mt-3">
                       <a href="#" className="twitter">
                         <AiOutlineTwitter target="_blank" />
@@ -71,7 +76,10 @@ export default function Footer() {
                       <a href="#" className="facebook">
                         <AiFillFacebook target="_blank" />
                       </a>
-                      <a href="https://www.instagram.com/remedial_s/" className="instagram">
+                      <a
+                        href="https://www.instagram.com/remedial_s/"
+                        className="instagram"
+                      >
                         <AiFillInstagram target="_blank" />
                       </a>
                     </div>
@@ -88,6 +96,9 @@ export default function Footer() {
               <span>remedial.id</span>
             </strong>
             . All Rights Reserved
+          </div>
+          <div className="credits">
+            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
           </div>
         </div>
       </footer>
