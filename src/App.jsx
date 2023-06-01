@@ -8,6 +8,7 @@ import Home from "./components/Home";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Register from "./pages/Register";
+import Login from "./pages/Login";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       {/* <Header />
       <Home />
       <Footer /> */}
-      <Register />
+      <Login />
     </>
   );
 }
