@@ -9,12 +9,13 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
+import Artikel from "./pages/Artikel";
 
 function App() {
   return (
     <>
-
       <Router>
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element="#" />
@@ -23,11 +24,12 @@ function App() {
           <Route path="/fundamental-seni" element="#" />
           <Route path="/teori-seni" element="#" />
           <Route path="/praktik-seni" element="#" />
+          <Route path="/artikel" element={<Artikel />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
         </Routes>
+        <Footer />
       </Router>
-
     </>
   );
 }
