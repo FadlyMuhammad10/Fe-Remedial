@@ -224,7 +224,11 @@ h6 {
   font-size: 13px;
   font-weight: 500;
   text-transform: none;
-  color: #d9d9d9;
+  color: #7e7e7e;
+}
+
+.navbar .dropdown ul a i {
+  font-weight: 900;
 }
 
 .navbar .dropdown span {
@@ -234,7 +238,7 @@ h6 {
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover > a {
-  color: #1d1d1d;
+  color: #000000;
 }
 
 .navbar .dropdown:hover > ul {
@@ -428,6 +432,16 @@ h6 {
 
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(255, 255, 255));
+}
+
+.card-registration {
+  margin-top: 60px;
+  border-radius: 15px;
+}
+
+form .form-label {
+  margin-bottom: 0;
+  font-size: 0.9rem;
 }
 
 .card-registration .select-input.form-control[readonly]:not([disabled]) {
@@ -1503,7 +1517,7 @@ HEAD #packageContainer {
 /*--------------------------------------------------------------
 # Artikel
 --------------------------------------------------------------*/
-.img-artikel{
+.img-artikel {
   display: flex;
   flex: roun;
 }
