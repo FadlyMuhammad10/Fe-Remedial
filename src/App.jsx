@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Artikel from "./pages/Artikel";
+import About from "./pages/About";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element="#" />
+          <Route path="/about" element={<About />} />
           <Route path="/program-offline" element="#" />
           <Route path="/program-online" element="#" />
           <Route path="/fundamental-seni" element="#" />

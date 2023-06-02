@@ -21,9 +21,9 @@ export default function Header() {
                 </NavLink>
               </li>
               <li>
-                <a className="nav-link scrollto" href="about.html">
+                <NavLink to="/about" className="nav-link scrollto">
                   Tentang Kami
-                </a>
+                </NavLink>
               </li>
               <li className="dropdown">
                 <a href="#program">
