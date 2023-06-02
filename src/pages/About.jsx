@@ -2,7 +2,7 @@ import Footer from "../components/Footer"
 import Header from "../components/Header"
 import "../assets/css/style.css";
 
-export default function Artikel() {
+export default function About() {
     return (
         <>
          <main id="main">

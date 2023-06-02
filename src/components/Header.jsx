@@ -27,7 +27,8 @@ export default function Header() {
               </li>
               <li className="dropdown">
                 <a href="#program">
-                  <span className="me-1">Program</span> <IoIosArrowDown fontSize="1.2rem" />
+                  <span className="me-1">Program</span>{" "}
+                  <IoIosArrowDown fontSize="1.2rem" />
                 </a>
                 <ul>
                   <li>
@@ -40,17 +41,33 @@ export default function Header() {
               </li>
               <li className="dropdown">
                 <a href="#seni">
-                  <span className="me-1">Seni</span> <IoIosArrowDown fontSize="1.2rem" />
+                  <span className="me-1">Seni</span>{" "}
+                  <IoIosArrowDown fontSize="1.2rem" />
                 </a>
                 <ul>
                   <li>
-                    <a href="/fundamental-seni">Fundamental Seni</a>
+                    <NavLink
+                      to="/fundamental-seni"
+                      className="nav-link scrollto"
+                    >
+                      Fundamental Seni
+                    </NavLink>
                   </li>
                   <li>
-                    <a href="/teori-seni">Teori Seni</a>
+                  <NavLink
+                      to="/teori-seni"
+                      className="nav-link scrollto"
+                    >
+                      Teori Seni
+                    </NavLink>
                   </li>
                   <li>
-                    <a href="/praktik-seni">Praktik Seni</a>
+                  <NavLink
+                      to="/praktik-seni"
+                      className="nav-link scrollto"
+                    >
+                      Praktik Seni
+                    </NavLink>
                   </li>
                 </ul>
               </li>
@@ -65,12 +82,18 @@ export default function Header() {
                 </a>
               </li>
               <li>
-                <NavLink to="/register" className="btn-daftar animated fadeInUp scrollto">
+                <NavLink
+                  to="/register"
+                  className="btn-daftar animated fadeInUp scrollto"
+                >
                   Daftar
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/login" className="btn-get-started animated fadeInUp scrollto">
+                <NavLink
+                  to="/login"
+                  className="btn-get-started animated fadeInUp scrollto"
+                >
                   Masuk
                 </NavLink>
               </li>

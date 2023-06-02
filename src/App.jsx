@@ -11,6 +11,9 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Artikel from "./pages/Artikel";
 import About from "./pages/About";
+import Fundamental from "./pages/Fundamental";
+import Teori from "./pages/Teori";
+import Praktik from "./pages/Praktik";
 
 function App() {
   return (
@@ -22,9 +25,9 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/program-offline" element="#" />
           <Route path="/program-online" element="#" />
-          <Route path="/fundamental-seni" element="#" />
-          <Route path="/teori-seni" element="#" />
-          <Route path="/praktik-seni" element="#" />
+          <Route path="/fundamental-seni" element={<Fundamental/>}/>
+          <Route path="/teori-seni" element={<Teori/>}/>
+          <Route path="/praktik-seni" element={<Praktik/>} />
           <Route path="/artikel" element={<Artikel />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
