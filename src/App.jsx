@@ -11,6 +11,7 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Artikel from "./pages/Artikel";
 import About from "./pages/About";
+import DetailArtikel from "./components/DetailArtikel";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/artikel" element={<Artikel />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/detailartikel" element={<DetailArtikel />} />
         </Routes>
         <Footer />
       </Router>
