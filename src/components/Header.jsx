@@ -27,12 +27,11 @@ export default function Header() {
               </li>
               <li className="dropdown">
                 <a href="#program">
-                  <span className="me-1">Program</span>{" "}
-                  <IoIosArrowDown fontSize="1.2rem" />
+                  <span className="me-1">Program</span> <IoIosArrowDown fontSize="1.2rem" />
                 </a>
                 <ul>
                   <li>
-                    <a href="/program-ofline">Kelas Ofline</a>
+                    <NavLink to="/program-offline">Kelas Ofline</NavLink>
                   </li>
                   <li>
                     <a href="/program-online">Kelas Online</a>
@@ -41,31 +40,21 @@ export default function Header() {
               </li>
               <li className="dropdown">
                 <a href="#seni">
-                  <span className="me-1">Seni</span>{" "}
-                  <IoIosArrowDown fontSize="1.2rem" />
+                  <span className="me-1">Seni</span> <IoIosArrowDown fontSize="1.2rem" />
                 </a>
                 <ul>
                   <li>
-                    <NavLink
-                      to="/fundamental-seni"
-                      className="nav-link scrollto"
-                    >
+                    <NavLink to="/fundamental-seni" className="nav-link scrollto">
                       Fundamental Seni
                     </NavLink>
                   </li>
                   <li>
-                  <NavLink
-                      to="/teori-seni"
-                      className="nav-link scrollto"
-                    >
+                    <NavLink to="/teori-seni" className="nav-link scrollto">
                       Teori Seni
                     </NavLink>
                   </li>
                   <li>
-                  <NavLink
-                      to="/praktik-seni"
-                      className="nav-link scrollto"
-                    >
+                    <NavLink to="/praktik-seni" className="nav-link scrollto">
                       Praktik Seni
                     </NavLink>
                   </li>
@@ -82,18 +71,12 @@ export default function Header() {
                 </a>
               </li>
               <li>
-                <NavLink
-                  to="/register"
-                  className="btn-daftar animated fadeInUp scrollto"
-                >
+                <NavLink to="/register" className="btn-daftar animated fadeInUp scrollto">
                   Daftar
                 </NavLink>
               </li>
               <li>
-                <NavLink
-                  to="/login"
-                  className="btn-get-started animated fadeInUp scrollto"
-                >
+                <NavLink to="/login" className="btn-get-started animated fadeInUp scrollto">
                   Masuk
                 </NavLink>
               </li>
