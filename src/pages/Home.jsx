@@ -1,6 +1,12 @@
 import "../assets/css/style.css";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import { FaRegLightbulb } from "react-icons/fa";
+import { BsStarFill } from "react-icons/bs";
+import { Carousel } from "../components/Carousel";
+import { slides } from "../assets/js/carouselData.json";
+import { Link } from "react-router-dom";
+
 
 export default function Home() {
   return (
@@ -8,53 +14,7 @@ export default function Home() {
       {/* <Header /> */}
       {/* ======= Hero Section ======= */}
       <section id="hero">
-        <div id="heroCarousel" data-bs-interval="5000" className="carousel slide carousel-fade" data-bs-ride="carousel">
-          <ol className="carousel-indicators" id="hero-carousel-indicators"></ol>
-
-          <div className="carousel-inner" role="listbox">
-            {/* Slide 1 */}
-            <div className="carousel-item active">
-              <div className="carousel-container">
-                <div className="container">
-                  <h6 className="animated fadeInDown">Selamat Datang di</h6>
-                  <h2 className="animated fadeInDown">
-                    <strong>Remedial.id</strong>
-                  </h2>
-                </div>
-              </div>
-            </div>
-
-            {/* Slide 2 */}
-            <div className="carousel-item">
-              <div className="carousel-container">
-                <div className="container">
-                  <h2 className="animated fadeInDown">Remedial.id</h2>
-                  <p className="animated fadeInUp">
-                    Remedial merupakan kegiatan yang akan Serrum lakukan selama 1 tahun di 2019. Kegiatan ini melibatkan murid SMA (pilihan) di Jakarta dan sekitarnya yang berfokus pada pola konsumsi informasi dan pengetahuan berdasarkan
-                    perkembangan hari ini. Dengan metode saling silang informasi yang menghasilkan pengetahuan dan pendekatan seni dan literasi.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Slide 3 */}
-            <div className="carousel-item">
-              <div className="carousel-container">
-                <div className="container">
-                  <h2 className="animated fadeInDown">Remedial.id</h2>
-                  <p className="animated fadeInUp">Untuk program seni lebih baik</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* <a className="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
-             <span className="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
-         </a>
-         <a className="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
-             <span className="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-         </a> */}
-        </div>
+        <Carousel data={slides}/>
       </section>
 
       <main id="main">
@@ -74,9 +34,9 @@ export default function Home() {
                   isu-isu pendidikan, sosial-politik dan perkotaan dengan pendekatan presentasi pendidikan dan artistik. Kegiatan Serrum meliputi proyek seni, pameran, lokakarya, diskusi, dan propaganda kreatif. Media yang digunakan antara
                   lain video, mural, grafis, komik dan seni instalasi.
                 </p>
-                <a href="about.html" className="btn-get-started animated fadeInUp scrollto">
+                <Link to="/about" className="btn-get-started animated fadeInUp scrollto">
                   Read More
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -215,9 +175,7 @@ export default function Home() {
                       <ul id="package-productReviews">
                         <li>
                           <div className="package-preview-icon">
-                            <picture>
-                              <img src="https://imgix3.ruangguru.com/assets/payment/payment_flow/landing_page/review-star.png" width="20" alt="" />
-                            </picture>
+                            <BsStarFill></BsStarFill>
                           </div>
                           <p>
                             <strong>4.8</strong>/5 rating kelas
@@ -225,9 +183,7 @@ export default function Home() {
                         </li>
                         <li>
                           <div className="package-preview-icon">
-                            <picture>
-                              <img src="https://imgix3.ruangguru.com/assets/payment/payment_flow/landing_page/review-light.png" width="20" alt="" />
-                            </picture>
+                            <FaRegLightbulb></FaRegLightbulb>
                           </div>
                           <p>Sesi pertemuan online hingga 10x seminggu</p>
                         </li>
@@ -260,9 +216,7 @@ export default function Home() {
                       <ul id="package-productReviews">
                         <li>
                           <div className="package-preview-icon">
-                            <picture>
-                              <img src="https://imgix3.ruangguru.com/assets/payment/payment_flow/landing_page/review-star.png" width="20" alt="" />
-                            </picture>
+                            <BsStarFill></BsStarFill>
                           </div>
                           <p>
                             <strong>4.8</strong>/5 rating kelas
@@ -270,9 +224,7 @@ export default function Home() {
                         </li>
                         <li>
                           <div className="package-preview-icon">
-                            <picture>
-                              <img src="https://imgix3.ruangguru.com/assets/payment/payment_flow/landing_page/review-light.png" width="20" alt="" />
-                            </picture>
+                            <FaRegLightbulb></FaRegLightbulb>
                           </div>
                           <p>Sesi pertemuan online hingga 10x seminggu</p>
                         </li>
@@ -299,147 +251,7 @@ export default function Home() {
             <div className="row justify-content-center">
               <div className="col-10 col-sm-10 col-md-10 col-lg-11 col-xl-10">
                 <div className="row">
-                  <div className="col-lg-4 col-md-6 icon-box">
-                    <figure className="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio">
-                      <div className="wp-block-embed__wrapper">
-                        <div className="jetpack-video-wrapper">
-                          <iframe
-                            width="100%"
-                            height="250"
-                            src="https://www.youtube.com/embed/ImRf-cl-V7A"
-                            title="YouTube video player"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                          ></iframe>
-                        </div>
-                      </div>
-                    </figure>
-                    <h4 className="title">
-                      <a href="https://youtu.be/ImRf-cl-V7A" target="_blank">
-                        APA ITU SENI? Pengertian, Fungsi, Cabang dan Pembagian Seni
-                      </a>
-                    </h4>
-                    <p className="description">
-                      Pada umumnya seni sering diartikan sebagai sebuah ekspresi perasaan manusia yang didalamnya mengandung unsur estetik atau keindahan dan diungkapkan melalui suatu media yang nyata baik itu dalam berupa gerak, rupa, nada
-                      dan syair, serta dapat dirasakan oleh panca indra manusia.{" "}
-                    </p>
-                  </div>
-                  <div className="col-lg-4 col-md-6 icon-box">
-                    <figure className="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio">
-                      <div className="wp-block-embed__wrapper">
-                        <div className="jetpack-video-wrapper">
-                          <iframe
-                            width="100%"
-                            height="250"
-                            src="https://www.youtube.com/embed/videoseries?list=PLhkyWqKxYl7LChI6lcooI-7_f_zFpo6Jh"
-                            title="YouTube video player"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                          ></iframe>
-                        </div>
-                      </div>
-                    </figure>
-                    <h4 className="title">
-                      <a href="https://youtube.com/playlist?list=PLhkyWqKxYl7LChI6lcooI-7_f_zFpo6Jh" target="_blank">
-                        Seni Tari
-                      </a>
-                    </h4>
-                    <p className="description">
-                      seni tari adalah suatu gerakan semua bagian tubuh atau hanya sebagian saja yang dilakukan dengan ritmis serta pada waktu tertentu untuk mengungkap pikiran, perasaan, dan tujuan dengan iringan musik atau tanpa iringan
-                      musik.{" "}
-                    </p>
-                  </div>
-                  <div className="col-lg-4 col-md-6 icon-box">
-                    <figure className="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio">
-                      <div className="wp-block-embed__wrapper">
-                        <div className="jetpack-video-wrapper">
-                          <iframe
-                            width="100%"
-                            height="250"
-                            src="https://www.youtube.com/embed/videoseries?list=PLhkyWqKxYl7Jygbz5eF4sU7vvkRfY5ikO"
-                            title="YouTube video player"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                          ></iframe>
-                        </div>
-                      </div>
-                    </figure>
-                    <h4 className="title">
-                      <a href="https://youtube.com/playlist?list=PLhkyWqKxYl7Jygbz5eF4sU7vvkRfY5ikO" target="_blank">
-                        Seni Rupa
-                      </a>
-                    </h4>
-                    <p className="description">
-                      Seni rupa adalah cabang seni yang membentuk karya seni dengan media yang bisa ditangkap mata dan dirasakan dengan rabaan. Kesan ini diciptakan dengan mengolah konsep titik, garis, bidang, bentuk, volume, warna,
-                      tekstur, dan pencahayaan dengan acuan estetika.
-                    </p>
-                  </div>
-                  <div className="col-lg-4 col-md-6 icon-box">
-                    <figure className="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio">
-                      <div className="wp-block-embed__wrapper">
-                        <div className="jetpack-video-wrapper">
-                          <iframe
-                            width="100%"
-                            height="250"
-                            src="https://www.youtube.com/embed/videoseries?list=PLHsx37V5nkBokmu8UWeBH51cD6jMT7OMc"
-                            title="YouTube video player"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                          ></iframe>
-                        </div>
-                      </div>
-                    </figure>
-                    <h4 className="title">
-                      <a href="https://youtube.com/playlist?list=PLHsx37V5nkBokmu8UWeBH51cD6jMT7OMc" target="_blank">
-                        Seni Musik
-                      </a>
-                    </h4>
-                    <p className="description">
-                      Seni musik adalah sebuah cabang seni yang lebih fokus mengutamakan penggunaan harmoni, melodi, irama, tempo, dan vokal sebagai sarana menyampaikan nilai-nilai seni itu sendiri dari seniman atau pembuat seni kepada
-                      orang lain atau penikmat seni.
-                    </p>
-                  </div>
-                  <div className="col-lg-4 col-md-6 icon-box">
-                    <figure className="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio">
-                      <div className="wp-block-embed__wrapper">
-                        <div className="jetpack-video-wrapper">
-                          <iframe
-                            width="100%"
-                            height="250"
-                            src="https://www.youtube.com/embed/s3jVNZl5vi4"
-                            title="YouTube video player"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                          ></iframe>
-                        </div>
-                      </div>
-                    </figure>
-                    <h4 className="title">
-                      <a href="https://youtu.be/s3jVNZl5vi4" target="_blank">
-                        Seni Sastra
-                      </a>
-                    </h4>
-                    <p className="description">Seni sastra adalah seni yang menampilkan persepsi, ekspresi, gagasan, dan keindahan melalui tuliskan.</p>
-                  </div>
-                  <div className="col-lg-4 col-md-6 icon-box">
-                    <figure className="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio">
-                      <div className="wp-block-embed__wrapper">
-                        <div className="jetpack-video-wrapper">
-                          <iframe
-                            width="100%"
-                            height="250"
-                            src="https://www.youtube.com/embed/videoseries?list=PLhkyWqKxYl7L8YaQ0VDaOgU9S769nj1Ff"
-                            title="YouTube video player"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                          ></iframe>
-                        </div>
-                      </div>
-                    </figure>
-                    <h4 className="title">
-                      <a href="https://youtube.com/playlist?list=PLhkyWqKxYl7L8YaQ0VDaOgU9S769nj1Ff" target="_blank">
-                        Seni Teater
-                      </a>
-                    </h4>
-                    <p className="description">
-                      Seni teater adalah jenis kesenian pertunjukan drama yang dipentaskan di atas panggung. Secara spesifik, seni teater merupakan sebuah seni drama yang menampilkan perilaku manusia dengan gerak, tari, dan nyanyian yang
-                      disajikan lengkap dengan dialog dan akting.
-                    </p>
-                  </div>
+                  
                 </div>
               </div>
             </div>

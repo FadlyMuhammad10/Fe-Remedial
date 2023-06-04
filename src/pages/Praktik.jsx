@@ -7,11 +7,11 @@ export default function Praktik() {
         <>
         <main id="main">
          {/* ======= Breadcrumbs =======  */}
-        <section id="breadcrumbs" class="breadcrumbs">
-            <div class="container-fluid">
+        <section id="breadcrumbs" className="breadcrumbs">
+            <div className="container-fluid">
 
-                <div class="row justify-content-center">
-                    <div class="col-11 col-xl-10">
+                <div className="row justify-content-center">
+                    <div className="col-11 col-xl-10">
                         <ol>
                             <li><a href="index.html">Beranda</a></li>
                             <li>Praktik Seni</li>
@@ -24,20 +24,20 @@ export default function Praktik() {
         </section>
         {/* End Breadcrumbs */}
 
-        <section class="fundamental">
-            <div class="container-fluid"/>
+        <section className="fundamental">
+            <div className="container-fluid"/>
 
-                <div class="row justify-content-center">
-                    <div class="col-11 col-xl-10">
-                        <div class="row">
+                <div className="row justify-content-center">
+                    <div className="col-11 col-xl-10">
+                        <div className="row">
                             <h1><strong>Praktik Seni</strong></h1>
                             <hr/>
                         </div>
 
-                        <div class="row justify-content-center">
-                            <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+                        <div className="row justify-content-center">
+                            <div className="col-12 col-sm-12 col-md-8 col-lg-8">
                                 <img src="assets/img/fundamental/fe.jpg" width="100%" height="450" alt=""/>
-                                <h1 class="mt-3"><strong>Fenomena Seni Rupa</strong></h1>
+                                <h1 className="mt-3"><strong>Fenomena Seni Rupa</strong></h1>
                                 <p>Fenomena Seni Rupa dapat menyangkut banyak peristiwa, pergerakan, hingga perkembangan
                                     umum yang menyangkut seni rupa di dunia. Berbagai fenomena tersebut dapat ditelaah
                                     sebagai inspirasi hingga berbagai pertimbangan lain dalam berkarya. Tidak sedikit
@@ -49,28 +49,28 @@ export default function Praktik() {
                                 <div id="seni"></div>
                             </div>
 
-                            <div class="col-12 col-md-4">
-                                <div class="row-cols-lg-10">
-                                    <h2 class="article-section-title">
+                            <div className="col-12 col-md-4">
+                                <div className="row-cols-lg-10">
+                                    <h2 className="article-section-title">
                                         <span>Baca Artikel</span>
                                     </h2>
-                                    <div class="col">
-                                        <div class="fundamental-item d-flex">
-                                            <img src="assets/img/fundamental/satu.jpg" class="fundamental-img" alt=""/>
+                                    <div className="col">
+                                        <div className="fundamental-item d-flex">
+                                            <img src="assets/img/fundamental/satu.jpg" className="fundamental-img" alt=""/>
                                             <h3><a href="#!">Seni Rupa Murni: Pengertian, Batasan, Fungsi & Contoh</a>
                                             </h3>
                                         </div>
-                                        <div class="col">
-                                            <div class="fundamental-item d-flex">
-                                                <img src="assets/img/fundamental/patung.jpg" class="fundamental-img"
+                                        <div className="col">
+                                            <div className="fundamental-item d-flex">
+                                                <img src="assets/img/fundamental/patung.jpg" className="fundamental-img"
                                                     alt=""/>
                                                 <h3><a href="#!">Pengertian seni patung, fungsi, teknik, alat &
                                                         bahan</a></h3>
                                             </div>
                                         </div>
-                                        <div class="col">
-                                            <div class="fundamental-item d-flex">
-                                                <img src="assets/img/fundamental/empat.jpg" class="fundamental-img"
+                                        <div className="col">
+                                            <div className="fundamental-item d-flex">
+                                                <img src="assets/img/fundamental/empat.jpg" className="fundamental-img"
                                                     alt=""/>
                                                 <h3><a href="#!">Perpaduan Warna Harmonis menggunakan Teori Warna &
                                                         Seni</a></h3>
