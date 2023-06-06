@@ -11,6 +11,7 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Artikel from "./pages/Artikel";
 import About from "./pages/About";
+import DetailArtikel from "./components/DetailArtikel";
 import Fundamental from "./pages/Fundamental";
 import Teori from "./pages/Teori";
 import Praktik from "./pages/Praktik";
@@ -32,6 +33,7 @@ function App() {
           <Route path="/artikel" element={<Artikel />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/detailartikel" element={<DetailArtikel />} />
         </Routes>
         <Footer />
       </Router>
