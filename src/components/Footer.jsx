@@ -1,6 +1,7 @@
 import React from "react";
 import { IoChevronForward } from "react-icons/io5";
 import { AiOutlineTwitter, AiFillFacebook, AiFillInstagram } from "react-icons/ai";
+import { NavLink } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -15,19 +16,19 @@ export default function Footer() {
                     <h4>Layanan Kami</h4>
                     <ul>
                       <li>
-                        <IoChevronForward /> <a href="#">Beranda</a>
+                        <IoChevronForward /> <NavLink to="/">Beranda</NavLink>
                       </li>
                       <li>
-                        <IoChevronForward /> <a href="#">Tentang kami</a>
+                        <IoChevronForward /> <NavLink to="/about">Tentang kami</NavLink>
                       </li>
                       <li>
-                        <IoChevronForward /> <a href="#">Program</a>
+                        <IoChevronForward /> <NavLink to="/program-offline">Program</NavLink>
                       </li>
                       <li>
-                        <IoChevronForward /> <a href="#">Seni</a>
+                        <IoChevronForward /> <NavLink to="#">Seni</NavLink>
                       </li>
                       <li>
-                        <IoChevronForward /> <a href="#">Artikel</a>
+                        <IoChevronForward /> <NavLink to="/artikel">Artikel</NavLink>
                       </li>
                     </ul>
                   </div>
@@ -36,13 +37,13 @@ export default function Footer() {
                     <h4>Lainnya</h4>
                     <ul>
                       <li>
-                        <IoChevronForward /> <a href="#">Fundamental Seni</a>
+                        <IoChevronForward /> <NavLink to="/fundamental-seni">Fundamental Seni</NavLink>
                       </li>
                       <li>
-                        <IoChevronForward /> <a href="#">Teori Seni</a>
+                        <IoChevronForward /> <NavLink to="/teori-seni">Teori Seni</NavLink>
                       </li>
                       <li>
-                        <IoChevronForward /> <a href="#">Praktik Seni</a>
+                        <IoChevronForward /> <NavLink to="/praktik-seni">Praktik Seni</NavLink>
                       </li>
                     </ul>
                   </div>

@@ -31,7 +31,7 @@ export default function Header() {
                 </a>
                 <ul>
                   <li>
-                    <a href="/program-ofline">Kelas Ofline</a>
+                    <NavLink to="/program-offline">Kelas Ofline</NavLink>
                   </li>
                   <li>
                     <a href="/program-online">Kelas Online</a>
@@ -44,13 +44,19 @@ export default function Header() {
                 </a>
                 <ul>
                   <li>
-                    <a href="/fundamental-seni">Fundamental Seni</a>
+                    <NavLink to="/fundamental-seni" className="nav-link scrollto">
+                      Fundamental Seni
+                    </NavLink>
                   </li>
                   <li>
-                    <a href="/teori-seni">Teori Seni</a>
+                    <NavLink to="/teori-seni" className="nav-link scrollto">
+                      Teori Seni
+                    </NavLink>
                   </li>
                   <li>
-                    <a href="/praktik-seni">Praktik Seni</a>
+                    <NavLink to="/praktik-seni" className="nav-link scrollto">
+                      Praktik Seni
+                    </NavLink>
                   </li>
                 </ul>
               </li>
