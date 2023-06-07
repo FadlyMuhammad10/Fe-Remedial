@@ -231,9 +231,9 @@ export default function Program_Offline() {
                   </div>
 
                   <div className="d-flex justify-content-center my-4">
-                    <a className="btn btn-dark px-5" href="#" role="button">
+                    <Link className="btn btn-dark px-5" to="/pembayaran" role="button">
                       Selanjutnya
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
