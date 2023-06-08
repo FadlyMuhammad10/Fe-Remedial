@@ -23,17 +23,18 @@ export default function Login() {
     };
 
     console.log(data);
-    dispatch(postLogin(data));
 
    
-    const token = await localStorage.getItem("token");
-    console.log(token)
-    if(token!==null && token!==undefined && token!=="undefined"){
-      console.log(token)
-      navigate('/')
-      localStorage.removeItem("token");
-    }
-    
+    dispatch(postLogin(data));
+
+    setTimeout(() => {
+    const token =localStorage.getItem('token')
+    console.log("token= ",token)
+      if(token!==null && token!==undefined && token!=="undefined"){
+        console.log(token)
+        navigate('/')
+        localStorage.removeItem("token");
+      }    }, 2000);
   };
 
   return (
