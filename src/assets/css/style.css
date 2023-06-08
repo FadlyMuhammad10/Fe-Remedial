@@ -1531,6 +1531,10 @@ HEAD #packageContainer {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
+.batas-bayar {
+  background-color: #2e3339;
+}
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/

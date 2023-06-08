@@ -17,6 +17,7 @@ import Teori from "./pages/Teori";
 import Praktik from "./pages/Praktik";
 import Program_Offline from "./pages/Kelas-Offline";
 import Pembayaran from "./pages/Pembayaran";
+import StatusBayar from "./pages/StatusBayar";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/program-offline" element={<Program_Offline />} />
           <Route path="/program-online" element="#" />
           <Route path="/pembayaran" element={<Pembayaran />} />
+          <Route path="/status-bayar" element={<StatusBayar />} />
           <Route path="/fundamental-seni" element={<Fundamental />} />
           <Route path="/teori-seni" element={<Teori />} />
           <Route path="/praktik-seni" element={<Praktik />} />

@@ -61,7 +61,7 @@ export default function Pembayaran() {
                 </div>
 
                 <div className="d-flex justify-content-center my-4">
-                  <Link className="btn btn-danger px-5" to="/pembayaran" role="button">
+                  <Link className="btn btn-danger px-5" to="/status-bayar" role="button">
                     Bayar
                   </Link>
                 </div>
