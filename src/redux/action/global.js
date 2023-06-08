@@ -11,7 +11,12 @@ export const postLogin = (data) => async (dispatch) => {
         },
       }
     );
-    localStorage.setItem("token", res?.data?.token);
+    console.log(res)
+    if(res.data.message === "user not found"){
+
+    }else {
+      localStorage.setItem("token", res?.data?.token);
+    }
   } catch (err) {
     console.log("ERORBTUHGTBOBO", err);
   }

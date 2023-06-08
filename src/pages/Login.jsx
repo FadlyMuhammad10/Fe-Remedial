@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { postLogin } from "../redux/action";
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
   const dispatch = useDispatch();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const navigate = useNavigate();
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
   };
@@ -15,18 +16,25 @@ export default function Login() {
     setPassword(event.target.value);
   };
 
-  const handleLogin = () => {
+  const handleLogin = async()  => {
     const data = {
       email: email,
       password: password,
     };
-    dispatch(postLogin(data));
-  };
 
-  const test = () => {
-    let data = localStorage?.getItem("token");
-    console.log("TEGIJBFJWBOIFHWJP", data);  
-  }
+    console.log(data);
+    dispatch(postLogin(data));
+
+   
+    const token = await localStorage.getItem("token");
+    console.log(token)
+    if(token!==null && token!==undefined && token!=="undefined"){
+      console.log(token)
+      navigate('/')
+      localStorage.removeItem("token");
+    }
+    
+  };
 
   return (
     <main id="main">
