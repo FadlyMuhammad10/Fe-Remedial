@@ -12,9 +12,7 @@ export const postLogin = (data) => async (dispatch) => {
       }
     );
     console.log(res)
-    if(res.data.message === "user not found"){
-
-    }else {
+    if(res && res.data && res.data.token){
       localStorage.setItem("token", res?.data?.token);
     }
   } catch (err) {

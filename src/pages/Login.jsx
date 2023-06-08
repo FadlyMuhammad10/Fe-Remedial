@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { postLogin } from "../redux/action";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 export default function Login() {
   const dispatch = useDispatch();
@@ -16,24 +17,37 @@ export default function Login() {
     setPassword(event.target.value);
   };
 
-  const handleLogin = async()  => {
+  const handleLogin = async () => {
     const data = {
       email: email,
       password: password,
     };
 
     console.log(data);
-    dispatch(postLogin(data));
-
-   
-    const token = await localStorage.getItem("token");
-    console.log(token)
-    if(token!==null && token!==undefined && token!=="undefined"){
-      console.log(token)
-      navigate('/')
-      localStorage.removeItem("token");
+    try {
+      const res = await axios.post(
+        `https://be4-skilvul-production.up.railway.app/user/login`,
+        data,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      console.log(res);
+      // if (res && res.data && res.data.token) {
+      //   localStorage.setItem("token", res?.data?.token);
+      // }
+      const token = res?.data?.token;
+      console.log(token);
+      if (token !== null && token !== undefined && token !== "undefined") {
+        console.log(token);
+        navigate("/");
+        // localStorage.removeItem("token");
+      }
+    } catch (err) {
+      console.log("ERORBTUHGTBOBO", err);
     }
-    
   };
 
   return (
