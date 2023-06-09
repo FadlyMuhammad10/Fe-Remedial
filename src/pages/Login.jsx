@@ -48,6 +48,18 @@ export default function Login() {
     } catch (err) {
       console.log("ERORBTUHGTBOBO", err);
     }
+
+   
+    dispatch(postLogin(data));
+
+    setTimeout(() => {
+    const token =localStorage.getItem('token')
+    console.log("token= ",token)
+      if(token!==null && token!==undefined && token!=="undefined"){
+        console.log(token)
+        navigate('/')
+        localStorage.removeItem("token");
+      }    }, 2000);
   };
 
   return (
