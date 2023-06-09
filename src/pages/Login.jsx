@@ -24,32 +24,7 @@ export default function Login() {
     };
 
     console.log(data);
-    try {
-      const res = await axios.post(
-        `https://be4-skilvul-production.up.railway.app/user/login`,
-        data,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
-      console.log(res);
-      // if (res && res.data && res.data.token) {
-      //   localStorage.setItem("token", res?.data?.token);
-      // }
-      const token = res?.data?.token;
-      console.log(token);
-      if (token !== null && token !== undefined && token !== "undefined") {
-        console.log(token);
-        navigate("/");
-        // localStorage.removeItem("token");
-      }
-    } catch (err) {
-      console.log("ERORBTUHGTBOBO", err);
-    }
 
-   
     dispatch(postLogin(data));
 
     setTimeout(() => {
