@@ -6,9 +6,16 @@ import { BsStarFill } from "react-icons/bs";
 import { Carousel } from "../components/Carousel";
 import { slides } from "../assets/js/carouselData.json";
 import { Link } from "react-router-dom";
-
+// import ArtikelList from "../components/ArtikelList";
+// import { useEffect, useState } from "react";
 
 export default function Home() {
+  // const [items, setItems] = useState([])
+  //   useEffect(() => {
+  //       fetch('https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=837feb089d874ae38adb5c13e616e88c')
+  //       .then(res => res.json())
+  //       .then(data => setItems(data.articles))
+  //   },[])
   return (
     <>
       {/* <Header /> */}
@@ -44,7 +51,7 @@ export default function Home() {
         {/*End About Section */}
 
         {/*======= Seni Section ======= */}
-        <section id="seni" className="seni section-bg pt-5">
+        <section id="seni" className="seni pt-5">
           <div className="container-fluid">
             <div className="row justify-content-center">
               <div className="col-11 col-sm-11 col-md-11 col-lg-11 col-xl-10 ">
@@ -400,7 +407,7 @@ export default function Home() {
         {/*End pembelajaran Section */}
 
         {/*======= Sastra Section ======= */}
-        <section id="seni" className="seni section-bg">
+        <section id="seni" className="seni">
           <div className="container-fluid">
             <div className="row justify-content-center">
               <div className="col-11 col-sm-11 col-md-11 col-lg-11 col-xl-10">
@@ -506,15 +513,17 @@ export default function Home() {
             </div>
 
             <div className="row justify-content-center">
-              <div className="col-lg-11" id="artikel-list"></div>
+              <div className="col-lg-11" id="artikel-list">
+                {/* <ArtikelList items={items}/> */}
+              </div>
             </div>
-
+                                  
             <div className="col-lg-13 d-flex justify-content-center">
-              <a href="artikel.html">
+              <Link to="/artikel">
                 <button type="button" className="btn btn-outline-secondary btn-md my-4 fw-bold">
                   Lihat Semua
                 </button>
-              </a>
+              </Link>
             </div>
           </div>
         </section>

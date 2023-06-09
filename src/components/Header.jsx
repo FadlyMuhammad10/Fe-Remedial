@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { IoIosArrowDown } from "react-icons/io";
+import { VscAccount } from "react-icons/vsc";
 
 export default function Header() {
   return (
@@ -16,7 +17,7 @@ export default function Header() {
           <nav id="navbar" className="navbar">
             <ul>
               <li>
-                <NavLink to="/" className="nav-link scrollto active">
+                <NavLink to="/" className="nav-link scrollto scrollto">
                   Beranda
                 </NavLink>
               </li>
@@ -80,9 +81,17 @@ export default function Header() {
                   Masuk
                 </NavLink>
               </li>
+              {/* <li className="dropdown">
+                <a href="#program">
+                  <VscAccount className="me-2" fontSize="2rem"/> <IoIosArrowDown fontSize="1.2rem" />
+                </a>
+                <ul>
+                  <li>
+                    <NavLink to="/login">Logout</NavLink>
+                  </li>
+                </ul>
+              </li> */}
 
-              {/* <li><a href="#!" className="btn-get-started animated fadeInUp scrollto">Daftar Sekarang</a></li>
-               */}
             </ul>
 
             <i className="bi bi-list mobile-nav-toggle"></i>
