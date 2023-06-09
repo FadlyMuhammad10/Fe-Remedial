@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
 
 export default function CardArtikel({item}){
     const websiteUrl = item.url 
+
 
     const date = item.publishedAt 
     const formatDate = date.replace('T',' ')

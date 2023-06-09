@@ -35,6 +35,7 @@ export default function DetailArtikel(){
                     </div>
                 </div>
                 
+
                 <div className="col-10 col-lg-11">
                     <div className="row justify-content-center">
                         <div className=" col-md-12 col-lg-9 col-xl-9 col-xxl-9">
