@@ -16,8 +16,11 @@ import Fundamental from "./pages/Fundamental";
 import Teori from "./pages/Teori";
 import Praktik from "./pages/Praktik";
 import Program_Offline from "./pages/Kelas-Offline";
+import Pembayaran from "./pages/Pembayaran";
+import StatusBayar from "./pages/StatusBayar";
 import { Provider } from "react-redux";
 import store from "./redux/store";
+
 
 function App() {
   return (
