@@ -1,7 +1,49 @@
+import { useState } from "react";
 import "../assets/css/style.css";
 import { Link } from "react-router-dom";
 
 export default function Program_Offline() {
+  const [harga, setHarga] = useState("Rp 25.000,00");
+  const [mapel, setMapel] = useState("");
+  const [tempat, setTempat] = useState("");
+  const [tanggal, setTanggal] = useState("");
+  const [waktu, setWaktu] = useState("");
+
+  const pelajaran = [
+    { label: "Seni Tari", value: 1 },
+    { label: "Seni Rupa", value: 2 },
+    { label: "Seni Musik", value: 3 },
+    { label: "Pertunjukan", value: 4 },
+  ];
+
+  const lokasi = [
+    { label: "Jakarta", value: 1 },
+    { label: "Bogor", value: 2 },
+    { label: "Depok", value: 3 },
+    { label: "Tangerang", value: 4 },
+    { label: "Bekasi", value: 5 },
+  ];
+
+  function handlePelajaran(event) {
+    setMapel(event.target.value);
+    // console.log(event.target.value);
+  }
+
+  function handleLokasi(event) {
+    setTempat(event.target.value);
+    // console.log(event.target.value);
+  }
+
+  function handleDate(event) {
+    setTanggal(event.target.value);
+    // console.log(event.target.value);
+  }
+
+  function handleWaktu(event) {
+    setWaktu(event.target.value);
+    // console.log(event.target.value);
+  }
+
   return (
     <>
       <main id="main">
@@ -24,7 +66,7 @@ export default function Program_Offline() {
         {/* <!-- End Breadcrumbs --> */}
 
         {/* <!-- ======= program Section ======= --> */}
-        <section id="program" className="program d-flex justify-content-center">
+        <section id="kelas-off" className="program d-flex justify-content-center">
           <div className="row d-flex justify-content-center">
             <div className="container col-10 mb-5 pb-5">
               <div className="row">
@@ -145,25 +187,26 @@ export default function Program_Offline() {
 
                       <div className="d-flex justify-content-center">
                         <div className="col-10 d-flex justify-item-center">
-                          <select className="form-select m-2 mt-4 py-2 px-3 bg-secondary bg-opacity-25" aria-label="Default select example">
+                          <select className="form-select m-2 mt-4 py-2 px-3 bg-secondary bg-opacity-25" onChange={handlePelajaran} aria-label="Default select example">
                             <option select="true">Pilih Mata Pelajaran</option>
-                            <option defaultValue="1">Seni Tari</option>
-                            <option defaultValue="2">Seni Rupa</option>
-                            <option defaultValue="3">Seni Musik</option>
-                            <option defaultValue="4">Pertunjukan</option>
+                            {pelajaran.map((pelajaran) => (
+                              <option key={pelajaran.value} value={pelajaran.label}>
+                                {pelajaran.label}
+                              </option>
+                            ))}
                           </select>
                         </div>
                       </div>
 
                       <div className="d-flex justify-content-center">
                         <div className="col-10 d-flex justify-item-center">
-                          <select className="form-select m-2 py-2 px-3 bg-secondary bg-opacity-25" aria-label="Default select example">
+                          <select className="form-select m-2 py-2 px-3 bg-secondary bg-opacity-25" onChange={handleLokasi} aria-label="Default select example">
                             <option select="true">Pilih Lokasi</option>
-                            <option defaultValue="1">Jakarta</option>
-                            <option defaultValue="2">Bogor</option>
-                            <option defaultValue="3">Depok</option>
-                            <option defaultValue="4">Tangerang</option>
-                            <option defaultValue="5">Bekasi</option>
+                            {lokasi.map((lokasi) => (
+                              <option key={lokasi.value} value={lokasi.label}>
+                                {lokasi.label}
+                              </option>
+                            ))}
                           </select>
                         </div>
                       </div>
@@ -176,8 +219,8 @@ export default function Program_Offline() {
                               className="btn btn-secondary"
                               // style="font-size: 8pt;"
                             >
-                              <input type="radio" name="options" id="option1" autoComplete="off" defaultChecked />
-                              01 Mar 23
+                              <input type="radio" name="options" id="option1" defaultValue={"03 Juli 2023"} defaultChecked onClick={handleDate} /> <br />
+                              03 Jul 23
                             </label>
                           </div>
 
@@ -186,18 +229,15 @@ export default function Program_Offline() {
                               className="btn btn-secondary"
                               // style="font-size: 8pt;"
                             >
-                              <input type="radio" name="options" id="option2" autoComplete="off" defaultChecked />
-                              01 Mar 23
+                              <input type="radio" name="options" id="option2" defaultValue={"10 Juli 2023"} defaultChecked onClick={handleDate} /> <br />
+                              10 Jul 23
                             </label>
                           </div>
 
                           <div className="btn-group btn-group-toggle col-3 mx-2" data-toggle="buttons">
-                            <label
-                              className="btn btn-secondary"
-                              // style="font-size: 8pt;"
-                            >
-                              <input type="radio" name="options" id="option3" autoComplete="off" defaultChecked />
-                              01 Mar 23
+                            <label className="btn btn-secondary">
+                              <input type="radio" name="options" id="option3" defaultValue={"17 Juli 2023"} defaultChecked onClick={handleDate} /> <br />
+                              17 Mar 23
                             </label>
                           </div>
                         </div>
@@ -211,8 +251,8 @@ export default function Program_Offline() {
                               className="btn btn-secondary"
                               // style="font-size: 8pt;"
                             >
-                              <input type="radio" name="waktu" id="waktu1" autoComplete="off" defaultChecked />
-                              00.00 - 00.30 WIB
+                              <input type="radio" name="waktu" id="waktu1" defaultValue="13.00 - 15.00 WIB" defaultChecked onClick={handleWaktu} /> <br />
+                              13.00 - 15.00 WIB
                             </label>
                           </div>
 
@@ -221,8 +261,8 @@ export default function Program_Offline() {
                               className="btn btn-secondary"
                               // style="font-size: 8pt;"
                             >
-                              <input type="radio" name="waktu" id="waktu2" autoComplete="off" defaultChecked />
-                              07.00 - 07.30 WIB
+                              <input type="radio" name="waktu" id="waktu2" defaultValue="07.30 - 09.30 WIB" defaultChecked onClick={handleWaktu} /> <br />
+                              07.30 - 09.30 WIB
                             </label>
                           </div>
                         </div>
@@ -231,7 +271,7 @@ export default function Program_Offline() {
                   </div>
 
                   <div className="d-flex justify-content-center my-4">
-                    <Link className="btn btn-dark px-5" to="/pembayaran" role="button">
+                    <Link className="btn btn-dark px-5" state={{ harga: harga, mapel: mapel, tempat: tempat, tanggal: tanggal, waktu: waktu }} to="/pembayaran" role="button">
                       Selanjutnya
                     </Link>
                   </div>

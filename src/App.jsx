@@ -21,7 +21,6 @@ import StatusBayar from "./pages/StatusBayar";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 
-
 function App() {
   return (
     <>
@@ -33,6 +32,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/program-offline" element={<Program_Offline />} />
             <Route path="/program-online" element="#" />
+            <Route path="/pembayaran" element={<Pembayaran />} />
             <Route path="/fundamental-seni" element={<Fundamental />} />
             <Route path="/teori-seni" element={<Teori />} />
             <Route path="/praktik-seni" element={<Praktik />} />

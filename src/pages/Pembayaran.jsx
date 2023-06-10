@@ -1,8 +1,47 @@
 import "../assets/css/style.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { ImPriceTag } from "react-icons/im";
+import { useEffect } from "react";
 
-export default function Pembayaran() {
+export default function Pembayaran(props) {
+  const location = useLocation();
+  // console.log(props, "props");
+  // console.log(location, "useLocation Hook");
+  const mapel = location.state;
+  const tempat = location.state;
+  const waktu = location.state;
+  const tanggal = location.state;
+  const harga = location.state;
+
+  // useEffect(() => {
+  //   const midtransScriptUrl = "https://app.sandbox.midtrans.com/snap/snap.js";
+
+  //   let scriptTag = document.createElement("script");
+  //   scriptTag.src = midtransScriptUrl;
+
+  //   const myMidtransClientKey = "";
+  //   scriptTag.setAttribute("data-client-key", myMidtransClientKey);
+
+  //   document.body.appendChild(scriptTag);
+
+  //   return () => {
+  //     document.body.removeChild(scriptTag);
+  //   };
+  // }, []);
+
+  // const bayar = () => {
+  //   // axios
+  //   //   .post("http://localhost:3000/api/siswa/payment", {
+  //   //     harga: 40000,
+  //   //   })
+  //   //   .then((res) => {
+  //   //     // console.log(res.data.token);
+
+  //   //     window.snap.pay(res.data.token);
+  //   //   });
+  //   console.log("asasd");
+  // };
+
   return (
     <>
       <main id="main">
@@ -27,7 +66,7 @@ export default function Pembayaran() {
         </section>
         {/* End Breadcrumbs */}
 
-        <div className="container px-5 pb-5">
+        <div className="container-xl px-5 pb-5">
           <div className="row d-flex justify-content-center">
             <div className="col-6">
               <div className="card d-flex my-4 px-4 py-3">
@@ -39,7 +78,7 @@ export default function Pembayaran() {
                     <ImPriceTag fontSize="2rem" color="yellow" border="1px solid black" />
                     <p className="ms-3 fs-5">Total Harga</p>
                   </div>
-                  <p className="fs-5">Rp 25.000,00</p>
+                  <p className="fs-5 text-white">{harga.harga}</p>
                 </div>
 
                 <h6>Metode Pembayaran</h6>
@@ -61,9 +100,9 @@ export default function Pembayaran() {
                 </div>
 
                 <div className="d-flex justify-content-center my-4">
-                  <Link className="btn btn-danger px-5" to="/status-bayar" role="button">
+                  <button onClick={() => bayar()} className="btn btn-danger px-5" role="button">
                     Bayar
-                  </Link>
+                  </button>
                 </div>
               </div>
             </div>
@@ -79,11 +118,11 @@ export default function Pembayaran() {
                     <hr />
                   </h6>
 
-                  <div className="profil-pelajar d-flex">
-                    <div className="col-4">
+                  <div className="row profil-pelajar d-flex  align-items-center">
+                    <div className="col-4 col-sm-5 col-md-5 col-lg-4">
                       <img src="src/assets/img/pengajar/pengajar3.png" className="rounded-circle" width="auto" height="90" alt="" />
                     </div>
-                    <div className="col-8">
+                    <div className="col-8 col-sm-7 col-md-7 col-lg-8 ">
                       <div className="my-3">
                         <h5 className="fw-semibold">Nova Sriadi Kurniawan</h5>
                         <h6>Pelajar</h6>
@@ -93,75 +132,85 @@ export default function Pembayaran() {
 
                   <ul className="info-kelas list-unstyled mt-5">
                     <li className="d-flex pb-1">
-                      <div className="col-5">
+                      <div className="col-5 col-sm-6 col-lg-7">
                         <div className="d-flex justify-content-between">
                           <h6>Topik</h6>
                           <h6>:</h6>
                         </div>
                       </div>
-                      <div className="col-7 ps-3">Seni Tari Kecak</div>
+                      <div className="ps-3">{mapel.mapel}</div>
                     </li>
 
                     <li className="d-flex pb-1">
-                      <div className="col-5">
+                      <div className="col-5 col-sm-6 col-lg-7">
                         <div className="d-flex justify-content-between">
                           <h6>Metode Pembelajaran</h6>
                           <h6>:</h6>
                         </div>
                       </div>
-                      <div className="col-7 ps-3">Offline</div>
+                      <div className="ps-3">Offline</div>
                     </li>
 
                     <li className="d-flex pb-1">
-                      <div className="col-5">
+                      <div className="col-5 col-sm-6 col-lg-7">
                         <div className="d-flex justify-content-between">
                           <h6>Durasi Pembelajaran</h6>
                           <h6>:</h6>
                         </div>
                       </div>
-                      <div className="col-7 ps-3">2 Jam/Hari</div>
+                      <div className="ps-3">2 Jam/Hari</div>
                     </li>
 
                     <li className="d-flex pb-1">
-                      <div className="col-5">
+                      <div className="col-5 col-sm-6 col-lg-7">
                         <div className="d-flex justify-content-between">
                           <h6>Lokasi Pembelajaran</h6>
                           <h6>:</h6>
                         </div>
                       </div>
-                      <div className="col-7 ps-3 text-uppercase">SMA 35 Jakarta</div>
+                      <div className="ps-3 text-uppercase">{tempat.tempat}</div>
                     </li>
 
                     <li className="d-flex pb-1">
-                      <div className="col-5">
+                      <div className="col-5 col-sm-6 col-lg-7">
                         <div className="d-flex justify-content-between">
                           <h6>Waktu Pembelajaran</h6>
                           <h6>:</h6>
                         </div>
                       </div>
-                      <div className="col-7 ps-3">08.00 - 10.00 WIB</div>
+                      <div className="ps-3">{waktu.waktu}</div>
                     </li>
 
                     <li className="d-flex pb-1">
-                      <div className="col-5">
+                      <div className="col-5 col-sm-6 col-lg-7">
+                        <div className="d-flex justify-content-between">
+                          <h6>Tanggal Mulai</h6>
+                          <h6>:</h6>
+                        </div>
+                      </div>
+                      <div className="ps-3">{tanggal.tanggal}</div>
+                    </li>
+
+                    <li className="d-flex pb-1">
+                      <div className="col-5 col-md-6 col-lg-7">
                         <div className="d-flex justify-content-between">
                           <h6>Lama Pembelajaran</h6>
                           <h6>:</h6>
                         </div>
                       </div>
-                      <div className="col-7 ps-3">6 Bulan</div>
+                      <div className="ps-3">6 Bulan</div>
                     </li>
 
                     <hr />
 
                     <li className="d-flex pt-4">
-                      <div className="col-5">
+                      <div className="col-5 col-lg-7">
                         <div className="d-flex justify-content-between">
                           <h6 className="fw-semibold">Harga Paket</h6>
                           <h6 className="fw-semibold">:</h6>
                         </div>
                       </div>
-                      <div className="col-7 ps-3 fw-semibold">Rp 25.000,00</div>
+                      <div className="ps-3 fw-semibold">{harga.harga}</div>
                     </li>
                   </ul>
                 </div>
