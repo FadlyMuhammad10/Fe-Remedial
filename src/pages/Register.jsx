@@ -1,11 +1,15 @@
 import "../assets/css/style.css";
 import React ,{useState} from "react";
-import {useNavigate} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom';
+import { useDispatch } from "react-redux";
+import { postSignUp } from "../redux/action";
 
 export default function Register() {
+  const dispatch = useDispatch();
   const [name, setName]=useState("")
   const [email, setEmail]=useState("")
   const [password, setPassword]=useState("")
+  const [konfirmasi, setKonfirmasi]=useState("")
   const [asalSekolah, setAsalSekolah]=useState("")
   const [alasan, setAlasan]=useState("")
   const [alamat, setAlamat]=useState("")
@@ -41,12 +45,13 @@ export default function Register() {
   };
   const handleSignUp = async () => {
     const data = {
-      nama_lengkap: nama_lengkap,
-      email: email,
-      password: password,
-      asal_sekolah: asal_sekolah,
-      alasan_ikut_program: alasan_ikut_program,
-      alamat: alamat,
+      nama_lengkap: name.toString(),
+      email: email.toString(),
+      password: password.toString(),
+      confirm_password: konfirmasi.toString(),
+      asal_sekolah: asalSekolah.toString(),
+      alasan_ikut_program: alasan.toString(),
+      alamat: alamat.toString(),
     };
 
     console.log(data);
@@ -54,12 +59,12 @@ export default function Register() {
     dispatch(postSignUp(data));
 
     setTimeout(() => {
-    const token =localStorage.getItem('token')
-    console.log("token= ",token)
-      if(token!==null && token!==undefined && token!=="undefined"){
-        console.log(token)
+    const register =localStorage.getItem('register')
+    console.log("register= ",register)
+      if(register === "success"){
+        console.log(register)
         navigate('/login')
-        localStorage.removeItem("token");
+        localStorage.removeItem("register");
       }    }, 2000);
   };
   return (
@@ -106,16 +111,17 @@ export default function Register() {
                       onChange={handlePasswordChange} id="passwordRegister" className="form-control form-control-sm" />
                           </div>
                         </div>
-                        <div className="col-md-6 mb-2 text-light">
+                      </div>
+
+                      <div className="col-md-6 mb-2 text-light">
                           <label className="form-label" htmlFor="lastName">
                             Konfirmasi password
                           </label>
                           <div className="form-outline">
-                            <input type="password" value={password}
+                            <input type="password" value={konfirmasi}
                       onChange={handleKonfirmasiChange} id="passwordRegister2" className="form-control form-control-sm" />
                           </div>
                         </div>
-                      </div>
 
                       <div className="row">
                         <div className="col-md-6 mb-2 text-light">
@@ -151,13 +157,12 @@ export default function Register() {
                       </div>
 
                       <div className="d-flex justify-content-center">
-                        <button
+                        <div
                           onClick={handleSignUp}
                           className="btn btn-danger btn-md px-5 mb-2"
-                          type="submit"
                         >
                           Daftar
-                        </button>
+                        </div>
                       </div>
                       <div className="mt-2 d-flex justify-content-center text-light">
                         <div className="me-2">
