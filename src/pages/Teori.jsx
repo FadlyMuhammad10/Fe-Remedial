@@ -39,13 +39,12 @@ export default function Teori() {
 
               <div className="row justify-content-center">
                 <div className="col-12 col-sm-12 col-md-8 col-lg-8">
-                  <img src="src/assets/img/fundamental/fe.jpg" width="100%" height="450" alt="" />
+                  <img src="src/assets/img/teori/sketsa.jpg" width="100%" height="450" alt="" />
                   <h1 className="mt-3">
-                    <strong>Fenomena Seni Rupa</strong>
+                    <strong>Teori Mimesis dan Kreasi (Plato dan Aristoteles)</strong>
                   </h1>
                   <p>
-                    Fenomena Seni Rupa dapat menyangkut banyak peristiwa, pergerakan, hingga perkembangan umum yang menyangkut seni rupa di dunia. Berbagai fenomena tersebut dapat ditelaah sebagai inspirasi hingga berbagai pertimbangan lain
-                    dalam berkarya. Tidak sedikit pula berbagai fenomena seni rupa yang dimanfaatkan untuk penelitian, baik dalam bidang seni rupa, maupun bidang lainnya seperti sejarah, arkeologi, dan bidang ilmu lainnya....
+                  Mimesis adalah teori yang menganggap semua karya seni sebagai tiruan alam atau kehidupan. Bahkan kata mimesis sendiri dalam bahasa Yunani secara tersirat bermakna “tiruan”. Mimesis merupakan teori yang telah lama diajukan oleh salah satu pelopor filosof di dunia ini, yaitu Plato. Mengapa demikian? Bukankah seandainya ketika kita melukiskan pemandangan alam, proses penciptaanya tetap melibatkan imajinasi kita sendiri? Seandainya kita menggambarkan suatu peristiwa dalam karya sastra, tetap akan melibatkan sudut pandang kita sendiri?
                   </p>
                   <div id="seni"></div>
                 </div>
