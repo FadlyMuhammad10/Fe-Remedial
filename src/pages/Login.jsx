@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { postLogin } from "../redux/action";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 export default function Login() {
@@ -88,19 +89,27 @@ export default function Login() {
                     />
                   </div>
 
-                  <p className="small d-flex text-start mb-3 pb-lg-2">
+                  {/* <p className="small d-flex text-start mb-3 pb-lg-2">
                     <a className="link-danger" href="#!">
                       Forgot password?
                     </a>
-                  </p>
+                  </p> */}
                   <div className="d-flex justify-content-center">
                     <button
                       onClick={handleLogin}
-                      className="btn btn-danger btn-md px-5 mb-3"
+                      className="btn btn-danger btn-md px-5 mb-3 mt-3"
                       type="submit"
                     >
                       Login
                     </button>
+                  </div>
+                  <div className="mt-2 d-flex justify-content-center text-light">
+                    <div className="me-2">
+                      <p>Belum Memiliki Akun?</p>
+                    </div>
+                    <Link to="/register" className="me-2 link-primary">
+                      Daftar Sekarang
+                    </Link>
                   </div>
                 </div>
               </div>

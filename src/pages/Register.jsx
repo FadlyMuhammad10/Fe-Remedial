@@ -1,4 +1,5 @@
 import "../assets/css/style.css";
+import { Link } from "react-router-dom";
 
 export default function Register() {
   return (
@@ -90,6 +91,14 @@ export default function Register() {
                         >
                           Daftar
                         </button>
+                      </div>
+                      <div className="mt-2 d-flex justify-content-center text-light">
+                        <div className="me-2">
+                          <p>Sudah Memiliki Akun?</p>
+                        </div>
+                        <Link to="/login" className="me-2 link-danger">
+                          Masuk
+                        </Link>
                       </div>
                     </form>
                   </div>
