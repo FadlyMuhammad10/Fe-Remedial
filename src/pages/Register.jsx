@@ -17,31 +17,24 @@ export default function Register() {
 
   const handleNameChange = (event) => {
     setName(event.target.value);
-    console.log(event.target.value);
   };
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
-    console.log(event.target.value);
   };
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
-    console.log(event.target.value);
   };
   const handleKonfirmasiChange = (event) => {
     setKonfirmasi(event.target.value);
-    console.log(event.target.value);
   };
   const handleAsalSekolahChange = (event) => {
     setAsalSekolah(event.target.value);
-    console.log(event.target.value);
   };
   const handleAlasanChange = (event) => {
     setAlasan(event.target.value);
-    console.log(event.target.value);
   };
   const handleAlamatChange = (event) => {
     setAlamat(event.target.value);
-    console.log(event.target.value);
   };
   const handleSignUp = async () => {
     const data = {
