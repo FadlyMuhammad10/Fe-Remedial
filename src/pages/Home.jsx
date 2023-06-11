@@ -44,7 +44,7 @@ export default function Home() {
         {/*End About Section */}
 
         {/*======= Seni Section ======= */}
-        <section id="seni" className="seni section-bg pt-5">
+        <section id="seni" className="seni pt-5">
           <div className="container-fluid">
             <div className="row justify-content-center">
               <div className="col-11 col-sm-11 col-md-11 col-lg-11 col-xl-10 ">
@@ -400,7 +400,7 @@ export default function Home() {
         {/*End pembelajaran Section */}
 
         {/*======= Sastra Section ======= */}
-        <section id="seni" className="seni section-bg">
+        <section id="seni" className="seni ">
           <div className="container-fluid">
             <div className="row justify-content-center">
               <div className="col-11 col-sm-11 col-md-11 col-lg-11 col-xl-10">
