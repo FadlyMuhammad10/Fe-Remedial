@@ -23,11 +23,12 @@ import store from "./redux/store";
 
 
 function App() {
+  const isLoggedIn = true;
   return (
     <>
       <Provider store={store}>
         <Router>
-          <Header />
+          <Header isLoggedIn={isLoggedIn} />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />

@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { IoIosArrowDown } from "react-icons/io";
-import { VscAccount } from "react-icons/vsc";
 
 export default function Header() {
   return (

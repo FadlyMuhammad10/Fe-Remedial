@@ -6,16 +6,9 @@ import { BsStarFill } from "react-icons/bs";
 import { Carousel } from "../components/Carousel";
 import { slides } from "../assets/js/carouselData.json";
 import { Link } from "react-router-dom";
-// import ArtikelList from "../components/ArtikelList";
-// import { useEffect, useState } from "react";
+
 
 export default function Home() {
-  // const [items, setItems] = useState([])
-  //   useEffect(() => {
-  //       fetch('https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=837feb089d874ae38adb5c13e616e88c')
-  //       .then(res => res.json())
-  //       .then(data => setItems(data.articles))
-  //   },[])
   return (
     <>
       {/* <Header /> */}
@@ -51,7 +44,7 @@ export default function Home() {
         {/*End About Section */}
 
         {/*======= Seni Section ======= */}
-        <section id="seni" className="seni pt-5">
+        <section id="seni" className="seni section-bg pt-5">
           <div className="container-fluid">
             <div className="row justify-content-center">
               <div className="col-11 col-sm-11 col-md-11 col-lg-11 col-xl-10 ">
@@ -267,7 +260,7 @@ export default function Home() {
                             height={"250"}
                             src={"https://www.youtube.com/embed/ImRf-cl-V7A"}
                             title="YouTube video player"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen
                           ></iframe>
                         </div>
                       </div>
@@ -291,7 +284,7 @@ export default function Home() {
                             height={"250"}
                             src={"https://www.youtube.com/embed/videoseries?list=PLhkyWqKxYl7LChI6lcooI-7_f_zFpo6Jh"}
                             title="YouTube video player"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen
                           ></iframe>
                         </div>
                       </div>
@@ -315,7 +308,7 @@ export default function Home() {
                             height={"250"}
                             src={"https://www.youtube.com/embed/videoseries?list=PLhkyWqKxYl7Jygbz5eF4sU7vvkRfY5ikO"}
                             title="YouTube video player"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen
                           ></iframe>
                         </div>
                       </div>
@@ -339,7 +332,7 @@ export default function Home() {
                             height={"250"}
                             src={"https://www.youtube.com/embed/videoseries?list=PLHsx37V5nkBokmu8UWeBH51cD6jMT7OMc"}
                             title="YouTube video player"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen
                           ></iframe>
                         </div>
                       </div>
@@ -363,7 +356,7 @@ export default function Home() {
                             height={"250"}
                             src={"https://www.youtube.com/embed/s3jVNZl5vi4"}
                             title="YouTube video player"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen
                           ></iframe>
                         </div>
                       </div>
@@ -384,7 +377,7 @@ export default function Home() {
                             height={"250"}
                             src={"https://www.youtube.com/embed/videoseries?list=PLhkyWqKxYl7L8YaQ0VDaOgU9S769nj1Ff"}
                             title="YouTube video player"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen
                           ></iframe>
                         </div>
                       </div>
@@ -407,7 +400,7 @@ export default function Home() {
         {/*End pembelajaran Section */}
 
         {/*======= Sastra Section ======= */}
-        <section id="seni" className="seni">
+        <section id="seni" className="seni section-bg">
           <div className="container-fluid">
             <div className="row justify-content-center">
               <div className="col-11 col-sm-11 col-md-11 col-lg-11 col-xl-10">
@@ -513,17 +506,15 @@ export default function Home() {
             </div>
 
             <div className="row justify-content-center">
-              <div className="col-lg-11" id="artikel-list">
-                {/* <ArtikelList items={items}/> */}
-              </div>
+              <div className="col-lg-11" id="artikel-list"></div>
             </div>
-                                  
+
             <div className="col-lg-13 d-flex justify-content-center">
-              <Link to="/artikel">
+              <a href="artikel.html">
                 <button type="button" className="btn btn-outline-secondary btn-md my-4 fw-bold">
                   Lihat Semua
                 </button>
-              </Link>
+              </a>
             </div>
           </div>
         </section>
