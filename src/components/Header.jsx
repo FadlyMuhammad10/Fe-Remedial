@@ -1,12 +1,17 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { IoIosArrowDown } from "react-icons/io";
 import { VscAccount } from "react-icons/vsc";
 
+
 export default function Header() {
-  // const nama = localStorage.getItem("nama");
-  // // Lakukan sesuatu dengan nilai nama lengkap, seperti menampilkan di header atau menggunakannya dalam logika lain di komponen ini
-  // console.log(nama);
+  const nama = localStorage.getItem("nama_lengkap");
+  const navigate = useNavigate()
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("nama_lengkap");
+    navigate("/")
+  }
   return (
     <>
       {/* ======= Header ======= */}
@@ -75,15 +80,23 @@ export default function Header() {
                 </a>
               </li>
               <li className="dropdown">
-                <VscAccount className="me-2" fontSize="2rem" color="white" /> <IoIosArrowDown fontSize="1.2rem" color="white" />
+                <div className="row">
+                  <VscAccount className="col" fontSize="2rem" color="white"/> 
+                  {nama && 
+                  <div className="col align-self-center text-white">
+                    {nama}
+                  </div>}
+                  <IoIosArrowDown className="col align-self-center"fontSize="1.2rem" color="white"/>
+                </div> 
                 <ul>
                   <li>
-                    <NavLink to="/">Logout</NavLink>
+                    <div onClick={handleLogout}>
+                      <p className="ps-4">Logout</p>
+                    </div>
                   </li>
                 </ul>
               </li>
             </ul>
-
             <i className="bi bi-list mobile-nav-toggle"></i>
           </nav>
           {/* navbar */}

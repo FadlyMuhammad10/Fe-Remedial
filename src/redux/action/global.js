@@ -14,8 +14,6 @@ export const  postSignUp= (data) => async (dispatch) => {
     console.log(res)
     if(res && res.data && res.data.message === "success register"){
       localStorage.setItem("register", "success");
-      // const nama = res.data.nama;
-      // localStorage.setItem("nama_lengkap", nama);
     }
   } catch (err) {
     console.log("ERORBTUHGTBOBO", err);
@@ -36,8 +34,8 @@ export const postLogin = (data) => async (dispatch) => {
     console.log(res)
     if(res && res.data && res.data.token){
       localStorage.setItem("token", res?.data?.token);
-      // const nama = res.data.nama;
-      // localStorage.setItem("nama_lengkap", nama);
+      const nama = res.data.nama_lengkap;
+      localStorage.setItem("nama_lengkap", nama);
     }
   } catch (err) {
     console.log("ERORBTUHGTBOBO", err);
