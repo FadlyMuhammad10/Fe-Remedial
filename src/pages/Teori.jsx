@@ -6,6 +6,7 @@ import "../assets/css/style.css";
 export default function Teori() {
   return (
     <>
+      <Header/>
       <main id="main">
         {/* ======= Breadcrumbs =======  */}
         <section id="breadcrumbs" className="breadcrumbs">

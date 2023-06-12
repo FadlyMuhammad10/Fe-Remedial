@@ -56,7 +56,7 @@ export default function Register() {
     console.log("register= ",register)
       if(register === "success"){
         console.log(register)
-        navigate('/login')
+        navigate('/')
         localStorage.removeItem("register");
       }    }, 2000);
   };
@@ -104,9 +104,7 @@ export default function Register() {
                       onChange={handlePasswordChange} id="passwordRegister" className="form-control form-control-sm" />
                           </div>
                         </div>
-                      </div>
-
-                      <div className="col-md-6 mb-2 text-light">
+                        <div className="col-md-6 mb-2 text-light">
                           <label className="form-label" htmlFor="lastName">
                             Konfirmasi password
                           </label>
@@ -115,6 +113,9 @@ export default function Register() {
                       onChange={handleKonfirmasiChange} id="passwordRegister2" className="form-control form-control-sm" />
                           </div>
                         </div>
+                      </div>
+
+                      
 
                       <div className="row">
                         <div className="col-md-6 mb-2 text-light">
@@ -157,14 +158,14 @@ export default function Register() {
                           Daftar
                         </div>
                       </div>
-                      <div className="mt-2 d-flex justify-content-center text-light">
+                      {/* <div className="mt-2 d-flex justify-content-center text-light">
                         <div className="me-2">
                           <p>Sudah Memiliki Akun?</p>
                         </div>
-                        {/* <Link to="/login" className="me-2 link-danger">
+                        <Link to="/" className="me-2 link-danger">
                           Masuk
-                        </Link> */}
-                      </div>
+                        </Link>
+                      </div> */}
                     </form>
                   </div>
                 </div>

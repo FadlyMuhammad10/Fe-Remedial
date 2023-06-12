@@ -12,6 +12,7 @@ export default function Home() {
   return (
     <>
       {/* <Header /> */}
+      <Header/>
       {/* ======= Hero Section ======= */}
       <section id="hero">
         <Carousel data={slides}/>

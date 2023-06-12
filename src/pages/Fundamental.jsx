@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 export default function Fundamental() {
   return (
     <>
+      <Header/>
       <main id="main">
         {/* ======= Breadcrumbs =======  */}
         <section id="breadcrumbs" className="breadcrumbs">

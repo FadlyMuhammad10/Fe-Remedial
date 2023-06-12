@@ -32,7 +32,7 @@ export default function Login() {
     console.log("token= ",token)
       if(token!==null && token!==undefined && token!=="undefined"){
         console.log(token)
-        navigate('/')
+        navigate('/home')
         localStorage.removeItem("token");
       }    }, 2000);
   };

@@ -3,6 +3,9 @@ import { NavLink } from "react-router-dom";
 import { IoIosArrowDown } from "react-icons/io";
 
 export default function Header() {
+  // const namaLengkap = localStorage.getItem("nama_lengkap");
+  // // Lakukan sesuatu dengan nilai nama lengkap, seperti menampilkan di header atau menggunakannya dalam logika lain di komponen ini
+  // console.log(namaLengkap);
   return (
     <>
       {/* ======= Header ======= */}
@@ -16,7 +19,7 @@ export default function Header() {
           <nav id="navbar" className="navbar">
             <ul>
               <li>
-                <NavLink to="/" className="nav-link scrollto scrollto">
+                <NavLink to="/home" className="nav-link scrollto scrollto">
                   Beranda
                 </NavLink>
               </li>
@@ -70,7 +73,7 @@ export default function Header() {
                   <i className="bi bi-search"></i>
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <NavLink to="/register" className="btn-daftar animated fadeInUp scrollto">
                   Daftar
                 </NavLink>
@@ -79,17 +82,16 @@ export default function Header() {
                 <NavLink to="/login" className="btn-get-started animated fadeInUp scrollto">
                   Masuk
                 </NavLink>
-              </li>
+              </li> */}
               {/* <li className="dropdown">
-                <a href="#program">
-                  <VscAccount className="me-2" fontSize="2rem"/> <IoIosArrowDown fontSize="1.2rem" />
-                </a>
+                <VscAccount className="me-2" fontSize="2rem"/> <IoIosArrowDown fontSize="1.2rem" />
                 <ul>
                   <li>
-                    <NavLink to="/login">Logout</NavLink>
+                    <NavLink to="/">Logout</NavLink>
                   </li>
                 </ul>
               </li> */}
+
 
             </ul>
 

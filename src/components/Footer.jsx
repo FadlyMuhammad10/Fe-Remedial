@@ -16,7 +16,7 @@ export default function Footer() {
                     <h4>Layanan Kami</h4>
                     <ul>
                       <li>
-                        <IoChevronForward /> <NavLink to="/">Beranda</NavLink>
+                        <IoChevronForward /> <NavLink to="/home">Beranda</NavLink>
                       </li>
                       <li>
                         <IoChevronForward /> <NavLink to="/about">Tentang kami</NavLink>

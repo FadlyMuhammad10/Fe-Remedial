@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 export default function Praktik() {
   return (
     <>
+      <Header/>
       <main id="main">
         {/* ======= Breadcrumbs =======  */}
         <section id="breadcrumbs" className="breadcrumbs">
