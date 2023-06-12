@@ -2,16 +2,17 @@ import "../assets/css/style.css";
 import { Link, useLocation } from "react-router-dom";
 import { ImPriceTag } from "react-icons/im";
 import { useEffect } from "react";
+import Header from "../components/Header";
 
 export default function Pembayaran(props) {
   const location = useLocation();
   // console.log(props, "props");
-  // console.log(location, "useLocation Hook");
-  const mapel = location.state;
-  const tempat = location.state;
-  const waktu = location.state;
-  const tanggal = location.state;
-  const harga = location.state;
+  console.log(location, "useLocation Hook");
+  const mapel = location?.state?.mapel;
+  const tempat = location?.state?.tempat;
+  const waktu = location?.state?.waktu;
+  const tanggal = location?.state?.tanggal;
+  const harga = location?.state?.harga;
 
   // useEffect(() => {
   //   const midtransScriptUrl = "https://app.sandbox.midtrans.com/snap/snap.js";
@@ -44,6 +45,7 @@ export default function Pembayaran(props) {
 
   return (
     <>
+      <Header />
       <main id="main">
         {/*======= Breadcrumbs ======= */}
         <section id="breadcrumbs" className="breadcrumbs">
@@ -78,10 +80,10 @@ export default function Pembayaran(props) {
                     <ImPriceTag fontSize="2rem" color="yellow" border="1px solid black" />
                     <p className="ms-3 fs-5">Total Harga</p>
                   </div>
-                  <p className="fs-5 text-white">{harga.harga}</p>
+                  <p className="fs-5 text-white">{harga}</p>
                 </div>
 
-                <h6>Metode Pembayaran</h6>
+                {/* <h6>Metode Pembayaran</h6>
                 <div className="col-10 d-flex align-self-center">
                   <select className="form-select bg-secondary bg-opacity-25" aria-label="Default select example">
                     <option select="true">Pilih Metode Pembayaran</option>
@@ -90,7 +92,7 @@ export default function Pembayaran(props) {
                     <option defaultValue="3">E-Wallet</option>
                     <option defaultValue="4">Lainnya</option>
                   </select>
-                </div>
+                </div> */}
 
                 <div className="form-check my-4 ">
                   <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
@@ -138,7 +140,7 @@ export default function Pembayaran(props) {
                           <h6>:</h6>
                         </div>
                       </div>
-                      <div className="ps-3">{mapel.mapel}</div>
+                      <div className="ps-3">{mapel}</div>
                     </li>
 
                     <li className="d-flex pb-1">
@@ -168,7 +170,7 @@ export default function Pembayaran(props) {
                           <h6>:</h6>
                         </div>
                       </div>
-                      <div className="ps-3 text-uppercase">{tempat.tempat}</div>
+                      <div className="ps-3 text-uppercase">{tempat}</div>
                     </li>
 
                     <li className="d-flex pb-1">
@@ -178,7 +180,7 @@ export default function Pembayaran(props) {
                           <h6>:</h6>
                         </div>
                       </div>
-                      <div className="ps-3">{waktu.waktu}</div>
+                      <div className="ps-3">{waktu}</div>
                     </li>
 
                     <li className="d-flex pb-1">
@@ -188,7 +190,7 @@ export default function Pembayaran(props) {
                           <h6>:</h6>
                         </div>
                       </div>
-                      <div className="ps-3">{tanggal.tanggal}</div>
+                      <div className="ps-3">{tanggal}</div>
                     </li>
 
                     <li className="d-flex pb-1">
@@ -210,7 +212,7 @@ export default function Pembayaran(props) {
                           <h6 className="fw-semibold">:</h6>
                         </div>
                       </div>
-                      <div className="ps-3 fw-semibold">{harga.harga}</div>
+                      <div className="ps-3 fw-semibold">{harga}</div>
                     </li>
                   </ul>
                 </div>

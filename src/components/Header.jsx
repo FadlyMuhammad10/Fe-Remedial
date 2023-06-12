@@ -35,7 +35,7 @@ export default function Header() {
                 </NavLink>
               </li>
               <li className="dropdown">
-                <a href="#program">
+                <a style={{ color: "white" }}>
                   <span className="me-1">Program</span> <IoIosArrowDown fontSize="1.2rem" />
                 </a>
                 <ul>
@@ -48,7 +48,7 @@ export default function Header() {
                 </ul>
               </li>
               <li className="dropdown">
-                <a href="#seni">
+                <a style={{ color: "white" }}>
                   <span className="me-1">Seni</span> <IoIosArrowDown fontSize="1.2rem" />
                 </a>
                 <ul>
