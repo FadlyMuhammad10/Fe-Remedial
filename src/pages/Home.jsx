@@ -12,6 +12,7 @@ export default function Home() {
   return (
     <>
       {/* <Header /> */}
+      <Header/>
       {/* ======= Hero Section ======= */}
       <section id="hero">
         <Carousel data={slides}/>
@@ -44,7 +45,7 @@ export default function Home() {
         {/*End About Section */}
 
         {/*======= Seni Section ======= */}
-        <section id="seni" className="seni section-bg pt-5">
+        <section id="seni" className="seni pt-5">
           <div className="container-fluid">
             <div className="row justify-content-center">
               <div className="col-11 col-sm-11 col-md-11 col-lg-11 col-xl-10 ">
@@ -251,7 +252,147 @@ export default function Home() {
             <div className="row justify-content-center">
               <div className="col-10 col-sm-10 col-md-10 col-lg-11 col-xl-10">
                 <div className="row">
-                  <iframe width={"560"} height={"315"} src={"https://www.youtube.com/embed/fzeWc3zh01g"} title="YouTube video player"></iframe>
+                  <div className="col-lg-4 col-md-6 icon-box">
+                    <figure className="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio">
+                      <div className="wp-block-embed__wrapper">
+                        <div className="jetpack-video-wrapper">
+                          <iframe
+                            width={"100%"}
+                            height={"250"}
+                            src={"https://www.youtube.com/embed/ImRf-cl-V7A"}
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen
+                          ></iframe>
+                        </div>
+                      </div>
+                    </figure>
+                    <h4 className="title">
+                      <a href="https://youtu.be/ImRf-cl-V7A" target="_blank">
+                        APA ITU SENI? Pengertian, Fungsi, Cabang dan Pembagian Seni
+                      </a>
+                    </h4>
+                    <p className="description">
+                      Pada umumnya seni sering diartikan sebagai sebuah ekspresi perasaan manusia yang didalamnya mengandung unsur estetik atau keindahan dan diungkapkan melalui suatu media yang nyata baik itu dalam berupa gerak, rupa, nada
+                      dan syair, serta dapat dirasakan oleh panca indra manusia.{" "}
+                    </p>
+                  </div>
+                  <div className="col-lg-4 col-md-6 icon-box">
+                    <figure className="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio">
+                      <div className="wp-block-embed__wrapper">
+                        <div className="jetpack-video-wrapper">
+                          <iframe
+                            width={"100%"}
+                            height={"250"}
+                            src={"https://www.youtube.com/embed/videoseries?list=PLhkyWqKxYl7LChI6lcooI-7_f_zFpo6Jh"}
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen
+                          ></iframe>
+                        </div>
+                      </div>
+                    </figure>
+                    <h4 className="title">
+                      <a href={"https://youtube.com/playlist?list=PLhkyWqKxYl7LChI6lcooI-7_f_zFpo6Jh"} target="_blank">
+                        Seni Tari
+                      </a>
+                    </h4>
+                    <p className="description">
+                      seni tari adalah suatu gerakan semua bagian tubuh atau hanya sebagian saja yang dilakukan dengan ritmis serta pada waktu tertentu untuk mengungkap pikiran, perasaan, dan tujuan dengan iringan musik atau tanpa iringan
+                      musik.{" "}
+                    </p>
+                  </div>
+                  <div className="col-lg-4 col-md-6 icon-box">
+                    <figure className="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio">
+                      <div className="wp-block-embed__wrapper">
+                        <div className="jetpack-video-wrapper">
+                          <iframe
+                            width={"100%"}
+                            height={"250"}
+                            src={"https://www.youtube.com/embed/videoseries?list=PLhkyWqKxYl7Jygbz5eF4sU7vvkRfY5ikO"}
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen
+                          ></iframe>
+                        </div>
+                      </div>
+                    </figure>
+                    <h4 className="title">
+                      <a href={"https://youtube.com/playlist?list=PLhkyWqKxYl7Jygbz5eF4sU7vvkRfY5ikO"} target="_blank">
+                        Seni Rupa
+                      </a>
+                    </h4>
+                    <p className="description">
+                      Seni rupa adalah cabang seni yang membentuk karya seni dengan media yang bisa ditangkap mata dan dirasakan dengan rabaan. Kesan ini diciptakan dengan mengolah konsep titik, garis, bidang, bentuk, volume, warna,
+                      tekstur, dan pencahayaan dengan acuan estetika.
+                    </p>
+                  </div>
+                  <div className="col-lg-4 col-md-6 icon-box">
+                    <figure className="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio">
+                      <div className="wp-block-embed__wrapper">
+                        <div className="jetpack-video-wrapper">
+                          <iframe
+                            width={"100%"}
+                            height={"250"}
+                            src={"https://www.youtube.com/embed/videoseries?list=PLHsx37V5nkBokmu8UWeBH51cD6jMT7OMc"}
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen
+                          ></iframe>
+                        </div>
+                      </div>
+                    </figure>
+                    <h4 className="title">
+                      <a href={"https://youtube.com/playlist?list=PLHsx37V5nkBokmu8UWeBH51cD6jMT7OMc"} target="_blank">
+                        Seni Musik
+                      </a>
+                    </h4>
+                    <p className="description">
+                      Seni musik adalah sebuah cabang seni yang lebih fokus mengutamakan penggunaan harmoni, melodi, irama, tempo, dan vokal sebagai sarana menyampaikan nilai-nilai seni itu sendiri dari seniman atau pembuat seni kepada
+                      orang lain atau penikmat seni.
+                    </p>
+                  </div>
+                  <div className="col-lg-4 col-md-6 icon-box">
+                    <figure className="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio">
+                      <div className="wp-block-embed__wrapper">
+                        <div className="jetpack-video-wrapper">
+                          <iframe
+                            width={"100%"}
+                            height={"250"}
+                            src={"https://www.youtube.com/embed/s3jVNZl5vi4"}
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen
+                          ></iframe>
+                        </div>
+                      </div>
+                    </figure>
+                    <h4 className="title">
+                      <a href={"https://youtu.be/s3jVNZl5vi4"} target="_blank">
+                        Seni Sastra
+                      </a>
+                    </h4>
+                    <p className="description">Seni sastra adalah seni yang menampilkan persepsi, ekspresi, gagasan, dan keindahan melalui tuliskan.</p>
+                  </div>
+                  <div className="col-lg-4 col-md-6 icon-box">
+                    <figure className="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio">
+                      <div className="wp-block-embed__wrapper">
+                        <div className="jetpack-video-wrapper">
+                          <iframe
+                            width={"100%"}
+                            height={"250"}
+                            src={"https://www.youtube.com/embed/videoseries?list=PLhkyWqKxYl7L8YaQ0VDaOgU9S769nj1Ff"}
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen
+                          ></iframe>
+                        </div>
+                      </div>
+                    </figure>
+                    <h4 className="title">
+                      <a href={"https://youtube.com/playlist?list=PLhkyWqKxYl7L8YaQ0VDaOgU9S769nj1Ff"} target="_blank">
+                        Seni Teater
+                      </a>
+                    </h4>
+                    <p className="description">
+                      Seni teater adalah jenis kesenian pertunjukan drama yang dipentaskan di atas panggung. Secara spesifik, seni teater merupakan sebuah seni drama yang menampilkan perilaku manusia dengan gerak, tari, dan nyanyian yang
+                      disajikan lengkap dengan dialog dan akting.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -260,7 +401,7 @@ export default function Home() {
         {/*End pembelajaran Section */}
 
         {/*======= Sastra Section ======= */}
-        <section id="seni" className="seni section-bg">
+        <section id="seni" className="seni ">
           <div className="container-fluid">
             <div className="row justify-content-center">
               <div className="col-11 col-sm-11 col-md-11 col-lg-11 col-xl-10">

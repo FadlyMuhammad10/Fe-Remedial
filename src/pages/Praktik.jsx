@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 export default function Praktik() {
   return (
     <>
+      <Header/>
       <main id="main">
         {/* ======= Breadcrumbs =======  */}
         <section id="breadcrumbs" className="breadcrumbs">
@@ -39,13 +40,12 @@ export default function Praktik() {
 
               <div className="row justify-content-center">
                 <div className="col-12 col-sm-12 col-md-8 col-lg-8">
-                  <img src="src/assets/img/fundamental/fe.jpg" width="100%" height="450" alt="" />
+                  <img src="src/assets/img/praktik/kk.jpg" width="100%" height="450" alt="" />
                   <h1 className="mt-3">
-                    <strong>Fenomena Seni Rupa</strong>
+                    <strong>Teknik Kolase Teori, Praktik & Pertimbangan Juxtaposition</strong>
                   </h1>
                   <p>
-                    Fenomena Seni Rupa dapat menyangkut banyak peristiwa, pergerakan, hingga perkembangan umum yang menyangkut seni rupa di dunia. Berbagai fenomena tersebut dapat ditelaah sebagai inspirasi hingga berbagai pertimbangan lain
-                    dalam berkarya. Tidak sedikit pula berbagai fenomena seni rupa yang dimanfaatkan untuk penelitian, baik dalam bidang seni rupa, maupun bidang lainnya seperti sejarah, arkeologi, dan bidang ilmu lainnya....
+                  Teknik kolase adalah penyusunan komposisi karya seni rupa yang dilakukan dengan cara menempelkan berbagai bahan seperti kain perca, bulu, potongan koran, dan bahan lainnya pada media karya. Teknik ini terdengar biasa saja dan malah tampaknya hanya cocok untuk hobi sehari-hari, bukan karya seni. Lalu, sebetulnya apa faktor yang menyebabkan keberhasilan dari teknik kolase sehingga mampu mewakili ekspresi seorang seniman yang sudah terkenal sekali pun?
                   </p>
                   <div id="seni"></div>
                 </div>

@@ -13,6 +13,7 @@ export default function Artikel() {
     },[])
     return (
         <>
+            <Header/>
             <main>
                 <section id="breadcrumbs" className="breadcrumbs">
                     <div className="container-fluid">

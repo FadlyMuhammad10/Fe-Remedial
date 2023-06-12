@@ -26,9 +26,8 @@ function App() {
     <>
       <Provider store={store}>
         <Router>
-          <Header />
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/program-offline" element={<Program_Offline />} />
             <Route path="/program-online" element="#" />
@@ -38,7 +37,7 @@ function App() {
             <Route path="/praktik-seni" element={<Praktik />} />
             <Route path="/artikel" element={<Artikel />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/login" element={<Login />} />
+            <Route path="/" element={<Login />} />
             <Route path="/detailartikel" element={<DetailArtikel />} />
           </Routes>
           <Footer />
