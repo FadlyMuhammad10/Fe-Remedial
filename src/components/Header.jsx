@@ -1,11 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { IoIosArrowDown } from "react-icons/io";
+import { VscAccount } from "react-icons/vsc";
 
 export default function Header() {
-  // const namaLengkap = localStorage.getItem("nama_lengkap");
+  // const nama = localStorage.getItem("nama");
   // // Lakukan sesuatu dengan nilai nama lengkap, seperti menampilkan di header atau menggunakannya dalam logika lain di komponen ini
-  // console.log(namaLengkap);
+  // console.log(nama);
   return (
     <>
       {/* ======= Header ======= */}
@@ -73,24 +74,14 @@ export default function Header() {
                   <i className="bi bi-search"></i>
                 </a>
               </li>
-              {/* <li>
-                <NavLink to="/register" className="btn-daftar animated fadeInUp scrollto">
-                  Daftar
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/login" className="btn-get-started animated fadeInUp scrollto">
-                  Masuk
-                </NavLink>
-              </li> */}
-              {/* <li className="dropdown">
-                <VscAccount className="me-2" fontSize="2rem"/> <IoIosArrowDown fontSize="1.2rem" />
+              <li className="dropdown">
+                <VscAccount className="me-2" fontSize="2rem" color="white"/> <IoIosArrowDown fontSize="1.2rem" color="white"/>
                 <ul>
                   <li>
                     <NavLink to="/">Logout</NavLink>
                   </li>
                 </ul>
-              </li> */}
+              </li>
 
 
             </ul>
