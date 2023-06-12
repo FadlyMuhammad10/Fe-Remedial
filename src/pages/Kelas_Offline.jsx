@@ -1,13 +1,16 @@
 import { useState } from "react";
 import "../assets/css/style.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Header from "../components/Header";
 
-export default function Program_Offline() {
+export default function Kelas_Offline() {
   const [harga, setHarga] = useState("Rp 25.000,00");
-  const [mapel, setMapel] = useState("");
-  const [tempat, setTempat] = useState("");
-  const [tanggal, setTanggal] = useState("");
-  const [waktu, setWaktu] = useState("");
+  const [mapel, setMapel] = useState(null);
+  const [tempat, setTempat] = useState(null);
+  const [tanggal, setTanggal] = useState(null);
+  const [waktu, setWaktu] = useState(null);
+
+  const navigate = useNavigate();
 
   const pelajaran = [
     { label: "Seni Tari", value: 1 },
@@ -26,27 +29,36 @@ export default function Program_Offline() {
 
   function handlePelajaran(event) {
     setMapel(event.target.value);
-    // console.log(event.target.value);
+    console.log(event.target.value);
   }
 
   function handleLokasi(event) {
     setTempat(event.target.value);
-    // console.log(event.target.value);
+    console.log(event.target.value);
   }
 
   function handleDate(event) {
     setTanggal(event.target.value);
-    // console.log(event.target.value);
+    console.log(event.target.value);
   }
 
   function handleWaktu(event) {
     setWaktu(event.target.value);
-    // console.log(event.target.value);
+    console.log(event.target.value);
+  }
+
+  function handleNext() {
+    if (harga !== null && mapel !== null && tempat !== null && tanggal !== null && waktu !== null) {
+      const location = {
+        state: { harga: harga, mapel: mapel, tempat: tempat, tanggal: tanggal, waktu: waktu },
+      };
+      navigate("/pembayaran", location);
+    }
   }
 
   return (
     <>
-      <Header/>
+      <Header />
       <main id="main">
         {/* <!-- ======= Breadcrumbs ======= --> */}
         <section id="breadcrumbs" className="breadcrumbs">
@@ -272,9 +284,9 @@ export default function Program_Offline() {
                   </div>
 
                   <div className="d-flex justify-content-center my-4">
-                    <Link className="btn btn-dark px-5" state={{ harga: harga, mapel: mapel, tempat: tempat, tanggal: tanggal, waktu: waktu }} to="/pembayaran" role="button">
+                    <div onClick={handleNext} className="btn btn-dark px-5" state={{ harga: harga, mapel: mapel, tempat: tempat, tanggal: tanggal, waktu: waktu }} to="/pembayaran" role="button">
                       Selanjutnya
-                    </Link>
+                    </div>
                   </div>
                 </div>
               </div>

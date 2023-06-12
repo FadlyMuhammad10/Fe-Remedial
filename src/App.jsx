@@ -15,11 +15,11 @@ import DetailArtikel from "./components/DetailArtikel";
 import Fundamental from "./pages/Fundamental";
 import Teori from "./pages/Teori";
 import Praktik from "./pages/Praktik";
-import Program_Offline from "./pages/Kelas-Offline";
 import Pembayaran from "./pages/Pembayaran";
 import StatusBayar from "./pages/StatusBayar";
 import { Provider } from "react-redux";
 import store from "./redux/store";
+import Kelas_Offline from "./pages/Kelas_Offline";
 
 function App() {
   return (
@@ -29,7 +29,7 @@ function App() {
           <Routes>
             <Route path="/home" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/program-offline" element={<Program_Offline />} />
+            <Route path="/program-offline" element={<Kelas_Offline />} />
             <Route path="/program-online" element="#" />
             <Route path="/pembayaran" element={<Pembayaran />} />
             <Route path="/fundamental-seni" element={<Fundamental />} />

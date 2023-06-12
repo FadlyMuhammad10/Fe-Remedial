@@ -30,7 +30,7 @@ export default function Header() {
                 </NavLink>
               </li>
               <li className="dropdown">
-                <a href="#program">
+                <a style={{ color: "white" }}>
                   <span className="me-1">Program</span> <IoIosArrowDown fontSize="1.2rem" />
                 </a>
                 <ul>
@@ -43,7 +43,7 @@ export default function Header() {
                 </ul>
               </li>
               <li className="dropdown">
-                <a href="#seni">
+                <a style={{ color: "white" }}>
                   <span className="me-1">Seni</span> <IoIosArrowDown fontSize="1.2rem" />
                 </a>
                 <ul>
@@ -75,15 +75,13 @@ export default function Header() {
                 </a>
               </li>
               <li className="dropdown">
-                <VscAccount className="me-2" fontSize="2rem" color="white"/> <IoIosArrowDown fontSize="1.2rem" color="white"/>
+                <VscAccount className="me-2" fontSize="2rem" color="white" /> <IoIosArrowDown fontSize="1.2rem" color="white" />
                 <ul>
                   <li>
                     <NavLink to="/">Logout</NavLink>
                   </li>
                 </ul>
               </li>
-
-
             </ul>
 
             <i className="bi bi-list mobile-nav-toggle"></i>
