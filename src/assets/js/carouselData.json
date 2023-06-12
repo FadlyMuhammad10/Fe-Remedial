@@ -1,15 +1,15 @@
 {
     "slides": [
       {
-        "src": "https://i.ibb.co/s21zGp1/slide-1.png",
+        "src": "https://i.ibb.co/m0Hf3vv/slide-1.png",
         "alt": "Image 1 for carousel"
       },
       {
-        "src": "https://i.ibb.co/9sTnBq0/slide-2.png",
+        "src": "https://i.ibb.co/TbgbtmM/slide-2.png",
         "alt": "Image 2 for carousel"
       },
       {
-        "src": "https://i.ibb.co/dLDBWm2/slide-3.png",
+        "src": "https://i.ibb.co/KjZV8L6/slide-3.png",
         "alt": "Image 3 for carousel"
       }
     ]
