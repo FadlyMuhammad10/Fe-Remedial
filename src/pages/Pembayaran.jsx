@@ -1,13 +1,13 @@
 import "../assets/css/style.css";
 import { Link, useLocation } from "react-router-dom";
 import { ImPriceTag } from "react-icons/im";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Header from "../components/Header";
 import axios from "axios";
 
 export default function Pembayaran(props) {
   const location = useLocation();
-  // console.log(props, "props");
+  const [disable, setDisable] = useState("");
   console.log(location, "useLocation Hook");
 
   const nama = localStorage.getItem("nama_lengkap");
@@ -18,6 +18,11 @@ export default function Pembayaran(props) {
   const harga = location?.state?.harga;
   // const email = localStorage.getItem("email");
   // const alamat = localStorage.getItem("alamat");
+
+  function handleCheck(event) {
+    setDisable(event.target.checked);
+    console.log(event.target.checked);
+  }
 
   useEffect(() => {
     const midtransScriptUrl = "https://app.sandbox.midtrans.com/snap/snap.js";
@@ -207,14 +212,14 @@ export default function Pembayaran(props) {
                 </div>
 
                 <div className="form-check my-4 ">
-                  <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                  <input className="form-check-input" type="checkbox" id="flexCheckDefault" onChange={handleCheck} />
                   <label className="form-check-label fs-6" htmlFor="flexCheckDefault">
                     Saya telah membaca dan menyetujui <span className="fw-semibold">Syarat dan Ketentuan</span>
                   </label>
                 </div>
 
                 <div className="d-flex justify-content-center my-4">
-                  <button onClick={() => bayar()} className="btn btn-danger px-5" role="button">
+                  <button onClick={() => bayar()} disabled={!disable} className="btn btn-danger px-5" role="button">
                     Bayar
                   </button>
                 </div>
