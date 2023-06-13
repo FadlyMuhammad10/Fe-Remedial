@@ -3,45 +3,51 @@ import { Link, useLocation } from "react-router-dom";
 import { ImPriceTag } from "react-icons/im";
 import { useEffect } from "react";
 import Header from "../components/Header";
+import axios from "axios";
 
 export default function Pembayaran(props) {
   const location = useLocation();
   // console.log(props, "props");
   console.log(location, "useLocation Hook");
+
+  const nama = localStorage.getItem("nama_lengkap");
   const mapel = location?.state?.mapel;
   const tempat = location?.state?.tempat;
   const waktu = location?.state?.waktu;
   const tanggal = location?.state?.tanggal;
   const harga = location?.state?.harga;
 
-  // useEffect(() => {
-  //   const midtransScriptUrl = "https://app.sandbox.midtrans.com/snap/snap.js";
+  useEffect(() => {
+    const midtransScriptUrl = "https://app.sandbox.midtrans.com/snap/snap.js";
 
-  //   let scriptTag = document.createElement("script");
-  //   scriptTag.src = midtransScriptUrl;
+    let scriptTag = document.createElement("script");
+    scriptTag.src = midtransScriptUrl;
 
-  //   const myMidtransClientKey = "";
-  //   scriptTag.setAttribute("data-client-key", myMidtransClientKey);
+    const myMidtransClientKey = "SB-Mid-client-B3Bj_C3s0ZhDhuV5";
+    scriptTag.setAttribute("data-client-key", myMidtransClientKey);
 
-  //   document.body.appendChild(scriptTag);
+    document.body.appendChild(scriptTag);
 
-  //   return () => {
-  //     document.body.removeChild(scriptTag);
-  //   };
-  // }, []);
+    return () => {
+      document.body.removeChild(scriptTag);
+    };
+  }, []);
 
-  // const bayar = () => {
-  //   // axios
-  //   //   .post("http://localhost:3000/api/siswa/payment", {
-  //   //     harga: 40000,
-  //   //   })
-  //   //   .then((res) => {
-  //   //     // console.log(res.data.token);
-
-  //   //     window.snap.pay(res.data.token);
-  //   //   });
-  //   console.log("asasd");
-  // };
+  const bayar = () => {
+    axios
+      .post("https://be4-skilvul-production.up.railway.app/api/v1/payment", {
+        nama_lengkap: nama,
+        mapel: mapel,
+        tempat: tempat,
+        waktu: waktu,
+        tanggal: tanggal,
+        harga: 25000,
+      })
+      .then((res) => {
+        // console.log(res.data.token);
+        window.snap.pay(res.data.token);
+      });
+  };
 
   return (
     <>
@@ -70,45 +76,6 @@ export default function Pembayaran(props) {
 
         <div className="container-xl px-5 pb-5">
           <div className="row d-flex justify-content-center">
-            <div className="col-6">
-              <div className="card d-flex my-4 px-4 py-3">
-                <h2 className="fs-4 fw-bold">
-                  Deskripsi <hr />
-                </h2>
-                <div className="total-harga bg-dark rounded-3 d-flex text-white justify-content-around pt-3 mb-4">
-                  <div className="d-flex">
-                    <ImPriceTag fontSize="2rem" color="yellow" border="1px solid black" />
-                    <p className="ms-3 fs-5">Total Harga</p>
-                  </div>
-                  <p className="fs-5 text-white">{harga}</p>
-                </div>
-
-                {/* <h6>Metode Pembayaran</h6>
-                <div className="col-10 d-flex align-self-center">
-                  <select className="form-select bg-secondary bg-opacity-25" aria-label="Default select example">
-                    <option select="true">Pilih Metode Pembayaran</option>
-                    <option defaultValue="1">BCA</option>
-                    <option defaultValue="2">BNI</option>
-                    <option defaultValue="3">E-Wallet</option>
-                    <option defaultValue="4">Lainnya</option>
-                  </select>
-                </div> */}
-
-                <div className="form-check my-4 ">
-                  <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                  <label className="form-check-label fs-6" htmlFor="flexCheckDefault">
-                    Saya telah membaca dan menyetujui <span className="fw-semibold">Syarat dan Ketentuan</span>
-                  </label>
-                </div>
-
-                <div className="d-flex justify-content-center my-4">
-                  <button onClick={() => bayar()} className="btn btn-danger px-5" role="button">
-                    Bayar
-                  </button>
-                </div>
-              </div>
-            </div>
-
             {/* Card Profil Pelajar */}
             <div className="col-6">
               <div className="card d-flex my-4 px-4 py-3">
@@ -126,7 +93,7 @@ export default function Pembayaran(props) {
                     </div>
                     <div className="col-8 col-sm-7 col-md-7 col-lg-8 ">
                       <div className="my-3">
-                        <h5 className="fw-semibold">Nova Sriadi Kurniawan</h5>
+                        <h5 className="fw-semibold">{nama}</h5>
                         <h6>Pelajar</h6>
                       </div>
                     </div>
@@ -215,6 +182,34 @@ export default function Pembayaran(props) {
                       <div className="ps-3 fw-semibold">{harga}</div>
                     </li>
                   </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-6">
+              <div className="card d-flex my-4 px-4 py-3">
+                <h2 className="fs-4 fw-bold">
+                  Deskripsi <hr />
+                </h2>
+                <div className="total-harga bg-dark rounded-3 d-flex text-white justify-content-around pt-3 mb-4">
+                  <div className="d-flex">
+                    <ImPriceTag fontSize="2rem" color="yellow" border="1px solid black" />
+                    <p className="ms-3 fs-5">Total Harga</p>
+                  </div>
+                  <p className="fs-5 text-white">{harga}</p>
+                </div>
+
+                <div className="form-check my-4 ">
+                  <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                  <label className="form-check-label fs-6" htmlFor="flexCheckDefault">
+                    Saya telah membaca dan menyetujui <span className="fw-semibold">Syarat dan Ketentuan</span>
+                  </label>
+                </div>
+
+                <div className="d-flex justify-content-center my-4">
+                  <button onClick={() => bayar()} className="btn btn-danger px-5" role="button">
+                    Bayar
+                  </button>
                 </div>
               </div>
             </div>

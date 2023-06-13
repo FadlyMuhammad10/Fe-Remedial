@@ -260,6 +260,14 @@ h6 {
   visibility: visible;
 }
 
+.logOut {
+  cursor: pointer;
+}
+
+.logOut:hover {
+  color: #d82b14;
+}
+
 @media (max-width: 1366px) {
   .navbar .dropdown .dropdown ul {
     left: -90%;
@@ -283,7 +291,7 @@ h6 {
 }
 
 .mobile-nav-toggle.bi-x {
-  color: #fff;
+  color: #d05d5d;
 }
 
 @media (max-width: 991px) {
