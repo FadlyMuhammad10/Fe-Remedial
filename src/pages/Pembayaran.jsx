@@ -16,6 +16,8 @@ export default function Pembayaran(props) {
   const waktu = location?.state?.waktu;
   const tanggal = location?.state?.tanggal;
   const harga = location?.state?.harga;
+  // const email = localStorage.getItem("email");
+  // const alamat = localStorage.getItem("alamat");
 
   useEffect(() => {
     const midtransScriptUrl = "https://app.sandbox.midtrans.com/snap/snap.js";
@@ -37,11 +39,13 @@ export default function Pembayaran(props) {
     axios
       .post("https://be4-skilvul-production.up.railway.app/api/v1/payment", {
         nama_lengkap: nama,
-        mapel: mapel,
-        tempat: tempat,
-        waktu: waktu,
-        tanggal: tanggal,
-        harga: 25000,
+        // mapel: mapel,
+        // tempat: tempat,
+        // waktu: waktu,
+        // tanggal: tanggal,
+        // email: email,
+        // alamat: alamat,
+        harga: 50000,
       })
       .then((res) => {
         // console.log(res.data.token);
@@ -94,7 +98,10 @@ export default function Pembayaran(props) {
                     <div className="col-8 col-sm-7 col-md-7 col-lg-8 ">
                       <div className="my-3">
                         <h5 className="fw-semibold">{nama}</h5>
-                        <h6>Pelajar</h6>
+                        <h6>
+                          Pelajar
+                          {/* {alamat} */}
+                        </h6>
                       </div>
                     </div>
                   </div>

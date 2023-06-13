@@ -105,7 +105,7 @@ export default function Kelas_Offline() {
 
                   <h4 className="mt-2 fw-bold">Harga</h4>
 
-                  <h2 className="pt-2 ps-3 fw-bold">Rp 25.000</h2>
+                  <h2 className="pt-2 ps-3 fw-bold">Rp 50.000</h2>
                 </div>
 
                 <div className="col-xl-4 col-lg-4 col-md-4 d-flex justify-content-end ">
