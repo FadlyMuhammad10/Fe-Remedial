@@ -53,6 +53,7 @@ export default function Kelas_Offline() {
         state: { harga: harga, mapel: mapel, tempat: tempat, tanggal: tanggal, waktu: waktu },
       };
       navigate("/pembayaran", location);
+    } else {
     }
   }
 

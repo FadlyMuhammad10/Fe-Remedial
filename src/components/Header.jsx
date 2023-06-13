@@ -3,15 +3,14 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { IoIosArrowDown } from "react-icons/io";
 import { VscAccount } from "react-icons/vsc";
 
-
 export default function Header() {
   const nama = localStorage.getItem("nama_lengkap");
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const handleLogout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("nama_lengkap");
-    navigate("/")
-  }
+    navigate("/");
+  };
   return (
     <>
       {/* ======= Header ======= */}
@@ -81,17 +80,14 @@ export default function Header() {
               </li>
               <li className="dropdown">
                 <div className="row">
-                  <VscAccount className="col" fontSize="2rem" color="white"/> 
-                  {nama && 
-                  <div className="col align-self-center text-white">
-                    {nama}
-                  </div>}
-                  <IoIosArrowDown className="col align-self-center"fontSize="1.2rem" color="white"/>
-                </div> 
-                <ul>
+                  <VscAccount className="col" fontSize="2rem" color="white" />
+                  {nama && <div className="col align-self-center text-white p-0">{nama}</div>}
+                  <IoIosArrowDown className="col align-self-center p-0" fontSize="1.2rem" color="white" />
+                </div>
+                <ul className="rounded">
                   <li>
-                    <div onClick={handleLogout}>
-                      <p className="ps-4">Logout</p>
+                    <div className="logOut ms-4" onClick={handleLogout}>
+                      Logout
                     </div>
                   </li>
                 </ul>
