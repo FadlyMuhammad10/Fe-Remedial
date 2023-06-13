@@ -20,7 +20,9 @@ export default function Artikel() {
                         <div className="row justify-content-center">
                         <div className="col-11 col-xl-10">
                             <ol>
-                            <li><a href="index.html">Beranda</a></li>
+                            <li>
+                                <Link to="/home">Beranda</Link>
+                            </li>
                             <li>Artikel</li>
                             </ol>
                         </div>
