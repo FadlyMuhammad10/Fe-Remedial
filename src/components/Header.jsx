@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { IoIosArrowDown } from "react-icons/io";
 import { VscAccount } from "react-icons/vsc";
+import logo from "../assets/img/logo.png"
 
 export default function Header() {
   const nama = localStorage.getItem("nama_lengkap");
@@ -18,7 +19,7 @@ export default function Header() {
         <div className="container d-flex align-items-center justify-content-between">
           {/* Uncomment below if you prefer to use an image logo */}
           <NavLink to="/" className="logo">
-            <img src="src/assets/img/logo.png" alt="" className="img-fluid" />
+            <img src={logo} className="img-fluid" />
           </NavLink>
 
           <nav id="navbar" className="navbar">
@@ -42,7 +43,7 @@ export default function Header() {
                     <NavLink to="/program-offline">Kelas Ofline</NavLink>
                   </li>
                   <li>
-                    <a href="/program-online">Kelas Online</a>
+                    <a href="">Kelas Online</a>
                   </li>
                 </ul>
               </li>

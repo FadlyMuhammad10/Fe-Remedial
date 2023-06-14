@@ -2,6 +2,7 @@ import React from "react";
 import { IoChevronForward } from "react-icons/io5";
 import { AiOutlineTwitter, AiFillFacebook, AiFillInstagram } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
+import logo from "../assets/img/logo.png"
 
 export default function Footer() {
   return (
@@ -61,7 +62,7 @@ export default function Footer() {
 
                   <div className="col-lg-3 col-md-6 footer-info">
                     <a href="" className="logo d-flex align-items-center">
-                      <img src="src/assets/img/logo.png" alt="" />
+                      <img src={logo} alt="" />
                       <span></span>
                     </a>
                     <p>
