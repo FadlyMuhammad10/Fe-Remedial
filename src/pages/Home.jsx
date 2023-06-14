@@ -1,13 +1,26 @@
 import "../assets/css/style.css";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import ArtikelList from "../components/ArtikelList";
 import { FaRegLightbulb } from "react-icons/fa";
 import { BsStarFill } from "react-icons/bs";
 import { Carousel } from "../components/Carousel";
 import { slides } from "../assets/js/carouselData.json";
 import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 
 export default function Home() {
+  const [items, setItems] = useState([]);
+
+
+  useEffect(() => {
+    fetch("https://64513164e1f6f1bb22aab5b3.mockapi.io/artikel")
+      .then((res) => res.json())
+      .then((data) => {
+        const newData = data.slice(0, 3); //start & jumlah yg diambil
+        setItems(newData)
+      });
+  }, []);
   return (
     <>
       {/* <Header /> */}
@@ -510,9 +523,11 @@ export default function Home() {
               </h3>
               <p>Kalian bisa menikmati artikel terbaru di remedial.id.</p>
             </div>
-
+              
             <div className="row justify-content-center">
-              <div className="col-lg-11" id="artikel-list"></div>
+              <div className="col-lg-11">
+                <ArtikelList items={items} />
+              </div>
             </div>
 
             <div className="col-lg-13 d-flex justify-content-center">
