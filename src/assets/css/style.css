@@ -712,6 +712,11 @@ form .form-label {
   min-height: 500px;
 }
 
+.about .deskripsi {
+  text-align: justify;
+  /* background-color: #13939e; */
+}
+
 #about .btn-get-started {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
