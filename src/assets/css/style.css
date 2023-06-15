@@ -119,19 +119,19 @@ h6 {
   background: rgba(23, 26, 29, 0.8);
 }
 
-#header .logo {
-  font-size: 30px;
+/* #header .logo {
+  font-size: 20px;
   margin: 0;
   padding: 0;
   line-height: 1;
   font-weight: 600;
   letter-spacing: 1px;
   font-family: "Poppins", sans-serif;
-}
+} */
 
-#header .logo a {
+/* #header .logo a {
   color: #fff;
-}
+} */
 
 #header .logo img {
   max-height: 60px;
@@ -224,17 +224,21 @@ h6 {
   font-size: 13px;
   font-weight: 500;
   text-transform: none;
-  color: #9d9d9d;
+  color: #7e7e7e;
 }
 
 .navbar .dropdown ul a i {
-  font-size: 12px;
+  font-weight: 900;
+}
+
+.navbar .dropdown span {
+  color: #d9d9d9;
 }
 
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover > a {
-  color: #1d1d1d;
+  color: #000000;
 }
 
 .navbar .dropdown:hover > ul {
@@ -254,6 +258,14 @@ h6 {
   top: 0;
   left: 100%;
   visibility: visible;
+}
+
+.logOut {
+  cursor: pointer;
+}
+
+.logOut:hover {
+  color: #d82b14;
 }
 
 @media (max-width: 1366px) {
@@ -279,7 +291,7 @@ h6 {
 }
 
 .mobile-nav-toggle.bi-x {
-  color: #fff;
+  color: #d05d5d;
 }
 
 @media (max-width: 991px) {
@@ -377,7 +389,7 @@ h6 {
   display: block;
 }
 
-#navbar ul li .bi-search {
+#navbar ul li .search {
   margin: 10px;
   font-size: 18px;
 }
@@ -430,6 +442,16 @@ h6 {
   background: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(255, 255, 255));
 }
 
+.card-registration {
+  margin-top: 60px;
+  border-radius: 15px;
+}
+
+form .form-label {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+
 .card-registration .select-input.form-control[readonly]:not([disabled]) {
   font-size: 1rem;
   line-height: 2.15;
@@ -446,12 +468,12 @@ h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   background-color: rgba(34, 39, 43, 0.8);
   overflow: hidden;
   position: relative;
 }
-
+/* 
 #hero .carousel,
 #hero .carousel-inner,
 #hero .carousel-item,
@@ -563,7 +585,7 @@ h6 {
 #hero .carousel-indicators li.active {
   opacity: 1;
   background: #428bca;
-}
+} */
 
 /* #hero .btn-get-started {
   font-family: "Raleway", sans-serif;
@@ -688,6 +710,11 @@ h6 {
   background: url("../img/about.png") center center no-repeat;
   /* background-size: cover; */
   min-height: 500px;
+}
+
+.about .deskripsi {
+  text-align: justify;
+  /* background-color: #13939e; */
 }
 
 #about .btn-get-started {
@@ -1041,6 +1068,7 @@ HEAD #packageContainer {
 }
 
 .package-card-top {
+  background-image: url(https://i.ibb.co/93LFT1C/Rectangle-2974.png);
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   height: 240px;
@@ -1499,6 +1527,25 @@ HEAD #packageContainer {
   padding-right: 10px;
   color: #505a63;
   content: "/";
+}
+/*--------------------------------------------------------------
+# Artikel
+--------------------------------------------------------------*/
+.img-artikel {
+  display: flex;
+  flex: roun;
+}
+
+/*--------------------------------------------------------------
+# Pembayaran
+--------------------------------------------------------------*/
+.total-harga {
+  align-content: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+.batas-bayar {
+  background-color: #2e3339;
 }
 
 /*--------------------------------------------------------------
