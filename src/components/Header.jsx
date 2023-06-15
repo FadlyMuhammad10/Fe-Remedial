@@ -101,11 +101,7 @@ export default function Header() {
                   Semua Artikel
                 </NavLink>
               </li>
-              {/* <li>
-                <a href="#!">
-                  <i className="bi bi-search"></i>
-                </a>
-              </li> */}
+
               <li className={dropProfil ? "dropdown active" : "dropdown"}>
                 <div className="row ms-3" onClick={activeProfile}>
                   <VscAccount className="col" fontSize="2rem" color="white" />

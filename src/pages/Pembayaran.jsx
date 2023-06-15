@@ -16,8 +16,6 @@ export default function Pembayaran(props) {
   const waktu = location?.state?.waktu;
   const tanggal = location?.state?.tanggal;
   const harga = location?.state?.harga;
-  const email = localStorage.getItem("email");
-  // const alamat = localStorage.getItem("alamat");
 
   function handleCheck(event) {
     setDisable(event.target.checked);
@@ -25,39 +23,33 @@ export default function Pembayaran(props) {
     console.log(localStorage);
   }
 
-  // useEffect(() => {
-  //   const midtransScriptUrl = "https://app.sandbox.midtrans.com/snap/snap.js";
+  useEffect(() => {
+    const midtransScriptUrl = "https://app.sandbox.midtrans.com/snap/snap.js";
 
-  //   let scriptTag = document.createElement("script");
-  //   scriptTag.src = midtransScriptUrl;
+    let scriptTag = document.createElement("script");
+    scriptTag.src = midtransScriptUrl;
 
-  //   const myMidtransClientKey = "SB-Mid-client-B3Bj_C3s0ZhDhuV5";
-  //   scriptTag.setAttribute("data-client-key", myMidtransClientKey);
+    const myMidtransClientKey = "SB-Mid-client-B3Bj_C3s0ZhDhuV5";
+    scriptTag.setAttribute("data-client-key", myMidtransClientKey);
 
-  //   document.body.appendChild(scriptTag);
+    document.body.appendChild(scriptTag);
 
-  //   return () => {
-  //     document.body.removeChild(scriptTag);
-  //   };
-  // }, []);
+    return () => {
+      document.body.removeChild(scriptTag);
+    };
+  }, []);
 
-  // const bayar = () => {
-  //   axios
-  //     .post("https://be4-skilvul-production.up.railway.app/api/v1/payment", {
-  //       nama_lengkap: nama,
-  //       // mapel: mapel,
-  //       // tempat: tempat,
-  //       // waktu: waktu,
-  //       // tanggal: tanggal,
-  //       // email: email,
-  //       // alamat: alamat,
-  //       harga: 50000,
-  //     })
-  //     .then((res) => {
-  //       // console.log(res.data.token);
-  //       window.snap.pay(res.data.token);
-  //     });
-  // };
+  const bayar = () => {
+    axios
+      .post("https://be4-skilvul-production.up.railway.app/api/v1/payment", {
+        nama_lengkap: nama,
+        harga: 50000,
+      })
+      .then((res) => {
+        // console.log(res.data.token);
+        window.snap.pay(res.data.token);
+      });
+  };
 
   return (
     <>
@@ -104,10 +96,7 @@ export default function Pembayaran(props) {
                     <div className="col-8 col-sm-7 col-md-7 col-lg-8 ">
                       <div className="my-3">
                         <h5 className="fw-semibold">{nama}</h5>
-                        <h6>
-                          Pelajar
-                          {email}
-                        </h6>
+                        <h6>Pelajar</h6>
                       </div>
                     </div>
                   </div>
