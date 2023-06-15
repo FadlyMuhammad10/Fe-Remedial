@@ -14,12 +14,14 @@ export default function Home() {
 
 
   useEffect(() => {
-    fetch("https://64513164e1f6f1bb22aab5b3.mockapi.io/artikel")
+    fetch("https://be4-skilvul-production.up.railway.app/api/v1/landingpage/artikel")
       .then((res) => res.json())
       .then((data) => {
-        const newData = data.slice(0, 3); //start & jumlah yg diambil
+        const newData = data.data.slice(0, 2); //start & jumlah yg diambil
         setItems(newData)
       });
+        
+        
   }, []);
   return (
     <>

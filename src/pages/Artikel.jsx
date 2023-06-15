@@ -9,9 +9,11 @@ export default function Artikel() {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch("https://64513164e1f6f1bb22aab5b3.mockapi.io/artikel")
+    fetch("https://be4-skilvul-production.up.railway.app/api/v1/landingpage/artikel")
       .then((res) => res.json())
-      .then((data) => setItems(data));
+      .then((data) => {
+        setItems(data.data)
+      });
   }, []);
 
   return (

@@ -6,7 +6,7 @@ export default function ArtikelList({ items }) {
   return (
     <div className="row">
       {items.map((item) => (
-        <Link to={"/artikel/"+item.id} key={item.id}>
+        <Link to={"/artikel/"+item._id} key={item._id}>
           <CardArtikel item={item} />
         </Link>
       ))}
