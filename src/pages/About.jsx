@@ -33,7 +33,7 @@ export default function About() {
               <div className="row justify-content-center">
                 <div className="col-xl-5 col-lg-6 img-box d-flex justify-content-center align-items-stretch position-relative ">{/* <a href="" className="glightbox play-btn mb-4"></a> */}</div>
 
-                <div className="col-xl-5 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 ps-lg-5 ">
+                <div className="col-xl-5 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px -lg-5 ">
                   <h3>Remedial.id</h3>
                   <p className="deskripsi">
                     Serrum remedial adalah perkumpulan studi dan pendidikan seni rupa yang berkedudukan di Jakarta yang didirikan pada tahun 2006. Kata serrum berasal dari kata share dan room yang berarti “ruang berbagi”. Serrum berfokus
