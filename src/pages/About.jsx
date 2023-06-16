@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import team from "../assets/img/img";
 
 export default function About() {
-  console.log(team);
+  // console.log(team);
   return (
     <>
       <Header />
@@ -70,7 +70,7 @@ export default function About() {
                 <div className="row">
                   <div className="col-xl-4 col-lg-4 col-md-4">
                     <div className="member">
-                      <img src={team} className="img-fluid" alt="" />
+                      <img src={team.team1} className="img-fluid" alt="" />
                       <div className="member-info">
                         <div className="member-info-content">
                           <h4>Nova Sri Ady Kurniawan</h4>
