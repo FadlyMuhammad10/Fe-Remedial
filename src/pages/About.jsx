@@ -2,7 +2,12 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import "../assets/css/style.css";
 import { Link } from "react-router-dom";
-import team from "../assets/img/img";
+import team3 from "../assets/img/team/team-3.jpg";
+import team2 from "../assets/img/team/team-2.jpg";
+import team1 from "../assets/img/team/team-1.jpg";
+import team4 from "../assets/img/team/team-4.jpg";
+import team5 from "../assets/img/team/team-5.jpg";
+import team6 from "../assets/img/team/team-6.jpg";
 
 export default function About() {
   // console.log(team);
@@ -70,7 +75,7 @@ export default function About() {
                 <div className="row">
                   <div className="col-xl-4 col-lg-4 col-md-4">
                     <div className="member">
-                      <img src={team.team1} className="img-fluid" alt="" />
+                      <img src={team3} className="img-fluid" alt="" />
                       <div className="member-info">
                         <div className="member-info-content">
                           <h4>Nova Sri Ady Kurniawan</h4>
@@ -87,7 +92,7 @@ export default function About() {
                   {/* End Member Item */}
                   <div className="col-xl-4 col-lg-4 col-md-4" data-wow-delay="0.1s">
                     <div className="member">
-                      <img src="src/assets/img/team/team-2 (2).JPG" className="img-fluid" alt="" />
+                      <img src={team2} className="img-fluid" alt="" />
                       <div className="member-info">
                         <div className="member-info-content">
                           <h4>Chika Aulia Zahwa</h4>
@@ -110,7 +115,7 @@ export default function About() {
                   {/* End Member Item */}
                   <div className="col-xl-4 col-lg-4 col-md-4" data-wow-delay="0.2s">
                     <div className="member">
-                      <img src="src/assets/img/team/team-1.jpg" className="img-fluid" alt="" />
+                      <img src={team1} className="img-fluid" alt="" />
                       <div className="member-info">
                         <div className="member-info-content">
                           <h4>Rohendi</h4>
@@ -137,10 +142,10 @@ export default function About() {
                   {/* End Member Item */}
                   <div className="col-xl-4 col-lg-4 col-md-4" data-wow-delay="0.2s">
                     <div className="member">
-                      <img src="src/assets/img/team/team-4.jpg" className="img-fluid" alt="" />
+                      <img src={team4} className="img-fluid" alt="" />
                       <div className="member-info">
                         <div className="member-info-content">
-                          <h4>muhammad anwar fuadi</h4>
+                          <h4>Muhammad Anwar Fuadi</h4>
                           <span>Back End Developer</span>
                         </div>
                         <div className="social">
@@ -160,7 +165,7 @@ export default function About() {
                   {/* End Member Item */}
                   <div className="col-xl-4 col-lg-4 col-md-4" data-wow-delay="0.2s">
                     <div className="member">
-                      <img src="src/assets/img/team/team-5.jpg" className="img-fluid" alt="" />
+                      <img src={team5} className="img-fluid" alt="" />
                       <div className="member-info">
                         <div className="member-info-content">
                           <h4>Muhammad Fadly Hidayat</h4>
@@ -183,7 +188,7 @@ export default function About() {
                   {/* End Member Item */}
                   <div className="col-xl-4 col-lg-4 col-md-4" data-wow-delay="0.2s">
                     <div className="member">
-                      <img src="src/assets/img/team/team-6.jpg" className="img-fluid" alt="" />
+                      <img src={team6} className="img-fluid" alt="" />
                       <div className="member-info">
                         <div className="member-info-content">
                           <h4>Meivira dinda maulidiya rizqi</h4>
