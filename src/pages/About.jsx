@@ -2,8 +2,10 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import "../assets/css/style.css";
 import { Link } from "react-router-dom";
+import team from "../assets/img/img";
 
 export default function About() {
+  console.log(team);
   return (
     <>
       <Header />
@@ -68,7 +70,7 @@ export default function About() {
                 <div className="row">
                   <div className="col-xl-4 col-lg-4 col-md-4">
                     <div className="member">
-                      <img src="src/assets/img/team/team-3.jpg" className="img-fluid" alt="" />
+                      <img src={team} className="img-fluid" alt="" />
                       <div className="member-info">
                         <div className="member-info-content">
                           <h4>Nova Sri Ady Kurniawan</h4>
