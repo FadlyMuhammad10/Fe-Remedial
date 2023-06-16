@@ -2,6 +2,7 @@ import "../assets/css/style.css";
 import { Link, useLocation } from "react-router-dom";
 import { ImPriceTag } from "react-icons/im";
 import { useEffect, useState } from "react";
+import { VscAccount } from "react-icons/vsc";
 import Header from "../components/Header";
 import axios from "axios";
 
@@ -90,8 +91,8 @@ export default function Pembayaran(props) {
                   </h6>
 
                   <div className="row profil-pelajar d-flex  align-items-center">
-                    <div className="col-4 col-sm-5 col-md-5 col-lg-4">
-                      <img src="src/assets/img/pengajar/pengajar3.png" className="rounded-circle" width="auto" height="90" alt="" />
+                    <div className="col-4 col-sm-5 col-md-5 col-lg-4 d-flex justify-content-center">
+                      <VscAccount fontSize="3.5rem" />
                     </div>
                     <div className="col-8 col-sm-7 col-md-7 col-lg-8 ">
                       <div className="my-3">
