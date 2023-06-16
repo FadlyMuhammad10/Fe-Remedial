@@ -78,7 +78,7 @@ export default function Home() {
                       <span>SENI</span>
                     </h2>
                     <div className="seni-item">
-                      <img src="src/assets/img/seni/seni-1.jpg" className="seni-img" alt="" />
+                      <img src={seni1} className="seni-img" alt="" />
                       <h3>
                         <a href="#!">Fenomena Seni Rupa</a>
                       </h3>
