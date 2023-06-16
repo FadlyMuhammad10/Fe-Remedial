@@ -8,20 +8,29 @@ import { Carousel } from "../components/Carousel";
 import { slides } from "../assets/js/carouselData.json";
 import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
+import seni1 from "../assets/img/seni/seni-1.jpg";
+import seni2 from "../assets/img/seni/seni-2.jpg";
+import seni3 from "../assets/img/seni/seni-3.jpg";
+import seni4 from "../assets/img/seni/seni-4.jpg";
+import seni5 from "../assets/img/seni/seni-5.jpg";
+import seni6 from "../assets/img/seni/seni-6.jpg";
+import sastra1 from "../assets/img/seni/sastra-1.jpg";
+import sastra2 from "../assets/img/seni/sastra-2.jpg";
+import sastra3 from "../assets/img/seni/sastra-3.jpg";
+import bahasa1 from "../assets/img/seni/bahasa-1.jpg";
+import bahasa2 from "../assets/img/seni/bahasa-2.jpg";
+import bahasa3 from "../assets/img/seni/bahasa-3.png";
 
 export default function Home() {
   const [items, setItems] = useState([]);
-
 
   useEffect(() => {
     fetch("https://be4-skilvul-production.up.railway.app/api/v1/landingpage/artikel")
       .then((res) => res.json())
       .then((data) => {
         const newData = data.data.slice(0, 2); //start & jumlah yg diambil
-        setItems(newData)
+        setItems(newData);
       });
-        
-        
   }, []);
   return (
     <>
@@ -69,7 +78,7 @@ export default function Home() {
                       <span>SENI</span>
                     </h2>
                     <div className="seni-item">
-                      <img src="src/assets/img/seni/seni-1.jpg" className="seni-img" alt="" />
+                      <img src={seni1} className="seni-img" alt="" />
                       <h3>
                         <a href="#!">Fenomena Seni Rupa</a>
                       </h3>
@@ -81,7 +90,7 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="seni-item mt-4">
-                      <img src="src/assets/img/seni/seni-3.jpg" className="seni-img" alt="" />
+                      <img src={seni3} className="seni-img" alt="" />
                       <h3>
                         <a href="#!">Pengertian Sketsa serta Tujuan, Fungsi, Manfaat & Langkah</a>
                       </h3>
@@ -93,7 +102,7 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="seni-item mt-4">
-                      <img src="src/assets/img/seni/seni-5.jpg" className="seni-img" alt="" />
+                      <img src={seni5} className="seni-img" alt="" />
                       <h3>
                         <a href="#!">Tari: Pengertian, Unsur-Unsur, Fungsi, dan Jenis.</a>
                       </h3>
@@ -112,7 +121,7 @@ export default function Home() {
                       <span>MUSIK</span>
                     </h2>
                     <div className="seni-item">
-                      <img src="src/assets/img/seni/seni-2.jpg" className="seni-img" alt="" />
+                      <img src={seni2} className="seni-img" alt="" />
                       <h3>
                         <a href="#!">Seni Musik: Sejarah, Unsur, Jenis dan Fungsinya</a>
                       </h3>
@@ -121,7 +130,7 @@ export default function Home() {
                                  </time> */}
                     </div>
                     <div className="seni-item mt-4">
-                      <img src="src/assets/img/seni/seni-4.jpg" className="seni-img" alt="" />
+                      <img src={seni4} className="seni-img" alt="" />
                       <h3>
                         <a href="#!">Musik Kontemporer, Ciri-Ciri, Karakteristik, dan Konsep Kreatif</a>
                       </h3>
@@ -133,7 +142,7 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="seni-item mt-4">
-                      <img src="src/assets/img/seni/seni-6.jpg" className="seni-img" alt="" />
+                      <img src={seni6} className="seni-img" alt="" />
                       <h3>
                         <a href="#!"> Musik Tradisional Beserta Alat Musiknya</a>
                       </h3>
@@ -431,7 +440,7 @@ export default function Home() {
                       <span>SASTRA</span>
                     </h2>
                     <div className="seni-item">
-                      <img src="src/assets/img/seni/sastra-2.jpg" className="seni-img" alt="" />
+                      <img src={sastra2} className="seni-img" alt="" />
                       <h3>
                         <a href="#!"> Sastra: Pengertian & Berbagai Pendekatannya</a>
                       </h3>
@@ -443,7 +452,7 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="seni-item mt-4">
-                      <img src="src/assets/img/seni/sastra-1.jpg" className="seni-img" alt="" />
+                      <img src={sastra1} className="seni-img" alt="" />
                       <h3>
                         <a href="#!">Drama: Pengertian, Ciri, Struktur, Unsur, Bentuk & Kaidah</a>
                       </h3>
@@ -455,7 +464,7 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="seni-item mt-4">
-                      <img src="src/assets/img/seni/sastra-3.jpg" className="seni-img" alt="" />
+                      <img src={sastra3} className="seni-img" alt="" />
                       <h3>
                         <a href="#!">Teks Cerita Fantasi, Ciri-Ciri, Struktur, Kaidah Kebahasaan, dan Contohnya</a>
                       </h3>
@@ -474,7 +483,7 @@ export default function Home() {
                       <span>BAHASA</span>
                     </h2>
                     <div className="seni-item mt-4 mt-lg-0">
-                      <img src="src/assets/img/seni/bahasa-1.jpg" className="seni-img" alt="" />
+                      <img src={bahasa1} className="seni-img" alt="" />
                       <h3>
                         <a href="#!">Ilmiah: Pengertian, Ciri, Jenis & Struktur (Sistematika)</a>
                       </h3>
@@ -483,7 +492,7 @@ export default function Home() {
                                  </time> */}
                     </div>
                     <div className="seni-item mt-4">
-                      <img src="src/assets/img/seni/bahasa-3.png" className="seni-img" alt="" />
+                      <img src={bahasa3} className="seni-img" alt="" />
                       <h3>
                         <a href="#!">Pengertian, Struktur, Unsur Kebahasaan & Pola Penulisan</a>
                       </h3>
@@ -495,7 +504,7 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="seni-item mt-4">
-                      <img src="src/assets/img/seni/bahasa-2.jpg" className="seni-img" alt="" />
+                      <img src={bahasa2} className="seni-img" alt="" />
                       <h3>
                         <a href="#!">Pengertian, Sistematika, Kaidah & Contoh</a>
                       </h3>
@@ -525,7 +534,7 @@ export default function Home() {
               </h3>
               <p>Kalian bisa menikmati artikel terbaru di remedial.id.</p>
             </div>
-              
+
             <div className="row justify-content-center">
               <div className="col-lg-11">
                 <ArtikelList items={items} />

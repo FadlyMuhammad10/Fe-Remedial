@@ -2,6 +2,12 @@ import { useState } from "react";
 import "../assets/css/style.css";
 import { Link, useNavigate } from "react-router-dom";
 import Header from "../components/Header";
+import program from "../assets/img/program.png";
+import pengajar5 from "../assets/img/pengajar/pengajar5.png";
+import pengajar4 from "../assets/img/pengajar/pengajar4.png";
+import pengajar3 from "../assets/img/pengajar/pengajar3.png";
+import pengajar2 from "../assets/img/pengajar/pengajar2.png";
+import pengajar1 from "../assets/img/pengajar/pengajar1.png";
 
 export default function Kelas_Offline() {
   const [harga, setHarga] = useState("Rp 50.000,00");
@@ -109,7 +115,7 @@ export default function Kelas_Offline() {
                 </div>
 
                 <div className="col-xl-4 col-lg-4 col-md-4 d-flex justify-content-end ">
-                  <img className="img-fluid py-5" src="src/assets/img/program.png" alt="" />
+                  <img className="img-fluid py-5" src={program} alt="" />
                   {/* <!-- <a href="" className="glightbox play-btn mb-4"></a> --> */}
                 </div>
               </div>
@@ -153,19 +159,19 @@ export default function Kelas_Offline() {
                         <div className="col-xl-11 col-lg-11 col-md-11 ">
                           <div className="row justify-content-around">
                             <div className="col-xl-3 col-lg-4 col-md-6 col-sm-8 text-start bg-dark rounded my-3 p-0 mx-2 text-white">
-                              <img src="src/assets/img/pengajar/pengajar5.png" className="rounded-top" width="100%" alt="" />
+                              <img src={pengajar5} className="rounded-top" width="100%" alt="" />
                               <h5 className="py-3 ps-4">Angela Hirata</h5>
                               <p className="px-4">Seni Musik</p>
                             </div>
 
                             <div className="col-xl-3 col-lg-4 col-md-6 col-sm-8 text-start bg-dark rounded my-3 mx-2 p-0 text-white">
-                              <img src="src/assets/img/pengajar/pengajar4.png" className="rounded-top" width="100%" alt="" />
+                              <img src={pengajar4} className="rounded-top" width="100%" alt="" />
                               <h5 className="py-3 ps-4">Mauren Andrea</h5>
                               <p className="px-4">Seni Rupa</p>
                             </div>
 
                             <div className="col-xl-3 col-lg-4 col-md-6 col-sm-8 text-start bg-dark rounded my-3 p-0 text-white">
-                              <img src="src/assets/img/pengajar/pengajar3.png" className="rounded-top" width="100%" alt="" />
+                              <img src={pengajar3} className="rounded-top" width="100%" alt="" />
                               <h5 className="py-3 ps-4">Marsel Nova</h5>
                               <p className="px-4">Pertunjukan</p>
                             </div>
@@ -177,13 +183,13 @@ export default function Kelas_Offline() {
                         <div className="col-xl-11">
                           <div className="row justify-content-evenly">
                             <div className="col-xl-3 col-lg-4 col-md-6 col-sm-8 text-start bg-dark rounded my-3 p-0 mx-2 text-white">
-                              <img src="src/assets/img/pengajar/pengajar2.png" className="rounded-top" width="100%" alt="" />
+                              <img src={pengajar2} className="rounded-top" width="100%" alt="" />
                               <p className="fs-5 py-3 ps-4">Samuel Lincoln</p>
                               <p className="px-4">Seni Rupa</p>
                             </div>
 
                             <div className="col-xl-3 col-lg-4 col-md-6 col-sm-8 text-start bg-dark rounded my-3 p-0 mx-2 text-white">
-                              <img src="src/assets/img/pengajar/pengajar1.png" className="rounded-top" width="100%" alt="" />
+                              <img src={pengajar1} className="rounded-top" width="100%" alt="" />
                               <p className="fs-5 py-3 ps-4">Jales Marque</p>
                               <p className="px-4">Seni Musik</p>
                             </div>

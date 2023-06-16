@@ -2,11 +2,15 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import "../assets/css/style.css";
 import { Link } from "react-router-dom";
+import fundamental from "../assets/img/fundamental/fe.jpg";
+import satu from "../assets/img/fundamental/satu.jpg";
+import patung from "../assets/img/fundamental/patung.jpg";
+import empat from "../assets/img/fundamental/empat.jpg";
 
 export default function Fundamental() {
   return (
     <>
-      <Header/>
+      <Header />
       <main id="main">
         {/* ======= Breadcrumbs =======  */}
         <section id="breadcrumbs" className="breadcrumbs">
@@ -44,7 +48,7 @@ export default function Fundamental() {
 
               <div className="row justify-content-center">
                 <div className="col-12 col-sm-12 col-md-8 col-lg-8">
-                  <img src="src/assets/img/fundamental/fe.jpg" width="100%" height="450" alt="" />
+                  <img src={fundamental} width="100%" height="450" alt="" />
                   <h1 className="mt-3">
                     <strong>Fenomena Seni Rupa</strong>
                   </h1>
@@ -62,14 +66,14 @@ export default function Fundamental() {
                     </h2>
                     <div className="col">
                       <div className="fundamental-item d-flex">
-                        <img src="src/assets/img/fundamental/satu.jpg" className="fundamental-img" alt="" />
+                        <img src={satu} className="fundamental-img" alt="" />
                         <h3>
                           <a href="#!">Seni Rupa Murni: Pengertian, Batasan, Fungsi & Contoh</a>
                         </h3>
                       </div>
                       <div className="col">
                         <div className="fundamental-item d-flex">
-                          <img src="src/assets/img/fundamental/patung.jpg" className="fundamental-img" alt="" />
+                          <img src={patung} className="fundamental-img" alt="" />
                           <h3>
                             <a href="#!">Pengertian seni patung, fungsi, teknik, alat & bahan</a>
                           </h3>
@@ -77,7 +81,7 @@ export default function Fundamental() {
                       </div>
                       <div className="col">
                         <div className="fundamental-item d-flex">
-                          <img src="src/assets/img/fundamental/empat.jpg" className="fundamental-img" alt="" />
+                          <img src={empat} className="fundamental-img" alt="" />
                           <h3>
                             <a href="#!">Perpaduan Warna Harmonis menggunakan Teori Warna & Seni</a>
                           </h3>
@@ -87,9 +91,9 @@ export default function Fundamental() {
                   </div>
                 </div>
               </div>
-              <div>
+              {/* <div>
                 <img src="" alt="" />
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
