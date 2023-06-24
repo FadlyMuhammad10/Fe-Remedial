@@ -1,7 +1,7 @@
 import React from "react";
 import { IoChevronForward } from "react-icons/io5";
 import { AiOutlineTwitter, AiFillFacebook, AiFillInstagram } from "react-icons/ai";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/img/logo.png"
 
 export default function Footer() {
@@ -26,7 +26,7 @@ export default function Footer() {
                         <IoChevronForward /> <NavLink to="/program-offline">Program</NavLink>
                       </li>
                       <li>
-                        <IoChevronForward /> <NavLink to="#">Seni</NavLink>
+                        <IoChevronForward /> <NavLink to="/fundamental-seni">Seni</NavLink>
                       </li>
                       <li>
                         <IoChevronForward /> <NavLink to="/artikel">Artikel</NavLink>
@@ -61,7 +61,7 @@ export default function Footer() {
                   </div>
 
                   <div className="col-lg-3 col-md-6 footer-info">
-                    <a href="" className="logo d-flex align-items-center">
+                    <a href="/home" className="logo d-flex align-items-center">
                       <img src={logo} alt="" />
                       <span></span>
                     </a>
@@ -72,18 +72,18 @@ export default function Footer() {
                       seni dan literasi.
                     </p>
                     <div className="social-links mt-3">
-                      <a href="#" className="twitter">
+                      <Link to="https://www.twitter.com" className="twitter">
                         <AiOutlineTwitter target="_blank" />
-                      </a>
-                      <a href="#" className="facebook">
+                      </Link>
+                      <Link to="https://www.facebook.com" className="facebook">
                         <AiFillFacebook target="_blank" />
-                      </a>
-                      <a
-                        href="https://www.instagram.com/remedial_s/"
+                      </Link>
+                      <Link
+                        to="https://www.instagram.com/remedial_s/"
                         className="instagram"
                       >
                         <AiFillInstagram target="_blank" />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -100,7 +100,7 @@ export default function Footer() {
             . All Rights Reserved
           </div>
           <div className="credits">
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            Designed by FE 22 - BE 4
           </div>
         </div>
       </footer>

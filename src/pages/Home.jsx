@@ -80,7 +80,7 @@ export default function Home() {
                     <div className="seni-item">
                       <img src={seni1} className="seni-img" alt="" />
                       <h3>
-                        <a href="#!">Fenomena Seni Rupa</a>
+                        <p>Fenomena Seni Rupa</p>
                       </h3>
                       <div className="entry-meta">
                         {/* <time className="entry-date published updated"
@@ -92,7 +92,7 @@ export default function Home() {
                     <div className="seni-item mt-4">
                       <img src={seni3} className="seni-img" alt="" />
                       <h3>
-                        <a href="#!">Pengertian Sketsa serta Tujuan, Fungsi, Manfaat & Langkah</a>
+                        <p>Pengertian Sketsa serta Tujuan, Fungsi, Manfaat & Langkah</p>
                       </h3>
                       <div className="entry-meta">
                         {/* <time className="entry-date published updated"
@@ -104,7 +104,7 @@ export default function Home() {
                     <div className="seni-item mt-4">
                       <img src={seni5} className="seni-img" alt="" />
                       <h3>
-                        <a href="#!">Tari: Pengertian, Unsur-Unsur, Fungsi, dan Jenis.</a>
+                        <p>Tari: Pengertian, Unsur-Unsur, Fungsi, dan Jenis.</p>
                       </h3>
                       <div className="entry-meta">
                         {/* <time className="entry-date published updated"
@@ -123,7 +123,7 @@ export default function Home() {
                     <div className="seni-item">
                       <img src={seni2} className="seni-img" alt="" />
                       <h3>
-                        <a href="#!">Seni Musik: Sejarah, Unsur, Jenis dan Fungsinya</a>
+                        <p href="#!">Seni Musik: Sejarah, Unsur, Jenis dan Fungsinya</p>
                       </h3>
                       {/* <time className="entry-date published updated" datetime="2021-01-09T19:27:23+07:00">
                                      09-01-2021
@@ -132,7 +132,7 @@ export default function Home() {
                     <div className="seni-item mt-4">
                       <img src={seni4} className="seni-img" alt="" />
                       <h3>
-                        <a href="#!">Musik Kontemporer, Ciri-Ciri, Karakteristik, dan Konsep Kreatif</a>
+                        <p>Musik Kontemporer, Ciri-Ciri, Karakteristik, dan Konsep Kreatif</p>
                       </h3>
                       <div className="entry-meta">
                         {/* <time className="entry-date published updated"
@@ -144,7 +144,7 @@ export default function Home() {
                     <div className="seni-item mt-4">
                       <img src={seni6} className="seni-img" alt="" />
                       <h3>
-                        <a href="#!"> Musik Tradisional Beserta Alat Musiknya</a>
+                        <p> Musik Tradisional Beserta Alat Musiknya</p>
                       </h3>
                       <div className="entry-meta">
                         {/* <time className="entry-date published updated"
@@ -209,7 +209,7 @@ export default function Home() {
                           <div className="package-preview-icon">
                             <FaRegLightbulb></FaRegLightbulb>
                           </div>
-                          <p>Sesi pertemuan online hingga 10x seminggu</p>
+                          <p>Sesi pertemuan offline hingga 10x seminggu</p>
                         </li>
                       </ul>
                     </div>
@@ -219,7 +219,7 @@ export default function Home() {
                 <div className="col-sm-7 col-md-6 col-lg-5 col-xl-6 h-100 d-flex justify-content-center">
                   <div className="package-card">
                     <div
-                      className="package-card-top" //
+                      className="package-card-top-1" //
                       //  style="background-image: url(src/assets/img/Rectangle\ 2974.png);"
                     >
                       <div className="package-product-label">
@@ -234,9 +234,9 @@ export default function Home() {
                           </div>
                         </div>
                       </div>
-                      <a href="#" className="btn-package" data-tracking-event-type="landing_page__core__item_click">
-                        Beli Paket
-                      </a>
+                      <div className="btn-package-disable" disabled data-tracking-event-type="landing_page__core__item_click">
+                        Coming Soon
+                      </div>
                       <ul id="package-productReviews">
                         <li>
                           <div className="package-preview-icon">
@@ -442,7 +442,7 @@ export default function Home() {
                     <div className="seni-item">
                       <img src={sastra2} className="seni-img" alt="" />
                       <h3>
-                        <a href="#!"> Sastra: Pengertian & Berbagai Pendekatannya</a>
+                        <p> Sastra: Pengertian & Berbagai Pendekatannya</p>
                       </h3>
                       <div className="entry-meta">
                         {/* <time className="entry-date published updated"
@@ -454,7 +454,7 @@ export default function Home() {
                     <div className="seni-item mt-4">
                       <img src={sastra1} className="seni-img" alt="" />
                       <h3>
-                        <a href="#!">Drama: Pengertian, Ciri, Struktur, Unsur, Bentuk & Kaidah</a>
+                        <p>Drama: Pengertian, Ciri, Struktur, Unsur, Bentuk & Kaidah</p>
                       </h3>
                       <div className="entry-meta">
                         {/* <time className="entry-date published updated"
@@ -466,7 +466,7 @@ export default function Home() {
                     <div className="seni-item mt-4">
                       <img src={sastra3} className="seni-img" alt="" />
                       <h3>
-                        <a href="#!">Teks Cerita Fantasi, Ciri-Ciri, Struktur, Kaidah Kebahasaan, dan Contohnya</a>
+                        <p>Teks Cerita Fantasi, Ciri-Ciri, Struktur, Kaidah Kebahasaan, dan Contohnya</p>
                       </h3>
                       <div className="entry-meta">
                         {/* <time className="entry-date published updated"
@@ -485,7 +485,7 @@ export default function Home() {
                     <div className="seni-item mt-4 mt-lg-0">
                       <img src={bahasa1} className="seni-img" alt="" />
                       <h3>
-                        <a href="#!">Ilmiah: Pengertian, Ciri, Jenis & Struktur (Sistematika)</a>
+                        <p>Ilmiah: Pengertian, Ciri, Jenis & Struktur (Sistematika)</p>
                       </h3>
                       {/* <time className="entry-date published updated" datetime="2021-01-24T19:27:23+07:00">
                                      24-01-2021
@@ -494,7 +494,7 @@ export default function Home() {
                     <div className="seni-item mt-4">
                       <img src={bahasa3} className="seni-img" alt="" />
                       <h3>
-                        <a href="#!">Pengertian, Struktur, Unsur Kebahasaan & Pola Penulisan</a>
+                        <p>Pengertian, Struktur, Unsur Kebahasaan & Pola Penulisan</p>
                       </h3>
                       <div className="entry-meta">
                         {/* <time className="entry-date published updated"
@@ -506,7 +506,7 @@ export default function Home() {
                     <div className="seni-item mt-4">
                       <img src={bahasa2} className="seni-img" alt="" />
                       <h3>
-                        <a href="#!">Pengertian, Sistematika, Kaidah & Contoh</a>
+                        <p>Pengertian, Sistematika, Kaidah & Contoh</p>
                       </h3>
                       <div className="entry-meta">
                         {/* <time className="entry-date published updated"
