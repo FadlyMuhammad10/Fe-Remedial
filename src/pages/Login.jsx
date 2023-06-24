@@ -39,7 +39,9 @@ export default function Login() {
   };
 
   useEffect(() => {
-    if (localStorage.getItem("token") !== "undefined") {
+    const token = localStorage.getItem("token");
+    console.log("token= ", token);
+    if (token !== null && token !== undefined && token !== "undefined") {
       navigate("/home");
     }
   }, []);
