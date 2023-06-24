@@ -234,7 +234,7 @@ export default function Home() {
                           </div>
                         </div>
                       </div>
-                      <a href="program.html" className="btn-package" data-tracking-event-type="landing_page__core__item_click">
+                      <a href="#" className="btn-package" data-tracking-event-type="landing_page__core__item_click">
                         Beli Paket
                       </a>
                       <ul id="package-productReviews">
