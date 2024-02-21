@@ -20,18 +20,32 @@ import sastra3 from "../assets/img/seni/sastra-3.jpg";
 import bahasa1 from "../assets/img/seni/bahasa-1.jpg";
 import bahasa2 from "../assets/img/seni/bahasa-2.jpg";
 import bahasa3 from "../assets/img/seni/bahasa-3.png";
+import CardKelas from "../components/Homepage/CardKelas";
+import axios from "axios";
 
 export default function Home() {
   const [items, setItems] = useState([]);
+  const [kelas, setKelas] = useState([]);
 
   useEffect(() => {
-    fetch("https://be4-skilvul-production.up.railway.app/api/v1/landingpage/artikel")
+    fetch(
+      "https://express-vercel-puce-sigma.vercel.app/api/v1/landingpage/artikel"
+    )
       .then((res) => res.json())
       .then((data) => {
         const newData = data.data.slice(0, 2); //start & jumlah yg diambil
         setItems(newData);
       });
   }, []);
+
+  useEffect(() => {
+    axios.get('https://express-vercel-puce-sigma.vercel.app/api/v1/landingpage/')
+      .then((res) => {
+        console.log(res)
+        setKelas(res.data.data)
+      })
+  }, [])
+
   return (
     <>
       {/* <Header /> */}
@@ -46,7 +60,9 @@ export default function Home() {
         <section id="about" className="about">
           <div className="container-fluid pt-5">
             <div className="row justify-content-center">
-              <div className="col-10 col-sm-10 col-md-9 col-lg-5 col-xl-5 img-box d-flex justify-content-center align-items-stretch position-relative">{/*<a href="" className="glightbox play-btn mb-4"></a> */}</div>
+              <div className="col-10 col-sm-10 col-md-9 col-lg-5 col-xl-5 img-box d-flex justify-content-center align-items-stretch position-relative">
+                {/*<a href="" className="glightbox play-btn mb-4"></a> */}
+              </div>
 
               <div className="col-10 col-sm-10 col-md-11 col-lg-5 col-xl-5 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
                 <h6>
@@ -54,11 +70,20 @@ export default function Home() {
                 </h6>
                 <h3>Remedial.id</h3>
                 <p>
-                  Serrum remedial adalah perkumpulan studi dan pendidikan seni rupa yang berkedudukan di Jakarta yang didirikan pada tahun 2006. Kata serrum berasal dari kata share dan room yang berarti “ruang berbagi”. Serrum berfokus pada
-                  isu-isu pendidikan, sosial-politik dan perkotaan dengan pendekatan presentasi pendidikan dan artistik. Kegiatan Serrum meliputi proyek seni, pameran, lokakarya, diskusi, dan propaganda kreatif. Media yang digunakan antara
-                  lain video, mural, grafis, komik dan seni instalasi.
+                  Serrum remedial adalah perkumpulan studi dan pendidikan seni
+                  rupa yang berkedudukan di Jakarta yang didirikan pada tahun
+                  2006. Kata serrum berasal dari kata share dan room yang
+                  berarti “ruang berbagi”. Serrum berfokus pada isu-isu
+                  pendidikan, sosial-politik dan perkotaan dengan pendekatan
+                  presentasi pendidikan dan artistik. Kegiatan Serrum meliputi
+                  proyek seni, pameran, lokakarya, diskusi, dan propaganda
+                  kreatif. Media yang digunakan antara lain video, mural,
+                  grafis, komik dan seni instalasi.
                 </p>
-                <Link to="/about" className="btn-get-started animated fadeInUp scrollto">
+                <Link
+                  to="/about"
+                  className="btn-get-started animated fadeInUp scrollto"
+                >
                   Read More
                 </Link>
               </div>
@@ -92,7 +117,10 @@ export default function Home() {
                     <div className="seni-item mt-4">
                       <img src={seni3} className="seni-img" alt="" />
                       <h3>
-                        <p>Pengertian Sketsa serta Tujuan, Fungsi, Manfaat & Langkah</p>
+                        <p>
+                          Pengertian Sketsa serta Tujuan, Fungsi, Manfaat &
+                          Langkah
+                        </p>
                       </h3>
                       <div className="entry-meta">
                         {/* <time className="entry-date published updated"
@@ -123,7 +151,9 @@ export default function Home() {
                     <div className="seni-item">
                       <img src={seni2} className="seni-img" alt="" />
                       <h3>
-                        <p href="#!">Seni Musik: Sejarah, Unsur, Jenis dan Fungsinya</p>
+                        <p href="#!">
+                          Seni Musik: Sejarah, Unsur, Jenis dan Fungsinya
+                        </p>
                       </h3>
                       {/* <time className="entry-date published updated" datetime="2021-01-09T19:27:23+07:00">
                                      09-01-2021
@@ -132,7 +162,10 @@ export default function Home() {
                     <div className="seni-item mt-4">
                       <img src={seni4} className="seni-img" alt="" />
                       <h3>
-                        <p>Musik Kontemporer, Ciri-Ciri, Karakteristik, dan Konsep Kreatif</p>
+                        <p>
+                          Musik Kontemporer, Ciri-Ciri, Karakteristik, dan
+                          Konsep Kreatif
+                        </p>
                       </h3>
                       <div className="entry-meta">
                         {/* <time className="entry-date published updated"
@@ -170,57 +203,30 @@ export default function Home() {
               <h3>
                 Remedial<span>Course</span>
               </h3>
-              <p>Berbagai macam pilihan course dengan metode belajar yang cocok buat kamu</p>
+              <p>
+                Berbagai macam pilihan course dengan metode belajar yang cocok
+                buat kamu
+              </p>
             </div>
-            <div id="packageContainer" className="d-flex justify-content-center">
+            <div
+              id="packageContainer"
+              className="d-flex justify-content-center"
+            >
               <div className="row justify-content-center h-100">
                 <div className="col-sm-7 col-md-6 col-lg-5 col-xl-6 h-100 d-flex justify-content-center">
-                  <div className="package-card">
-                    <div
-                      className="package-card-top" //
-                      //  style="background-image: url(src/assets/img/Rectangle.png);"
-                    >
-                      <div className="package-product-label">
-                        <p>Kelas Offline</p>
-                      </div>
-                    </div>
-                    <div className="package-card-bottom">
-                      <div id="price-information-wrapper-variant-b">
-                        <div className="package-price-information">
-                          <div className="package-price-information-bottom">
-                            <span className="finalPrice">Rp&nbsp;50.000</span>
-                          </div>
-                        </div>
-                      </div>
+                  {
+                    kelas.map((itemKelas) => {
 
-                      <Link to="/program-offline" className="btn-package">
-                        Beli Paket
-                      </Link>
-                      <ul id="package-productReviews">
-                        <li>
-                          <div className="package-preview-icon">
-                            <BsStarFill></BsStarFill>
-                          </div>
-                          <p>
-                            <strong>4.8</strong>/5 rating kelas
-                          </p>
-                        </li>
-                        <li>
-                          <div className="package-preview-icon">
-                            <FaRegLightbulb></FaRegLightbulb>
-                          </div>
-                          <p>Sesi pertemuan offline hingga 10x seminggu</p>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
+                      return <CardKelas key={itemKelas._id} items={itemKelas} />
+                    })
+                  }
                 </div>
 
-                <div className="col-sm-7 col-md-6 col-lg-5 col-xl-6 h-100 d-flex justify-content-center">
+                {/* <div className="col-sm-7 col-md-6 col-lg-5 col-xl-6 h-100 d-flex justify-content-center">
                   <div className="package-card">
                     <div
                       className="package-card-top-1" //
-                      //  style="background-image: url(src/assets/img/Rectangle\ 2974.png);"
+                    //  style="background-image: url(src/assets/img/Rectangle\ 2974.png);"
                     >
                       <div className="package-product-label">
                         <p>Kelas Online</p>
@@ -234,9 +240,16 @@ export default function Home() {
                           </div>
                         </div>
                       </div>
-                      <div className="btn-package-disable" disabled data-tracking-event-type="landing_page__core__item_click">
+                      {/* <div
+                        className="btn-package-disable"
+                        disabled
+                        data-tracking-event-type="landing_page__core__item_click"
+                      >
                         Coming Soon
-                      </div>
+                      </div> */}
+                {/* <Link to="/program-offline" className="btn-package">
+                        Beli Paket
+                      </Link>
                       <ul id="package-productReviews">
                         <li>
                           <div className="package-preview-icon">
@@ -254,8 +267,8 @@ export default function Home() {
                         </li>
                       </ul>
                     </div>
-                  </div>
-                </div>
+                  </div> */}
+                {/* </div> */}
               </div>
             </div>
           </div>
@@ -269,7 +282,10 @@ export default function Home() {
               <h3>
                 Video <span>Pembelajaran</span>
               </h3>
-              <p>Berbagai macam pilihan video dengan metode belajar yang cocok buat kamu</p>
+              <p>
+                Berbagai macam pilihan video dengan metode belajar yang cocok
+                buat kamu
+              </p>
             </div>
 
             <div className="row justify-content-center">
@@ -292,12 +308,16 @@ export default function Home() {
                     </figure>
                     <h4 className="title">
                       <a href="https://youtu.be/ImRf-cl-V7A" target="_blank">
-                        APA ITU SENI? Pengertian, Fungsi, Cabang dan Pembagian Seni
+                        APA ITU SENI? Pengertian, Fungsi, Cabang dan Pembagian
+                        Seni
                       </a>
                     </h4>
                     <p className="description">
-                      Pada umumnya seni sering diartikan sebagai sebuah ekspresi perasaan manusia yang didalamnya mengandung unsur estetik atau keindahan dan diungkapkan melalui suatu media yang nyata baik itu dalam berupa gerak, rupa, nada
-                      dan syair, serta dapat dirasakan oleh panca indra manusia.{" "}
+                      Pada umumnya seni sering diartikan sebagai sebuah ekspresi
+                      perasaan manusia yang didalamnya mengandung unsur estetik
+                      atau keindahan dan diungkapkan melalui suatu media yang
+                      nyata baik itu dalam berupa gerak, rupa, nada dan syair,
+                      serta dapat dirasakan oleh panca indra manusia.{" "}
                     </p>
                   </div>
                   <div className="col-lg-4 col-md-6 icon-box">
@@ -307,7 +327,9 @@ export default function Home() {
                           <iframe
                             width={"100%"}
                             height={"250"}
-                            src={"https://www.youtube.com/embed/videoseries?list=PLhkyWqKxYl7LChI6lcooI-7_f_zFpo6Jh"}
+                            src={
+                              "https://www.youtube.com/embed/videoseries?list=PLhkyWqKxYl7LChI6lcooI-7_f_zFpo6Jh"
+                            }
                             title="YouTube video player"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowFullScreen
@@ -316,13 +338,20 @@ export default function Home() {
                       </div>
                     </figure>
                     <h4 className="title">
-                      <a href={"https://youtube.com/playlist?list=PLhkyWqKxYl7LChI6lcooI-7_f_zFpo6Jh"} target="_blank">
+                      <a
+                        href={
+                          "https://youtube.com/playlist?list=PLhkyWqKxYl7LChI6lcooI-7_f_zFpo6Jh"
+                        }
+                        target="_blank"
+                      >
                         Seni Tari
                       </a>
                     </h4>
                     <p className="description">
-                      seni tari adalah suatu gerakan semua bagian tubuh atau hanya sebagian saja yang dilakukan dengan ritmis serta pada waktu tertentu untuk mengungkap pikiran, perasaan, dan tujuan dengan iringan musik atau tanpa iringan
-                      musik.{" "}
+                      seni tari adalah suatu gerakan semua bagian tubuh atau
+                      hanya sebagian saja yang dilakukan dengan ritmis serta
+                      pada waktu tertentu untuk mengungkap pikiran, perasaan,
+                      dan tujuan dengan iringan musik atau tanpa iringan musik.{" "}
                     </p>
                   </div>
                   <div className="col-lg-4 col-md-6 icon-box">
@@ -332,7 +361,9 @@ export default function Home() {
                           <iframe
                             width={"100%"}
                             height={"250"}
-                            src={"https://www.youtube.com/embed/videoseries?list=PLhkyWqKxYl7Jygbz5eF4sU7vvkRfY5ikO"}
+                            src={
+                              "https://www.youtube.com/embed/videoseries?list=PLhkyWqKxYl7Jygbz5eF4sU7vvkRfY5ikO"
+                            }
                             title="YouTube video player"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowFullScreen
@@ -341,13 +372,21 @@ export default function Home() {
                       </div>
                     </figure>
                     <h4 className="title">
-                      <a href={"https://youtube.com/playlist?list=PLhkyWqKxYl7Jygbz5eF4sU7vvkRfY5ikO"} target="_blank">
+                      <a
+                        href={
+                          "https://youtube.com/playlist?list=PLhkyWqKxYl7Jygbz5eF4sU7vvkRfY5ikO"
+                        }
+                        target="_blank"
+                      >
                         Seni Rupa
                       </a>
                     </h4>
                     <p className="description">
-                      Seni rupa adalah cabang seni yang membentuk karya seni dengan media yang bisa ditangkap mata dan dirasakan dengan rabaan. Kesan ini diciptakan dengan mengolah konsep titik, garis, bidang, bentuk, volume, warna,
-                      tekstur, dan pencahayaan dengan acuan estetika.
+                      Seni rupa adalah cabang seni yang membentuk karya seni
+                      dengan media yang bisa ditangkap mata dan dirasakan dengan
+                      rabaan. Kesan ini diciptakan dengan mengolah konsep titik,
+                      garis, bidang, bentuk, volume, warna, tekstur, dan
+                      pencahayaan dengan acuan estetika.
                     </p>
                   </div>
                   <div className="col-lg-4 col-md-6 icon-box">
@@ -357,7 +396,9 @@ export default function Home() {
                           <iframe
                             width={"100%"}
                             height={"250"}
-                            src={"https://www.youtube.com/embed/videoseries?list=PLHsx37V5nkBokmu8UWeBH51cD6jMT7OMc"}
+                            src={
+                              "https://www.youtube.com/embed/videoseries?list=PLHsx37V5nkBokmu8UWeBH51cD6jMT7OMc"
+                            }
                             title="YouTube video player"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowFullScreen
@@ -366,13 +407,21 @@ export default function Home() {
                       </div>
                     </figure>
                     <h4 className="title">
-                      <a href={"https://youtube.com/playlist?list=PLHsx37V5nkBokmu8UWeBH51cD6jMT7OMc"} target="_blank">
+                      <a
+                        href={
+                          "https://youtube.com/playlist?list=PLHsx37V5nkBokmu8UWeBH51cD6jMT7OMc"
+                        }
+                        target="_blank"
+                      >
                         Seni Musik
                       </a>
                     </h4>
                     <p className="description">
-                      Seni musik adalah sebuah cabang seni yang lebih fokus mengutamakan penggunaan harmoni, melodi, irama, tempo, dan vokal sebagai sarana menyampaikan nilai-nilai seni itu sendiri dari seniman atau pembuat seni kepada
-                      orang lain atau penikmat seni.
+                      Seni musik adalah sebuah cabang seni yang lebih fokus
+                      mengutamakan penggunaan harmoni, melodi, irama, tempo, dan
+                      vokal sebagai sarana menyampaikan nilai-nilai seni itu
+                      sendiri dari seniman atau pembuat seni kepada orang lain
+                      atau penikmat seni.
                     </p>
                   </div>
                   <div className="col-lg-4 col-md-6 icon-box">
@@ -395,7 +444,10 @@ export default function Home() {
                         Seni Sastra
                       </a>
                     </h4>
-                    <p className="description">Seni sastra adalah seni yang menampilkan persepsi, ekspresi, gagasan, dan keindahan melalui tuliskan.</p>
+                    <p className="description">
+                      Seni sastra adalah seni yang menampilkan persepsi,
+                      ekspresi, gagasan, dan keindahan melalui tuliskan.
+                    </p>
                   </div>
                   <div className="col-lg-4 col-md-6 icon-box">
                     <figure className="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio">
@@ -404,7 +456,9 @@ export default function Home() {
                           <iframe
                             width={"100%"}
                             height={"250"}
-                            src={"https://www.youtube.com/embed/videoseries?list=PLhkyWqKxYl7L8YaQ0VDaOgU9S769nj1Ff"}
+                            src={
+                              "https://www.youtube.com/embed/videoseries?list=PLhkyWqKxYl7L8YaQ0VDaOgU9S769nj1Ff"
+                            }
                             title="YouTube video player"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowFullScreen
@@ -413,13 +467,21 @@ export default function Home() {
                       </div>
                     </figure>
                     <h4 className="title">
-                      <a href={"https://youtube.com/playlist?list=PLhkyWqKxYl7L8YaQ0VDaOgU9S769nj1Ff"} target="_blank">
+                      <a
+                        href={
+                          "https://youtube.com/playlist?list=PLhkyWqKxYl7L8YaQ0VDaOgU9S769nj1Ff"
+                        }
+                        target="_blank"
+                      >
                         Seni Teater
                       </a>
                     </h4>
                     <p className="description">
-                      Seni teater adalah jenis kesenian pertunjukan drama yang dipentaskan di atas panggung. Secara spesifik, seni teater merupakan sebuah seni drama yang menampilkan perilaku manusia dengan gerak, tari, dan nyanyian yang
-                      disajikan lengkap dengan dialog dan akting.
+                      Seni teater adalah jenis kesenian pertunjukan drama yang
+                      dipentaskan di atas panggung. Secara spesifik, seni teater
+                      merupakan sebuah seni drama yang menampilkan perilaku
+                      manusia dengan gerak, tari, dan nyanyian yang disajikan
+                      lengkap dengan dialog dan akting.
                     </p>
                   </div>
                 </div>
@@ -454,7 +516,10 @@ export default function Home() {
                     <div className="seni-item mt-4">
                       <img src={sastra1} className="seni-img" alt="" />
                       <h3>
-                        <p>Drama: Pengertian, Ciri, Struktur, Unsur, Bentuk & Kaidah</p>
+                        <p>
+                          Drama: Pengertian, Ciri, Struktur, Unsur, Bentuk &
+                          Kaidah
+                        </p>
                       </h3>
                       <div className="entry-meta">
                         {/* <time className="entry-date published updated"
@@ -466,7 +531,10 @@ export default function Home() {
                     <div className="seni-item mt-4">
                       <img src={sastra3} className="seni-img" alt="" />
                       <h3>
-                        <p>Teks Cerita Fantasi, Ciri-Ciri, Struktur, Kaidah Kebahasaan, dan Contohnya</p>
+                        <p>
+                          Teks Cerita Fantasi, Ciri-Ciri, Struktur, Kaidah
+                          Kebahasaan, dan Contohnya
+                        </p>
                       </h3>
                       <div className="entry-meta">
                         {/* <time className="entry-date published updated"
@@ -485,7 +553,10 @@ export default function Home() {
                     <div className="seni-item mt-4 mt-lg-0">
                       <img src={bahasa1} className="seni-img" alt="" />
                       <h3>
-                        <p>Ilmiah: Pengertian, Ciri, Jenis & Struktur (Sistematika)</p>
+                        <p>
+                          Ilmiah: Pengertian, Ciri, Jenis & Struktur
+                          (Sistematika)
+                        </p>
                       </h3>
                       {/* <time className="entry-date published updated" datetime="2021-01-24T19:27:23+07:00">
                                      24-01-2021
@@ -494,7 +565,10 @@ export default function Home() {
                     <div className="seni-item mt-4">
                       <img src={bahasa3} className="seni-img" alt="" />
                       <h3>
-                        <p>Pengertian, Struktur, Unsur Kebahasaan & Pola Penulisan</p>
+                        <p>
+                          Pengertian, Struktur, Unsur Kebahasaan & Pola
+                          Penulisan
+                        </p>
                       </h3>
                       <div className="entry-meta">
                         {/* <time className="entry-date published updated"
@@ -543,7 +617,10 @@ export default function Home() {
 
             <div className="col-lg-13 d-flex justify-content-center">
               <Link to="/artikel">
-                <button type="button" className="btn btn-outline-secondary btn-md my-4 fw-bold">
+                <button
+                  type="button"
+                  className="btn btn-outline-secondary btn-md my-4 fw-bold"
+                >
                   Lihat Semua
                 </button>
               </Link>

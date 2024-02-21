@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../assets/css/style.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import Header from "../components/Header";
 import program from "../assets/img/program.png";
 import pengajar5 from "../assets/img/pengajar/pengajar5.png";
@@ -8,8 +8,12 @@ import pengajar4 from "../assets/img/pengajar/pengajar4.png";
 import pengajar3 from "../assets/img/pengajar/pengajar3.png";
 import pengajar2 from "../assets/img/pengajar/pengajar2.png";
 import pengajar1 from "../assets/img/pengajar/pengajar1.png";
+import axios from "axios";
 
 export default function Kelas_Offline() {
+  const { id } = useParams()
+  const [items, setItems] = useState([]);
+
   const [harga, setHarga] = useState("Rp 50.000,00");
   const [mapel, setMapel] = useState(null);
   const [tempat, setTempat] = useState(null);
@@ -17,6 +21,14 @@ export default function Kelas_Offline() {
   const [waktu, setWaktu] = useState(null);
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    axios.get("https://express-vercel-puce-sigma.vercel.app/api/v1/detailpage/" + id)
+      .then((res) => {
+        console.log(res)
+        setItems(res.data.data)
+      })
+  }, [])
 
   const pelajaran = [
     { label: "Seni Tari", value: 1 },
@@ -91,10 +103,9 @@ export default function Kelas_Offline() {
             <div className="container col-10 mb-5 pb-5">
               <div className="row">
                 <div className="col-xl-8 col-lg-8 col-md-8 icon-boxes d-flex flex-column justify-content-center">
-                  <h3>Kelas Ofline</h3>
+                  <h3>{items.judul}</h3>
                   <p>
-                    Siswa kreatif yang ingin fokus pada disiplin ilmu seperti teater, musik atau seni dapat memilih untuk belajar seni yang di inginkan. Hal ini dapat mempersiapkan siswa untuk karir dalam seni atau melengkapi berbagai karir
-                    lain di humaniora. Sebut saja adalah studi topik tertentu dalam wilayah subjek yang lebih luas dan merupakan dasar dari kualifikasi. Sebuah kursus umum meliputi kuliah, penilaian dan tutorial.
+                    {items.deskripsi_kelas}
                   </p>
                   <p>
                     <i className="bi bi-app"></i> Tersedia 10 mata pelajaran
@@ -111,7 +122,7 @@ export default function Kelas_Offline() {
 
                   <h4 className="mt-2 fw-bold">Harga</h4>
 
-                  <h2 className="pt-2 ps-3 fw-bold">Rp 50.000</h2>
+                  <h2 className="pt-2 ps-3 fw-bold">Rp. {items.harga}</h2>
                 </div>
 
                 <div className="col-xl-4 col-lg-4 col-md-4 d-flex justify-content-end ">
@@ -237,7 +248,7 @@ export default function Kelas_Offline() {
                           <div className="btn-group btn-group-toggle col-3 mx-2" data-toggle="buttons">
                             <label
                               className="btn btn-secondary"
-                              // style="font-size: 8pt;"
+                            // style="font-size: 8pt;"
                             >
                               <input type="radio" name="options" id="option1" defaultValue={"03 Juli 2023"} defaultChecked onClick={handleDate} /> <br />
                               03 Jul 23
@@ -247,7 +258,7 @@ export default function Kelas_Offline() {
                           <div className="btn-group btn-group-toggle col-3 mx-2" data-toggle="buttons">
                             <label
                               className="btn btn-secondary"
-                              // style="font-size: 8pt;"
+                            // style="font-size: 8pt;"
                             >
                               <input type="radio" name="options" id="option2" defaultValue={"10 Juli 2023"} defaultChecked onClick={handleDate} /> <br />
                               10 Jul 23
@@ -269,7 +280,7 @@ export default function Kelas_Offline() {
                           <div className="btn-group btn-group-toggle col-5 mx-2" data-toggle="buttons">
                             <label
                               className="btn btn-secondary"
-                              // style="font-size: 8pt;"
+                            // style="font-size: 8pt;"
                             >
                               <input type="radio" name="waktu" id="waktu1" defaultValue="13.00 - 15.00 WIB" defaultChecked onClick={handleWaktu} /> <br />
                               13.00 - 15.00 WIB
@@ -279,7 +290,7 @@ export default function Kelas_Offline() {
                           <div className="btn-group btn-group-toggle col-5 mx-2" data-toggle="buttons">
                             <label
                               className="btn btn-secondary"
-                              // style="font-size: 8pt;"
+                            // style="font-size: 8pt;"
                             >
                               <input type="radio" name="waktu" id="waktu2" defaultValue="07.30 - 09.30 WIB" defaultChecked onClick={handleWaktu} /> <br />
                               07.30 - 09.30 WIB

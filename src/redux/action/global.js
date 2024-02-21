@@ -1,9 +1,9 @@
 import axios from "axios";
 
-export const  postSignUp= (data) => async (dispatch) => {
+export const postSignUp = (data) => async (dispatch) => {
   try {
     const res = await axios.post(
-      `https://be4-skilvul-production.up.railway.app/user/register`,
+      `https://express-vercel-puce-sigma.vercel.app/user/register`,
       data,
       {
         headers: {
@@ -11,8 +11,8 @@ export const  postSignUp= (data) => async (dispatch) => {
         },
       }
     );
-    console.log(res)
-    if(res && res.data && res.data.message === "success register"){
+    console.log(res);
+    if (res && res.data && res.data.message === "success register") {
       localStorage.setItem("register", "success");
     }
   } catch (err) {
@@ -23,7 +23,7 @@ export const  postSignUp= (data) => async (dispatch) => {
 export const postLogin = (data) => async (dispatch) => {
   try {
     const res = await axios.post(
-      `https://be4-skilvul-production.up.railway.app/user/login`,
+      `https://express-vercel-puce-sigma.vercel.app/user/login`,
       data,
       {
         headers: {
@@ -31,11 +31,15 @@ export const postLogin = (data) => async (dispatch) => {
         },
       }
     );
-    console.log(res)
-    if(res && res.data && res.data.token){
+    console.log(res);
+    if (res && res.data && res.data.token) {
       localStorage.setItem("token", res?.data?.token);
       const nama = res.data.nama_lengkap;
+      const email = res.data.email;
+      const alamat = res.data.alamat;
       localStorage.setItem("nama_lengkap", nama);
+      localStorage.setItem("email", email);
+      localStorage.setItem("alamat", alamat);
     }
   } catch (err) {
     console.log("ERORBTUHGTBOBO", err);

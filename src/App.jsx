@@ -21,6 +21,8 @@ import { Provider } from "react-redux";
 import store from "./redux/store";
 import Kelas_Offline from "./pages/Kelas_Offline";
 
+import CourseDetails from "./pages/CourseDetails";
+
 function App() {
   return (
     <>
@@ -29,7 +31,7 @@ function App() {
           <Routes>
             <Route path="/home" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/program-offline" element={<Kelas_Offline />} />
+            <Route path="/program-offline/:id" element={<Kelas_Offline />} />
             <Route path="/program-online" element="#" />
             <Route path="/pembayaran" element={<Pembayaran />} />
             <Route path="/fundamental-seni" element={<Fundamental />} />
@@ -39,6 +41,7 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/" element={<Login />} />
             <Route path="/artikel/:id" element={<DetailArtikel />} />
+            <Route path="/course-details/:id" element={<CourseDetails />} />
           </Routes>
           <Footer />
         </Router>

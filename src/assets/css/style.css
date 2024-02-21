@@ -268,6 +268,14 @@ h6 {
 .logOut:hover {
   color: #d82b14;
 }
+.myCourse {
+  cursor: pointer;
+  color: #272c30;
+}
+
+.myCourse:hover {
+  color: #d82b14;
+}
 
 @media (max-width: 1366px) {
   .navbar .dropdown .dropdown ul {
@@ -364,10 +372,18 @@ h6 {
   background: #f3f3f3;
 
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-linear-gradient(to bottom right, rgb(68, 64, 64), rgb(37, 34, 35));
+  background: -webkit-linear-gradient(
+    to bottom right,
+    rgb(68, 64, 64),
+    rgb(37, 34, 35)
+  );
 
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(255, 255, 255));
+  background: linear-gradient(
+    to bottom right,
+    rgb(255, 255, 255),
+    rgb(255, 255, 255)
+  );
 }
 
 .card-registration {
@@ -1012,7 +1028,7 @@ HEAD #packageContainer {
   position: relative;
 }
 
-.package-card .package-card-top .package-card-top-1{
+.package-card .package-card-top .package-card-top-1 {
   height: 350px;
 }
 
@@ -1189,7 +1205,7 @@ HEAD #packageContainer {
     padding: 80px 0 0 24px;
   }
 
-  .package-card-top .package-card-top-1{
+  .package-card-top .package-card-top-1 {
     height: 350px;
   }
 
@@ -1372,7 +1388,12 @@ HEAD #packageContainer {
 }
 
 .team .member:hover .member-info {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 20%, rgba(0, 212, 255, 0) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.8) 20%,
+    rgba(0, 212, 255, 0) 100%
+  );
   opacity: 1;
   transition: 0.4s;
 }
@@ -1490,7 +1511,8 @@ HEAD #packageContainer {
 --------------------------------------------------------------*/
 .total-harga {
   align-content: center;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 .batas-bayar {
@@ -1690,4 +1712,207 @@ HEAD #packageContainer {
   color: #012970;
   font-family: "Nunito", sans-serif;
   margin-top: 3px;
+}
+
+/* course detail */
+.course-details-area {
+  margin-top: 100px;
+}
+
+.courses-details-wrapper h5 {
+  color: #707070;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.courses-title {
+  font-size: 32px;
+}
+.course-details-img {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 5px;
+  min-height: 464px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.course-details-img .popup-video {
+  width: 70px;
+  height: 70px;
+  line-height: 71px;
+  background-color: #ffffff;
+  color: #2878eb;
+  font-size: 13px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.courses-tag-btn a {
+  color: #1b212f;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+  border: 1px solid rgba(112, 112, 112, 0.2);
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 30px;
+  margin-right: 8px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+@media (max-width: 767px) {
+  .courses-tag-btn a {
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+    margin-right: 2px;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .courses-tag-btn a {
+    margin-bottom: 10px;
+    width: unset;
+    text-align: unset;
+  }
+}
+.courses-tag-btn a:hover {
+  color: #ffffff;
+  border-color: #2878eb;
+  background-color: #2878eb;
+}
+
+.price-list h5 {
+  color: #707070;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.price-list h5 span {
+  text-decoration: line-through;
+}
+
+.price-list .sub-title {
+  color: #1b212f;
+  font-weight: 700;
+  margin-left: 10px;
+}
+.courses-ingredients {
+  border-radius: 5px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 5px 15px 60px rgba(27, 33, 47, 0.05);
+  box-shadow: 5px 15px 60px rgba(27, 33, 47, 0.05);
+  padding: 30px 35px 10px 35px;
+  margin-left: 75px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .courses-ingredients {
+    padding: 30px 15px 10px 15px;
+    margin-left: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .courses-ingredients {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .courses-ingredients {
+    padding: 30px 15px 10px 15px;
+    margin-left: 0;
+  }
+}
+.learn-box h5 {
+  color: #1b212f;
+  font-size: 20px;
+  border-bottom: 1px solid rgba(164, 157, 157, 0.2);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.learn-list {
+  overflow-y: scroll;
+  height: 440px;
+  margin-right: 20px;
+  /* Handle */
+}
+
+@media (max-width: 767px) {
+  .learn-list {
+    margin-right: 5px;
+  }
+}
+
+.learn-list ::-webkit-scrollbar-thumb {
+  background: #707070;
+}
+
+.learn-list li {
+  margin-bottom: 25px;
+  padding-right: 55px;
+}
+
+@media (max-width: 767px) {
+  .learn-list li {
+    padding-right: 5px;
+  }
+}
+
+.learn-list li a,
+.learn-list li div {
+  color: #505050;
+  font-size: 16px;
+  line-height: 1;
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .learn-list li a {
+    font-size: 15px;
+  }
+}
+
+.learn-list li a .play-video {
+  -webkit-transform: translateY(-2px);
+  transform: translateY(-2px);
+  display: inline-block;
+  margin-right: 8px;
+}
+
+@media (max-width: 767px) {
+  .learn-list li a .play-video {
+    margin-right: 1px;
+  }
+}
+
+.learn-list li a .play-video i {
+  color: #1b212f;
+  font-size: 20px;
+  margin-right: 3px;
+}
+.cart-list-tag li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+@media (max-width: 767px) {
+  .cart-list-tag li {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .cart-list-tag li {
+    margin-bottom: 0;
+  }
 }

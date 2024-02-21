@@ -16,6 +16,8 @@ export default function Header() {
   const handleLogout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("nama_lengkap");
+    localStorage.removeItem("email");
+    localStorage.removeItem("alamat");
     navigate("/");
   };
 
@@ -112,6 +114,11 @@ export default function Header() {
                   <li>
                     <div className="logOut ms-4" onClick={handleLogout}>
                       Logout
+                    </div>
+                  </li>
+                  <li>
+                    <div className="myCourse ms-4" >
+                      My Course
                     </div>
                   </li>
                 </ul>

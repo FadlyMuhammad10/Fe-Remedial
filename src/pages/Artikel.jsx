@@ -9,10 +9,12 @@ export default function Artikel() {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch("https://be4-skilvul-production.up.railway.app/api/v1/landingpage/artikel")
+    fetch(
+      "https://express-vercel-puce-sigma.vercel.app/api/v1/landingpage/artikel"
+    )
       .then((res) => res.json())
       .then((data) => {
-        setItems(data.data)
+        setItems(data.data);
       });
   }, []);
 
@@ -39,7 +41,8 @@ export default function Artikel() {
             <div className="col-11 col-xl-10">
               <h2 className="mt-3">Artikel</h2>
               <h6 className="">
-                Kami menyediakan informasi atau laporan mengenai suatu kejadian, isu, atau <br />
+                Kami menyediakan informasi atau laporan mengenai suatu kejadian,
+                isu, atau <br />
                 peristiwa yang berkaitan dengan seni dan literasi
               </h6>
               <hr />

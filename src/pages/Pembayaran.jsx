@@ -12,6 +12,7 @@ export default function Pembayaran(props) {
   console.log(location, "useLocation Hook");
 
   const nama = localStorage.getItem("nama_lengkap");
+  const email = localStorage.getItem("email");
   const mapel = location?.state?.mapel;
   const tempat = location?.state?.tempat;
   const waktu = location?.state?.waktu;
@@ -42,9 +43,10 @@ export default function Pembayaran(props) {
 
   const bayar = () => {
     axios
-      .post("https://be4-skilvul-production.up.railway.app/api/v1/payment", {
+      .post("https://express-vercel-puce-sigma.vercel.app/api/v1/payment", {
         nama_lengkap: nama,
         harga: 50000,
+        email: email,
       })
       .then((res) => {
         // console.log(res.data.token);
@@ -196,21 +198,39 @@ export default function Pembayaran(props) {
                 </h2>
                 <div className="total-harga bg-dark rounded-3 d-flex text-white justify-content-around pt-3 mb-4">
                   <div className="d-flex">
-                    <ImPriceTag fontSize="2rem" color="yellow" border="1px solid black" />
+                    <ImPriceTag
+                      fontSize="2rem"
+                      color="yellow"
+                      border="1px solid black"
+                    />
                     <p className="ms-3 fs-5">Total Harga</p>
                   </div>
                   <p className="fs-5 text-white">{harga}</p>
                 </div>
 
                 <div className="form-check my-4 ">
-                  <input className="form-check-input" type="checkbox" id="flexCheckDefault" onChange={handleCheck} />
-                  <label className="form-check-label fs-6" htmlFor="flexCheckDefault">
-                    Saya telah membaca dan menyetujui <span className="fw-semibold">Syarat dan Ketentuan</span>
+                  <input
+                    className="form-check-input"
+                    type="checkbox"
+                    id="flexCheckDefault"
+                    onChange={handleCheck}
+                  />
+                  <label
+                    className="form-check-label fs-6"
+                    htmlFor="flexCheckDefault"
+                  >
+                    Saya telah membaca dan menyetujui{" "}
+                    <span className="fw-semibold">Syarat dan Ketentuan</span>
                   </label>
                 </div>
 
                 <div className="d-flex justify-content-center my-4">
-                  <button onClick={() => bayar()} disabled={!disable} className="btn btn-danger px-5" role="button">
+                  <button
+                    onClick={() => bayar()}
+                    disabled={!disable}
+                    className="btn btn-danger px-5"
+                    role="button"
+                  >
                     Bayar
                   </button>
                 </div>
