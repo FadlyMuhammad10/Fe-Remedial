@@ -31,15 +31,15 @@ export const postLogin = (data) => async (dispatch) => {
         },
       }
     );
-    console.log(res);
+    console.log(res); 
     if (res && res.data && res.data.token) {
       localStorage.setItem("token", res?.data?.token);
       const nama = res.data.nama_lengkap;
       const email = res.data.email;
-      const alamat = res.data.alamat;
+      const id = res.data.id;
       localStorage.setItem("nama_lengkap", nama);
       localStorage.setItem("email", email);
-      localStorage.setItem("alamat", alamat);
+      localStorage.setItem("id", id);
     }
   } catch (err) {
     console.log("ERORBTUHGTBOBO", err);
