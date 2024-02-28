@@ -22,7 +22,7 @@ export default function Login() {
     const data = {
       email: email,
       password: password,
-      alamat: alamat,
+      // alamat: alamat,
     };
 
     console.log(data);

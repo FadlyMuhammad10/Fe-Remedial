@@ -10,7 +10,7 @@ export default function Artikel() {
 
   useEffect(() => {
     fetch(
-      "https://express-vercel-puce-sigma.vercel.app/api/v1/landingpage/artikel"
+      `https://express-vercel-rho-woad.vercel.app/api/v1/landingpage/artikel`
     )
       .then((res) => res.json())
       .then((data) => {

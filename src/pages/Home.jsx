@@ -29,7 +29,7 @@ export default function Home() {
 
   useEffect(() => {
     fetch(
-      "https://express-vercel-puce-sigma.vercel.app/api/v1/landingpage/artikel"
+      `https://express-vercel-rho-woad.vercel.app/api/v1/landingpage/artikel`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -40,7 +40,7 @@ export default function Home() {
 
   useEffect(() => {
     axios
-      .get("https://express-vercel-puce-sigma.vercel.app/api/v1/landingpage/")
+      .get(`https://express-vercel-rho-woad.vercel.app/api/v1/landingpage/`)
       .then((res) => {
         console.log(res);
         setKelas(res.data.data);

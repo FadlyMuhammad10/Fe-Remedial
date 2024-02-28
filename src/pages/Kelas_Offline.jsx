@@ -11,7 +11,7 @@ import pengajar1 from "../assets/img/pengajar/pengajar1.png";
 import axios from "axios";
 
 export default function Kelas_Offline() {
-  const { id } = useParams()
+  const { id } = useParams();
   const [items, setItems] = useState([]);
 
   const [harga, setHarga] = useState("Rp 50.000,00");
@@ -23,12 +23,13 @@ export default function Kelas_Offline() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get("https://express-vercel-puce-sigma.vercel.app/api/v1/detailpage/" + id)
+    axios
+      .get(`${process.env.URL_HOSTING}/api/v1/detailpage/` + id)
       .then((res) => {
-        console.log(res)
-        setItems(res.data.data)
-      })
-  }, [])
+        console.log(res);
+        setItems(res.data.data);
+      });
+  }, []);
 
   const pelajaran = [
     { label: "Seni Tari", value: 1 },
@@ -66,9 +67,21 @@ export default function Kelas_Offline() {
   }
 
   function handleNext() {
-    if (harga !== null && mapel !== null && tempat !== null && tanggal !== null && waktu !== null) {
+    if (
+      harga !== null &&
+      mapel !== null &&
+      tempat !== null &&
+      tanggal !== null &&
+      waktu !== null
+    ) {
       const location = {
-        state: { harga: harga, mapel: mapel, tempat: tempat, tanggal: tanggal, waktu: waktu },
+        state: {
+          harga: harga,
+          mapel: mapel,
+          tempat: tempat,
+          tanggal: tanggal,
+          waktu: waktu,
+        },
       };
       navigate("/pembayaran", location);
     } else {
@@ -98,15 +111,16 @@ export default function Kelas_Offline() {
         {/* <!-- End Breadcrumbs --> */}
 
         {/* <!-- ======= program Section ======= --> */}
-        <section id="kelas-off" className="program d-flex justify-content-center">
+        <section
+          id="kelas-off"
+          className="program d-flex justify-content-center"
+        >
           <div className="row d-flex justify-content-center">
             <div className="container col-10 mb-5 pb-5">
               <div className="row">
                 <div className="col-xl-8 col-lg-8 col-md-8 icon-boxes d-flex flex-column justify-content-center">
                   <h3>{items.judul}</h3>
-                  <p>
-                    {items.deskripsi_kelas}
-                  </p>
+                  <p>{items.deskripsi_kelas}</p>
                   <p>
                     <i className="bi bi-app"></i> Tersedia 10 mata pelajaran
                   </p>
@@ -114,7 +128,8 @@ export default function Kelas_Offline() {
                     <i className="bi bi-app"></i> Belajar lebih fleksibel
                   </p>
                   <p>
-                    <i className="bi bi-app"></i> Mampu mengetahui tentang seni dan cara mempraktikannya
+                    <i className="bi bi-app"></i> Mampu mengetahui tentang seni
+                    dan cara mempraktikannya
                   </p>
                   <p>
                     <i className="bi bi-app"></i> Bersertifikat
@@ -142,8 +157,14 @@ export default function Kelas_Offline() {
                         Deskripsi
                       </li>
                       <li className="list-group-item py-5 lh-lg">
-                        Siswa kreatif yang ingin fokus pada disiplin ilmu seperti teater, musik atau seni dapat memilih untuk belajar seni yang di inginkan. Hal ini dapat mempersiapkan siswa untuk karir dalam seni atau melengkapi berbagai
-                        karir lain di humaniora. Sebut saja adalah studi topik tertentu dalam wilayah subjek yang lebih luas dan merupakan dasar dari kualifikasi. Sebuah kursus umum meliputi kuliah, penilaian dan tutorial.
+                        Siswa kreatif yang ingin fokus pada disiplin ilmu
+                        seperti teater, musik atau seni dapat memilih untuk
+                        belajar seni yang di inginkan. Hal ini dapat
+                        mempersiapkan siswa untuk karir dalam seni atau
+                        melengkapi berbagai karir lain di humaniora. Sebut saja
+                        adalah studi topik tertentu dalam wilayah subjek yang
+                        lebih luas dan merupakan dasar dari kualifikasi. Sebuah
+                        kursus umum meliputi kuliah, penilaian dan tutorial.
                         {/* <br><br> */}
                         <ul className="list-unstyled">
                           <li>
@@ -152,7 +173,10 @@ export default function Kelas_Offline() {
                               <li>Daftar ke website Remedial.</li>
                               <li>Pilih kelas atau tambahkan kelas</li>
                               <li>Checkout</li>
-                              <li>Setelah itu, Team remedial akan langsung mengirimkan e-tiket melalui email.</li>
+                              <li>
+                                Setelah itu, Team remedial akan langsung
+                                mengirimkan e-tiket melalui email.
+                              </li>
                             </ul>
                           </li>
                         </ul>
@@ -170,19 +194,34 @@ export default function Kelas_Offline() {
                         <div className="col-xl-11 col-lg-11 col-md-11 ">
                           <div className="row justify-content-around">
                             <div className="col-xl-3 col-lg-4 col-md-6 col-sm-8 text-start bg-dark rounded my-3 p-0 mx-2 text-white">
-                              <img src={pengajar5} className="rounded-top" width="100%" alt="" />
+                              <img
+                                src={pengajar5}
+                                className="rounded-top"
+                                width="100%"
+                                alt=""
+                              />
                               <h5 className="py-3 ps-4">Angela Hirata</h5>
                               <p className="px-4">Seni Musik</p>
                             </div>
 
                             <div className="col-xl-3 col-lg-4 col-md-6 col-sm-8 text-start bg-dark rounded my-3 mx-2 p-0 text-white">
-                              <img src={pengajar4} className="rounded-top" width="100%" alt="" />
+                              <img
+                                src={pengajar4}
+                                className="rounded-top"
+                                width="100%"
+                                alt=""
+                              />
                               <h5 className="py-3 ps-4">Mauren Andrea</h5>
                               <p className="px-4">Seni Rupa</p>
                             </div>
 
                             <div className="col-xl-3 col-lg-4 col-md-6 col-sm-8 text-start bg-dark rounded my-3 p-0 text-white">
-                              <img src={pengajar3} className="rounded-top" width="100%" alt="" />
+                              <img
+                                src={pengajar3}
+                                className="rounded-top"
+                                width="100%"
+                                alt=""
+                              />
                               <h5 className="py-3 ps-4">Marsel Nova</h5>
                               <p className="px-4">Pertunjukan</p>
                             </div>
@@ -194,13 +233,23 @@ export default function Kelas_Offline() {
                         <div className="col-xl-11">
                           <div className="row justify-content-evenly">
                             <div className="col-xl-3 col-lg-4 col-md-6 col-sm-8 text-start bg-dark rounded my-3 p-0 mx-2 text-white">
-                              <img src={pengajar2} className="rounded-top" width="100%" alt="" />
+                              <img
+                                src={pengajar2}
+                                className="rounded-top"
+                                width="100%"
+                                alt=""
+                              />
                               <p className="fs-5 py-3 ps-4">Samuel Lincoln</p>
                               <p className="px-4">Seni Rupa</p>
                             </div>
 
                             <div className="col-xl-3 col-lg-4 col-md-6 col-sm-8 text-start bg-dark rounded my-3 p-0 mx-2 text-white">
-                              <img src={pengajar1} className="rounded-top" width="100%" alt="" />
+                              <img
+                                src={pengajar1}
+                                className="rounded-top"
+                                width="100%"
+                                alt=""
+                              />
                               <p className="fs-5 py-3 ps-4">Jales Marque</p>
                               <p className="px-4">Seni Musik</p>
                             </div>
@@ -214,14 +263,23 @@ export default function Kelas_Offline() {
                 <div className="col-lg-3 col-9">
                   <div className="card d-flex">
                     <ul className="list-group list-group-flush">
-                      <li className="list-group-item fs-5 fw-bold">Pilihan Waktu</li>
+                      <li className="list-group-item fs-5 fw-bold">
+                        Pilihan Waktu
+                      </li>
 
                       <div className="d-flex justify-content-center">
                         <div className="col-10 d-flex justify-item-center">
-                          <select className="form-select m-2 mt-4 py-2 px-3 bg-secondary bg-opacity-25" onChange={handlePelajaran} aria-label="Default select example">
+                          <select
+                            className="form-select m-2 mt-4 py-2 px-3 bg-secondary bg-opacity-25"
+                            onChange={handlePelajaran}
+                            aria-label="Default select example"
+                          >
                             <option select="true">Pilih Mata Pelajaran</option>
                             {pelajaran.map((pelajaran) => (
-                              <option key={pelajaran.value} value={pelajaran.label}>
+                              <option
+                                key={pelajaran.value}
+                                value={pelajaran.label}
+                              >
                                 {pelajaran.label}
                               </option>
                             ))}
@@ -231,7 +289,11 @@ export default function Kelas_Offline() {
 
                       <div className="d-flex justify-content-center">
                         <div className="col-10 d-flex justify-item-center">
-                          <select className="form-select m-2 py-2 px-3 bg-secondary bg-opacity-25" onChange={handleLokasi} aria-label="Default select example">
+                          <select
+                            className="form-select m-2 py-2 px-3 bg-secondary bg-opacity-25"
+                            onChange={handleLokasi}
+                            aria-label="Default select example"
+                          >
                             <option select="true">Pilih Lokasi</option>
                             {lokasi.map((lokasi) => (
                               <option key={lokasi.value} value={lokasi.label}>
@@ -245,29 +307,62 @@ export default function Kelas_Offline() {
                       <div className="py-3">
                         <h6 className="px-3 text-black">Tanggal Mulai Kelas</h6>
                         <div className="d-flex justify-content-center ">
-                          <div className="btn-group btn-group-toggle col-3 mx-2" data-toggle="buttons">
+                          <div
+                            className="btn-group btn-group-toggle col-3 mx-2"
+                            data-toggle="buttons"
+                          >
                             <label
                               className="btn btn-secondary"
-                            // style="font-size: 8pt;"
+                              // style="font-size: 8pt;"
                             >
-                              <input type="radio" name="options" id="option1" defaultValue={"03 Juli 2023"} defaultChecked onClick={handleDate} /> <br />
+                              <input
+                                type="radio"
+                                name="options"
+                                id="option1"
+                                defaultValue={"03 Juli 2023"}
+                                defaultChecked
+                                onClick={handleDate}
+                              />{" "}
+                              <br />
                               03 Jul 23
                             </label>
                           </div>
 
-                          <div className="btn-group btn-group-toggle col-3 mx-2" data-toggle="buttons">
+                          <div
+                            className="btn-group btn-group-toggle col-3 mx-2"
+                            data-toggle="buttons"
+                          >
                             <label
                               className="btn btn-secondary"
-                            // style="font-size: 8pt;"
+                              // style="font-size: 8pt;"
                             >
-                              <input type="radio" name="options" id="option2" defaultValue={"10 Juli 2023"} defaultChecked onClick={handleDate} /> <br />
+                              <input
+                                type="radio"
+                                name="options"
+                                id="option2"
+                                defaultValue={"10 Juli 2023"}
+                                defaultChecked
+                                onClick={handleDate}
+                              />{" "}
+                              <br />
                               10 Jul 23
                             </label>
                           </div>
 
-                          <div className="btn-group btn-group-toggle col-3 mx-2" data-toggle="buttons">
+                          <div
+                            className="btn-group btn-group-toggle col-3 mx-2"
+                            data-toggle="buttons"
+                          >
                             <label className="btn btn-secondary">
-                              <input type="radio" name="options" id="option3" defaultValue={"17 Juli 2023"} defaultChecked onClick={handleDate} /> <br />
+                              <input
+                                type="radio"
+                                name="options"
+                                id="option3"
+                                defaultValue={"17 Juli 2023"}
+                                defaultChecked
+                                onClick={handleDate}
+                              />{" "}
+                              <br />
                               17 Mar 23
                             </label>
                           </div>
@@ -277,22 +372,44 @@ export default function Kelas_Offline() {
                       <div className="pb-3">
                         <h6 className="px-3 text-black">Waktu</h6>
                         <div className="d-flex justify-content-center ">
-                          <div className="btn-group btn-group-toggle col-5 mx-2" data-toggle="buttons">
+                          <div
+                            className="btn-group btn-group-toggle col-5 mx-2"
+                            data-toggle="buttons"
+                          >
                             <label
                               className="btn btn-secondary"
-                            // style="font-size: 8pt;"
+                              // style="font-size: 8pt;"
                             >
-                              <input type="radio" name="waktu" id="waktu1" defaultValue="13.00 - 15.00 WIB" defaultChecked onClick={handleWaktu} /> <br />
+                              <input
+                                type="radio"
+                                name="waktu"
+                                id="waktu1"
+                                defaultValue="13.00 - 15.00 WIB"
+                                defaultChecked
+                                onClick={handleWaktu}
+                              />{" "}
+                              <br />
                               13.00 - 15.00 WIB
                             </label>
                           </div>
 
-                          <div className="btn-group btn-group-toggle col-5 mx-2" data-toggle="buttons">
+                          <div
+                            className="btn-group btn-group-toggle col-5 mx-2"
+                            data-toggle="buttons"
+                          >
                             <label
                               className="btn btn-secondary"
-                            // style="font-size: 8pt;"
+                              // style="font-size: 8pt;"
                             >
-                              <input type="radio" name="waktu" id="waktu2" defaultValue="07.30 - 09.30 WIB" defaultChecked onClick={handleWaktu} /> <br />
+                              <input
+                                type="radio"
+                                name="waktu"
+                                id="waktu2"
+                                defaultValue="07.30 - 09.30 WIB"
+                                defaultChecked
+                                onClick={handleWaktu}
+                              />{" "}
+                              <br />
                               07.30 - 09.30 WIB
                             </label>
                           </div>
@@ -302,7 +419,19 @@ export default function Kelas_Offline() {
                   </div>
 
                   <div className="d-flex justify-content-center my-4">
-                    <div onClick={handleNext} className="btn btn-dark px-5" state={{ harga: harga, mapel: mapel, tempat: tempat, tanggal: tanggal, waktu: waktu }} to="/pembayaran" role="button">
+                    <div
+                      onClick={handleNext}
+                      className="btn btn-dark px-5"
+                      state={{
+                        harga: harga,
+                        mapel: mapel,
+                        tempat: tempat,
+                        tanggal: tanggal,
+                        waktu: waktu,
+                      }}
+                      to="/pembayaran"
+                      role="button"
+                    >
                       Selanjutnya
                     </div>
                   </div>

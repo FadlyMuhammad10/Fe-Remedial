@@ -11,10 +11,11 @@ const CourseDetails = () => {
   const [isLoading, setIsLoading] = useState(true);
   const nama = localStorage.getItem("nama_lengkap");
   const email = localStorage.getItem("email");
-  
+  const user_id = localStorage.getItem("user_id");
+
   const getMateriKelas = async () => {
     const { data } = await axios.get(
-      "https://express-vercel-puce-sigma.vercel.app/api/v1/detailpage/" + id
+      `https://express-vercel-rho-woad.vercel.app/api/v1/detailpage/` + id
     );
 
     setItems(data.data);
@@ -44,16 +45,18 @@ const CourseDetails = () => {
 
   const onBuyingCourse = (harga) => {
     axios
-    .post("https://express-vercel-puce-sigma.vercel.app/api/v1/payment", {
-      nama_lengkap: nama,
-      harga: harga,
-      email: email,
-    })
-    .then((res) => {
-      // console.log(res.data.token);
-      window.snap.pay(res.data.token);
-    });
-  }
+      .post(`https://express-vercel-rho-woad.vercel.app/api/v1/payment`, {
+        nama_lengkap: nama,
+        harga: harga,
+        email: email,
+        user_id: user_id,
+        kelas_id: items._id,
+      })
+      .then((res) => {
+        // console.log(res.data.token);
+        window.snap.pay(res.data.token);
+      });
+  };
 
   useEffect(() => {
     setIsLoading(true);
@@ -75,10 +78,7 @@ const CourseDetails = () => {
                 <div className="col-xxl-8 col-xl-7">
                   <div className="courses-details-wrapper mb-30">
                     <h2 className="courses-title mb-30">{items.judul}</h2>
-                    <h5>
-                      Instructor
-                      {items.instructor}
-                    </h5>
+                    <h5>Instructor {items.instructor}</h5>
                     <iframe
                       className="course-details-img mb-30"
                       src={`https://www.youtube.com/embed/${materiKelas}`}
@@ -136,8 +136,13 @@ const CourseDetails = () => {
                           })}
                         </ul>
                       </div>
-                    </div> 
-                      <button className="px-4 btn-package" onClick={() => onBuyingCourse(items.harga)}>Beli</button>
+                    </div>
+                    <button
+                      className="px-4 btn-package"
+                      onClick={() => onBuyingCourse(items.harga)}
+                    >
+                      Beli
+                    </button>
                   </div>
                 </div>
               </div>
@@ -152,7 +157,6 @@ const CourseDetails = () => {
                     </h5>
                   </div>
                 </div>
-                
               </div>
             </div>
           </section>

@@ -20,7 +20,7 @@ export default function DetailArtikel() {
 
   useEffect(() => {
     fetch(
-      "https://express-vercel-puce-sigma.vercel.app/api/v1/detailpage/artikel/" +
+      `https://express-vercel-rho-woad.vercel.app/api/v1/detailpage/artikel/` +
         id
     )
       .then((res) => res.json())
