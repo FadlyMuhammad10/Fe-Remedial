@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import { Link } from "react-router-dom";
+import { BASE_URL } from "../config";
 
 export default function DetailArtikel() {
   const { id } = useParams();
@@ -19,10 +20,7 @@ export default function DetailArtikel() {
   };
 
   useEffect(() => {
-    fetch(
-      `https://express-vercel-rho-woad.vercel.app/api/v1/detailpage/artikel/` +
-        id
-    )
+    fetch(`${BASE_URL}/api/v1/detailpage/artikel/` + id)
       .then((res) => res.json())
       .then((data) => {
         setItems(data.data);

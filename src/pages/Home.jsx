@@ -22,15 +22,14 @@ import bahasa2 from "../assets/img/seni/bahasa-2.jpg";
 import bahasa3 from "../assets/img/seni/bahasa-3.png";
 import CardKelas from "../components/Homepage/CardKelas";
 import axios from "axios";
+import { BASE_URL } from "../config";
 
 export default function Home() {
   const [items, setItems] = useState([]);
   const [kelas, setKelas] = useState([]);
 
   useEffect(() => {
-    fetch(
-      `https://express-vercel-rho-woad.vercel.app/api/v1/landingpage/artikel`
-    )
+    fetch(`${BASE_URL}/api/v1/landingpage/artikel`)
       .then((res) => res.json())
       .then((data) => {
         const newData = data.data.slice(0, 2); //start & jumlah yg diambil
@@ -39,12 +38,10 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    axios
-      .get(`https://express-vercel-rho-woad.vercel.app/api/v1/landingpage/`)
-      .then((res) => {
-        console.log(res);
-        setKelas(res.data.data);
-      });
+    axios.get(`${BASE_URL}/api/v1/landingpage/`).then((res) => {
+      console.log(res);
+      setKelas(res.data.data);
+    });
   }, []);
 
   return (

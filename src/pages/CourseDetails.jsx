@@ -3,20 +3,21 @@ import Header from "../components/Header";
 import "../assets/css/style.css";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import { FaVideo, FaLock } from "react-icons/fa";
+import { FaVideo, FaLock, FaUnlock } from "react-icons/fa";
+import { BASE_URL } from "../config";
 const CourseDetails = () => {
   const { id } = useParams();
   const [items, setItems] = useState([]);
   const [materiKelas, setMateriKelas] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [isBought, setIsBought] = useState(false);
+
   const nama = localStorage.getItem("nama_lengkap");
   const email = localStorage.getItem("email");
   const user_id = localStorage.getItem("user_id");
 
   const getMateriKelas = async () => {
-    const { data } = await axios.get(
-      `https://express-vercel-rho-woad.vercel.app/api/v1/detailpage/` + id
-    );
+    const { data } = await axios.get(`${BASE_URL}/api/v1/detailpage/` + id);
 
     setItems(data.data);
     setMateriKelas(data.data.materi[0].videoUrl);
@@ -25,6 +26,19 @@ const CourseDetails = () => {
 
   const setVideoMateri = (value) => {
     setMateriKelas(value);
+  };
+  const checkIfBought = async () => {
+    const token = localStorage.getItem("token");
+    const { data } = await axios.get(
+      `${BASE_URL}/api/v1/order/check-bought/${id}`,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`, // Sertakan token dalam header
+        },
+      }
+    );
+    console.log(data);
+    setIsBought(data.isBought);
   };
 
   useEffect(() => {
@@ -44,14 +58,23 @@ const CourseDetails = () => {
   }, []);
 
   const onBuyingCourse = (harga) => {
+    const token = localStorage.getItem("token");
     axios
-      .post(`https://express-vercel-rho-woad.vercel.app/api/v1/payment`, {
-        nama_lengkap: nama,
-        harga: harga,
-        email: email,
-        user_id: user_id,
-        kelas_id: items._id,
-      })
+      .post(
+        `${BASE_URL}/api/v1/order/create`,
+        {
+          nama_lengkap: nama,
+          harga: harga,
+          email: email,
+          user_id: user_id,
+          order_item: items._id,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${token}`, // Sertakan token dalam header
+          },
+        }
+      )
       .then((res) => {
         // console.log(res.data.token);
         window.snap.pay(res.data.token);
@@ -61,15 +84,16 @@ const CourseDetails = () => {
   useEffect(() => {
     setIsLoading(true);
     getMateriKelas();
+    checkIfBought();
   }, []);
 
-  console.log(materiKelas, "materi");
-  console.log(items, "items");
+  // console.log(materiKelas, "materi");
+  // console.log(items, "items");
   return (
     <>
       <Header />
       {isLoading ? (
-        "loading booss"
+        "loading"
       ) : (
         <main id="main">
           <section className="course-details-area" id="learn-bok">
@@ -81,7 +105,11 @@ const CourseDetails = () => {
                     <h5>Instructor {items.instructor}</h5>
                     <iframe
                       className="course-details-img mb-30"
-                      src={`https://www.youtube.com/embed/${materiKelas}`}
+                      src={
+                        isBought
+                          ? `https://www.youtube.com/embed/${materiKelas}`
+                          : `https://www.youtube.com/embed/${items.materi[0].videoUrl}`
+                      }
                     ></iframe>
                   </div>
                 </div>
@@ -91,12 +119,14 @@ const CourseDetails = () => {
                       <li>
                         <div className="price-list">
                           <h5>
-                            {
+                            {isBought ? (
+                              ""
+                            ) : (
                               <b className="sub-title">
                                 Rp.{" "}
                                 {parseInt(items.harga).toLocaleString("id-ID")}
                               </b>
-                            }
+                            )}
                           </h5>
                         </div>
                       </li>
@@ -106,7 +136,7 @@ const CourseDetails = () => {
                       style={{ marginLeft: "0" }}
                     >
                       <div className="learn-box">
-                        <h5>10 Sesi ( 3 jam 8 Menit )</h5>
+                        <h5>Daftar Materi</h5>
                         <ul
                           className="learn-list "
                           style={{ marginRight: "0", height: "360px" }}
@@ -128,8 +158,12 @@ const CourseDetails = () => {
                                   </span>
 
                                   <span className="time float-end">
-                                    <FaLock />
+                                    {isBought ? "" : <FaLock />}
                                   </span>
+
+                                  {/* <span className="time float-end">
+                                    <FaLock />
+                                  </span> */}
                                 </a>
                               </li>
                             );
@@ -137,12 +171,20 @@ const CourseDetails = () => {
                         </ul>
                       </div>
                     </div>
-                    <button
+                    {!isBought && ( // Tampilkan tombol "Beli" hanya jika kelas belum dibeli
+                      <button
+                        className="px-4 btn-package"
+                        onClick={() => onBuyingCourse(items.harga)}
+                      >
+                        Beli
+                      </button>
+                    )}
+                    {/* <button
                       className="px-4 btn-package"
                       onClick={() => onBuyingCourse(items.harga)}
                     >
                       Beli
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               </div>

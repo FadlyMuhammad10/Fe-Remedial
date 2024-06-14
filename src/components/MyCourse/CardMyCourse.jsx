@@ -3,9 +3,8 @@ import { BsStarFill, BsFillFilePersonFill } from "react-icons/bs";
 import { FaRegLightbulb } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-const CardKelas = ({ items }) => {
+const CardMyCourse = ({ items }) => {
   console.log(items);
-
   const styleCard = {
     backgroundImage: `url(${items.image_url.name})`,
     borderTopLeftRadius: "25px",
@@ -29,9 +28,7 @@ const CardKelas = ({ items }) => {
         <div id="price-information-wrapper-variant-b">
           <div className="package-price-information">
             <div className="package-price-information-bottom">
-              <span className="finalPrice">
-                Rp.&nbsp;{parseInt(items.harga).toLocaleString("id-ID")}
-              </span>
+              {/* <span className="finalPrice">Rp.&nbsp;{items.harga}</span> */}
             </div>
           </div>
         </div>
@@ -46,10 +43,10 @@ const CardKelas = ({ items }) => {
             </div>
           </li>
           <li>
-            <div className="package-preview-icon">
-              {/* <BsStarFill></BsStarFill> */}
+            {/* <div className="package-preview-icon">
+              <BsStarFill></BsStarFill>
             </div>
-            {/* <p>
+            <p>
               <strong>4.8</strong>/5 rating kelas
             </p> */}
           </li>
@@ -65,4 +62,4 @@ const CardKelas = ({ items }) => {
   );
 };
 
-export default CardKelas;
+export default CardMyCourse;

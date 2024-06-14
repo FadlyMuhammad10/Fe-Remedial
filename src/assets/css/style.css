@@ -1010,14 +1010,14 @@ HEAD #packageContainer {
   z-index: 3;
 }
 
-.package-card-top {
+/* .package-card-top {
   background-image: url(https://i.ibb.co/93LFT1C/Rectangle-2974.png);
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   height: 240px;
   padding: 12px;
   position: relative;
-}
+} */
 
 .package-card-top-1 {
   background-image: url(https://i.ibb.co/GTgN8vm/2.png);
@@ -1060,7 +1060,15 @@ HEAD #packageContainer {
   display: flex;
   gap: 6px;
 }
-
+.course_tag {
+  font-size: 14px;
+  display: inline-block;
+  padding: 15px 22px;
+  line-height: 1;
+  border-radius: 10px;
+  color: #4e31aa;
+  background-color: #eef1ff;
+}
 .package-preview-icon {
   flex-shrink: 0;
 }
@@ -1859,6 +1867,7 @@ HEAD #packageContainer {
 .learn-list li {
   margin-bottom: 25px;
   padding-right: 55px;
+  list-style: none;
 }
 
 @media (max-width: 767px) {

@@ -22,6 +22,8 @@ import store from "./redux/store";
 import Kelas_Offline from "./pages/Kelas_Offline";
 
 import CourseDetails from "./pages/CourseDetails";
+import AllCourse from "./pages/allCourse";
+import MyCourse from "./pages/myCourse";
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
           <Routes>
             <Route path="/home" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/course" element={<AllCourse />} />
+            <Route path="/my-course" element={<MyCourse />} />
             <Route path="/program-offline/:id" element={<Kelas_Offline />} />
             <Route path="/program-online" element="#" />
             <Route path="/pembayaran" element={<Pembayaran />} />

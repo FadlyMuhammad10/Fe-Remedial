@@ -4,14 +4,13 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import "../assets/css/style.css";
 import ArtikelList from "../components/ArtikelList";
+import { BASE_URL } from "../config";
 
 export default function Artikel() {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch(
-      `https://express-vercel-rho-woad.vercel.app/api/v1/landingpage/artikel`
-    )
+    fetch(`${BASE_URL}/api/v1/landingpage/artikel`)
       .then((res) => res.json())
       .then((data) => {
         setItems(data.data);

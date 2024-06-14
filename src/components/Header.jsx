@@ -20,6 +20,9 @@ export default function Header() {
     localStorage.removeItem("alamat");
     navigate("/");
   };
+  const handleMyCourse = () => {
+    navigate("/my-course");
+  };
 
   const handleClick = () => {
     setClicked(!clicked);
@@ -63,9 +66,15 @@ export default function Header() {
                   Tentang Kami
                 </NavLink>
               </li>
-              <li className={dropProgram ? "dropdown active" : "dropdown"}>
+              <li>
+                <NavLink to="/course" className="nav-link scrollto">
+                  Semua Kelas
+                </NavLink>
+              </li>
+              {/* <li className={dropProgram ? "dropdown active" : "dropdown"}>
                 <a onClick={activeProgram} style={{ color: "white" }}>
-                  <span className="me-1">Program</span> <IoIosArrowDown fontSize="1.2rem" />
+                  <span className="me-1">Program</span>{" "}
+                  <IoIosArrowDown fontSize="1.2rem" />
                 </a>
                 <ul>
                   <li>
@@ -75,14 +84,18 @@ export default function Header() {
                     <a href="">Kelas Online</a>
                   </li>
                 </ul>
-              </li>
+              </li> */}
               <li className={dropSeni ? "dropdown active" : "dropdown"}>
                 <a onClick={activeSeni} style={{ color: "white" }}>
-                  <span className="me-1">Seni</span> <IoIosArrowDown fontSize="1.2rem" />
+                  <span className="me-1">Seni</span>{" "}
+                  <IoIosArrowDown fontSize="1.2rem" />
                 </a>
                 <ul>
                   <li>
-                    <NavLink to="/fundamental-seni" className="nav-link scrollto">
+                    <NavLink
+                      to="/fundamental-seni"
+                      className="nav-link scrollto"
+                    >
                       Fundamental Seni
                     </NavLink>
                   </li>
@@ -107,18 +120,26 @@ export default function Header() {
               <li className={dropProfil ? "dropdown active" : "dropdown"}>
                 <div className="row ms-3" onClick={activeProfile}>
                   <VscAccount className="col" fontSize="2rem" color="white" />
-                  {nama && <div className="col align-self-center text-white p-0">{nama}</div>}
-                  <IoIosArrowDown className="col align-self-center p-0" fontSize="1.2rem" color="white" />
+                  {nama && (
+                    <div className="col align-self-center text-white p-0">
+                      {nama}
+                    </div>
+                  )}
+                  <IoIosArrowDown
+                    className="col align-self-center p-0"
+                    fontSize="1.2rem"
+                    color="white"
+                  />
                 </div>
                 <ul className="rounded">
                   <li>
-                    <div className="logOut ms-4" onClick={handleLogout}>
-                      Logout
+                    <div className="myCourse ms-4" onClick={handleMyCourse}>
+                      My Course
                     </div>
                   </li>
                   <li>
-                    <div className="myCourse ms-4" >
-                      My Course
+                    <div className="logOut ms-4" onClick={handleLogout}>
+                      Logout
                     </div>
                   </li>
                 </ul>
@@ -126,7 +147,10 @@ export default function Header() {
             </ul>
 
             <div id="mobile" className="ms-4" onClick={handleClick}>
-              <i id="bar" className={clicked ? "fas fa-times" : "fas fa-bars"}></i>
+              <i
+                id="bar"
+                className={clicked ? "fas fa-times" : "fas fa-bars"}
+              ></i>
             </div>
 
             {/* <i className="bi bi-list mobile-nav-toggle"><BsList /></i> */}
