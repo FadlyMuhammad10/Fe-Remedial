@@ -277,29 +277,10 @@ h6 {
   color: #d82b14;
 }
 
-.container-item {
-  min-height: 100vh;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  text-align: center;
-}
-
-/* button {
-  cursor: pointer;
-  border: 0;
-  border-radius: 4px;
-  font-weight: 600;
-  margin: 0 5px;
-  width: 70px;
-  padding: 10px 0; */
-/*   box-shadow: 0 0 20px rgba(104, 85, 224, 0.2); */
-/* transition: 0.4s;
-} */
-
 .reg {
   color: white;
   background-color: #d82b14;
+  margin-right: 10px;
 }
 
 .log {
