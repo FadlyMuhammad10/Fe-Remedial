@@ -19,7 +19,7 @@ export default function Fundamental() {
               <div className="col-11 col-xl-10">
                 <ol>
                   <li>
-                    <Link to="/home">Beranda</Link>
+                    <Link to="/">Beranda</Link>
                   </li>
                   <li>Fundamental Seni</li>
                 </ol>
@@ -40,8 +40,13 @@ export default function Fundamental() {
                   <strong>Fundamental Seni</strong>
                 </h1>
                 <p>
-                  Mempelajari fundamental seni adalah Dasar-dasar pemikiran yang terpetakan dari awal sangatlah penting agar pemahaman kita tidak bersimpangan dengan penyumbang-penyumbang pemikiran seni. Beberapa fundamental seni rupa dan
-                  desain yang penting untuk dipahami meliputi: pengertian seni, pengertian seni rupa, prinsip prinsip seni rupa dan desain, unsur unsur seni rupa, dan lain-lain dapat ditemukan disini.
+                  Mempelajari fundamental seni adalah Dasar-dasar pemikiran yang
+                  terpetakan dari awal sangatlah penting agar pemahaman kita
+                  tidak bersimpangan dengan penyumbang-penyumbang pemikiran
+                  seni. Beberapa fundamental seni rupa dan desain yang penting
+                  untuk dipahami meliputi: pengertian seni, pengertian seni
+                  rupa, prinsip prinsip seni rupa dan desain, unsur unsur seni
+                  rupa, dan lain-lain dapat ditemukan disini.
                 </p>
                 <hr />
               </div>
@@ -53,8 +58,14 @@ export default function Fundamental() {
                     <strong>Fenomena Seni Rupa</strong>
                   </h1>
                   <p>
-                    Fenomena Seni Rupa dapat menyangkut banyak peristiwa, pergerakan, hingga perkembangan umum yang menyangkut seni rupa di dunia. Berbagai fenomena tersebut dapat ditelaah sebagai inspirasi hingga berbagai pertimbangan lain
-                    dalam berkarya. Tidak sedikit pula berbagai fenomena seni rupa yang dimanfaatkan untuk penelitian, baik dalam bidang seni rupa, maupun bidang lainnya seperti sejarah, arkeologi, dan bidang ilmu lainnya....
+                    Fenomena Seni Rupa dapat menyangkut banyak peristiwa,
+                    pergerakan, hingga perkembangan umum yang menyangkut seni
+                    rupa di dunia. Berbagai fenomena tersebut dapat ditelaah
+                    sebagai inspirasi hingga berbagai pertimbangan lain dalam
+                    berkarya. Tidak sedikit pula berbagai fenomena seni rupa
+                    yang dimanfaatkan untuk penelitian, baik dalam bidang seni
+                    rupa, maupun bidang lainnya seperti sejarah, arkeologi, dan
+                    bidang ilmu lainnya....
                   </p>
                   <div id="seni"></div>
                 </div>
@@ -68,14 +79,24 @@ export default function Fundamental() {
                       <div className="fundamental-item d-flex">
                         <img src={satu} className="fundamental-img" alt="" />
                         <h3>
-                          <a href="#!">Seni Rupa Murni: Pengertian, Batasan, Fungsi & Contoh</a>
+                          <a href="#!">
+                            Seni Rupa Murni: Pengertian, Batasan, Fungsi &
+                            Contoh
+                          </a>
                         </h3>
                       </div>
                       <div className="col">
                         <div className="fundamental-item d-flex">
-                          <img src={patung} className="fundamental-img" alt="" />
+                          <img
+                            src={patung}
+                            className="fundamental-img"
+                            alt=""
+                          />
                           <h3>
-                            <a href="#!">Pengertian seni patung, fungsi, teknik, alat & bahan</a>
+                            <a href="#!">
+                              Pengertian seni patung, fungsi, teknik, alat &
+                              bahan
+                            </a>
                           </h3>
                         </div>
                       </div>
@@ -83,7 +104,10 @@ export default function Fundamental() {
                         <div className="fundamental-item d-flex">
                           <img src={empat} className="fundamental-img" alt="" />
                           <h3>
-                            <a href="#!">Perpaduan Warna Harmonis menggunakan Teori Warna & Seni</a>
+                            <a href="#!">
+                              Perpaduan Warna Harmonis menggunakan Teori Warna &
+                              Seni
+                            </a>
                           </h3>
                         </div>
                       </div>

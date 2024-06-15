@@ -20,7 +20,7 @@ export default function Header() {
     localStorage.removeItem("email");
     localStorage.removeItem("alamat");
     localStorage.removeItem("user_id");
-    navigate("/home");
+    navigate("/");
   };
   const handleMyCourse = () => {
     navigate("/my-course");
@@ -30,7 +30,7 @@ export default function Header() {
     navigate("/register");
   };
   const handleMasuk = () => {
-    navigate("/");
+    navigate("/login");
   };
 
   const handleClick = () => {
@@ -66,7 +66,7 @@ export default function Header() {
           <nav className={clicked ? "navbar active" : "navbar"}>
             <ul>
               <li>
-                <NavLink to="/home" className="nav-link scrollto scrollto">
+                <NavLink to="/" className="nav-link scrollto scrollto">
                   Beranda
                 </NavLink>
               </li>

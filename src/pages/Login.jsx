@@ -34,7 +34,7 @@ export default function Login() {
       // console.log("token= ", token);
       if (token !== null && token !== undefined && token !== "undefined") {
         // console.log(token);
-        navigate("/home");
+        navigate("/");
         // localStorage.removeItem("token");
       }
     }, 2000);
@@ -44,7 +44,7 @@ export default function Login() {
     const token = localStorage.getItem("token");
     // console.log("token= ", token);
     if (token !== null && token !== undefined && token !== "undefined") {
-      navigate("/home");
+      navigate("/");
     }
   }, []);
 

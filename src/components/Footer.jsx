@@ -1,8 +1,12 @@
 import React from "react";
 import { IoChevronForward } from "react-icons/io5";
-import { AiOutlineTwitter, AiFillFacebook, AiFillInstagram } from "react-icons/ai";
+import {
+  AiOutlineTwitter,
+  AiFillFacebook,
+  AiFillInstagram,
+} from "react-icons/ai";
 import { Link, NavLink } from "react-router-dom";
-import logo from "../assets/img/logo.png"
+import logo from "../assets/img/logo.png";
 
 export default function Footer() {
   return (
@@ -17,19 +21,23 @@ export default function Footer() {
                     <h4>Layanan Kami</h4>
                     <ul>
                       <li>
-                        <IoChevronForward /> <NavLink to="/home">Beranda</NavLink>
+                        <IoChevronForward /> <NavLink to="/">Beranda</NavLink>
                       </li>
                       <li>
-                        <IoChevronForward /> <NavLink to="/about">Tentang kami</NavLink>
+                        <IoChevronForward />{" "}
+                        <NavLink to="/about">Tentang kami</NavLink>
                       </li>
                       <li>
-                        <IoChevronForward /> <NavLink to="/program-offline">Program</NavLink>
+                        <IoChevronForward />{" "}
+                        <NavLink to="/program-offline">Program</NavLink>
                       </li>
                       <li>
-                        <IoChevronForward /> <NavLink to="/fundamental-seni">Seni</NavLink>
+                        <IoChevronForward />{" "}
+                        <NavLink to="/fundamental-seni">Seni</NavLink>
                       </li>
                       <li>
-                        <IoChevronForward /> <NavLink to="/artikel">Artikel</NavLink>
+                        <IoChevronForward />{" "}
+                        <NavLink to="/artikel">Artikel</NavLink>
                       </li>
                     </ul>
                   </div>
@@ -38,13 +46,18 @@ export default function Footer() {
                     <h4>Lainnya</h4>
                     <ul>
                       <li>
-                        <IoChevronForward /> <NavLink to="/fundamental-seni">Fundamental Seni</NavLink>
+                        <IoChevronForward />{" "}
+                        <NavLink to="/fundamental-seni">
+                          Fundamental Seni
+                        </NavLink>
                       </li>
                       <li>
-                        <IoChevronForward /> <NavLink to="/teori-seni">Teori Seni</NavLink>
+                        <IoChevronForward />{" "}
+                        <NavLink to="/teori-seni">Teori Seni</NavLink>
                       </li>
                       <li>
-                        <IoChevronForward /> <NavLink to="/praktik-seni">Praktik Seni</NavLink>
+                        <IoChevronForward />{" "}
+                        <NavLink to="/praktik-seni">Praktik Seni</NavLink>
                       </li>
                     </ul>
                   </div>
@@ -61,7 +74,7 @@ export default function Footer() {
                   </div>
 
                   <div className="col-lg-3 col-md-6 footer-info">
-                    <a href="/home" className="logo d-flex align-items-center">
+                    <a href="/" className="logo d-flex align-items-center">
                       <img src={logo} alt="" />
                       <span></span>
                     </a>
@@ -99,9 +112,7 @@ export default function Footer() {
             </strong>
             . All Rights Reserved
           </div>
-          <div className="credits">
-            Designed by FE 22 - BE 4
-          </div>
+          <div className="credits">Designed by FE 22 - BE 4</div>
         </div>
       </footer>
     </>

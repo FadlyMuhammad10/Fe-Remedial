@@ -4,11 +4,12 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import { Register } from "./assets/page/Register";
 // import { Login } from "./assets/page/Login";
 // import "./App.css";
-import Home from "./pages/Home";
+
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
+import Home from "./pages/Home";
 import Artikel from "./pages/Artikel";
 import About from "./pages/About";
 import DetailArtikel from "./components/DetailArtikel";
@@ -31,7 +32,7 @@ function App() {
       <Provider store={store}>
         <Router>
           <Routes>
-            <Route path="/home" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/course" element={<AllCourse />} />
             <Route path="/my-course" element={<MyCourse />} />
@@ -43,7 +44,7 @@ function App() {
             <Route path="/praktik-seni" element={<Praktik />} />
             <Route path="/artikel" element={<Artikel />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/" element={<Login />} />
+            <Route path="/login" element={<Login />} />
             <Route path="/artikel/:id" element={<DetailArtikel />} />
             <Route path="/course-details/:id" element={<CourseDetails />} />
           </Routes>

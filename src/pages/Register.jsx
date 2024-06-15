@@ -57,7 +57,7 @@ export default function Register() {
       // console.log("register= ",register)
       if (register === "success") {
         // console.log(register)
-        navigate("/");
+        navigate("/login");
         localStorage.removeItem("register");
       }
     }, 2000);
@@ -207,7 +207,7 @@ export default function Register() {
                         <div className="me-2">
                           <p>Sudah Memiliki Akun?</p>
                         </div>
-                        <Link to="/" className="me-2 link-danger">
+                        <Link to="/login" className="me-2 link-danger">
                           Masuk
                         </Link>
                       </div>

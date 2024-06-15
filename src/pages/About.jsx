@@ -22,7 +22,7 @@ export default function About() {
               <div className="col-11 col-xl-10">
                 <ol>
                   <li>
-                    <Link to="/home">Beranda</Link>
+                    <Link to="/">Beranda</Link>
                   </li>
                   <li>Tentang kami</li>
                 </ol>
@@ -38,20 +38,38 @@ export default function About() {
           <div className="container-fluid d-flex justify-content-center">
             <div className="col-10 col-lg-11">
               <div className="row justify-content-center">
-                <div className="col-xl-5 col-lg-6 img-box d-flex justify-content-center align-items-stretch position-relative ">{/* <a href="" className="glightbox play-btn mb-4"></a> */}</div>
+                <div className="col-xl-5 col-lg-6 img-box d-flex justify-content-center align-items-stretch position-relative ">
+                  {/* <a href="" className="glightbox play-btn mb-4"></a> */}
+                </div>
 
                 <div className="col-xl-5 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px -lg-5 ">
                   <h3>Remedial.id</h3>
                   <p className="deskripsi">
-                    Serrum remedial adalah perkumpulan studi dan pendidikan seni rupa yang berkedudukan di Jakarta yang didirikan pada tahun 2006. Kata serrum berasal dari kata share dan room yang berarti “ruang berbagi”. Serrum berfokus
-                    pada isu-isu pendidikan, sosial-politik dan perkotaan dengan pendekatan presentasi pendidikan dan artistik. Kegiatan Serrum meliputi proyek seni, pameran, lokakarya, diskusi, dan propaganda kreatif. Media yang digunakan
-                    antara lain video, mural, grafis, komik dan seni instalasi.
+                    Serrum remedial adalah perkumpulan studi dan pendidikan seni
+                    rupa yang berkedudukan di Jakarta yang didirikan pada tahun
+                    2006. Kata serrum berasal dari kata share dan room yang
+                    berarti “ruang berbagi”. Serrum berfokus pada isu-isu
+                    pendidikan, sosial-politik dan perkotaan dengan pendekatan
+                    presentasi pendidikan dan artistik. Kegiatan Serrum meliputi
+                    proyek seni, pameran, lokakarya, diskusi, dan propaganda
+                    kreatif. Media yang digunakan antara lain video, mural,
+                    grafis, komik dan seni instalasi.
                   </p>
                   <p className="deskripsi">
-                    Serrum membangun program pendidikan nonformal yang dimulai pada tahun 2014 dengan tema Kurikulab, 2016 - Ekstrakurikuler dan 2018 adalah Remedial. Program ini melibatkan siswa SMA yang telah dikurasi di Jakarta dan
-                    sekitarnya. Dalam program Remedial, peserta yang terlibat membedah pola konsumsi informasi dan pengetahuan berdasarkan perkembangan zaman. Siswa bertransaksi informasi untuk menghasilkan pengetahuan dan pendekatan seni
-                    dan literasi. Berbagai kegiatan yang telah dilakukan dalam program Remedial adalah mengenal ruang kolektif Gudskul dan Jakarta 32°C, diskusi Seni Rupa Milenium, dan praktik cetak grafis. Serrum juga berkolaborasi dengan
-                    komunitas lokal untuk mengeksplorasi kurikulum yang memuat narasi lokal sebagai sumber pengetahuan.
+                    Serrum membangun program pendidikan nonformal yang dimulai
+                    pada tahun 2014 dengan tema Kurikulab, 2016 -
+                    Ekstrakurikuler dan 2018 adalah Remedial. Program ini
+                    melibatkan siswa SMA yang telah dikurasi di Jakarta dan
+                    sekitarnya. Dalam program Remedial, peserta yang terlibat
+                    membedah pola konsumsi informasi dan pengetahuan berdasarkan
+                    perkembangan zaman. Siswa bertransaksi informasi untuk
+                    menghasilkan pengetahuan dan pendekatan seni dan literasi.
+                    Berbagai kegiatan yang telah dilakukan dalam program
+                    Remedial adalah mengenal ruang kolektif Gudskul dan Jakarta
+                    32°C, diskusi Seni Rupa Milenium, dan praktik cetak grafis.
+                    Serrum juga berkolaborasi dengan komunitas lokal untuk
+                    mengeksplorasi kurikulum yang memuat narasi lokal sebagai
+                    sumber pengetahuan.
                   </p>
                 </div>
               </div>
@@ -82,7 +100,10 @@ export default function About() {
                           <span>Project Manager</span>
                         </div>
                         <div className="social">
-                          <a href="https://www.linkedin.com/in/nova-sri-ady-kurniawan-028641255/" target="_blank">
+                          <a
+                            href="https://www.linkedin.com/in/nova-sri-ady-kurniawan-028641255/"
+                            target="_blank"
+                          >
                             <i className="bi bi-linkedin"></i>
                           </a>
                         </div>
@@ -90,7 +111,10 @@ export default function About() {
                     </div>
                   </div>{" "}
                   {/* End Member Item */}
-                  <div className="col-xl-4 col-lg-4 col-md-4" data-wow-delay="0.1s">
+                  <div
+                    className="col-xl-4 col-lg-4 col-md-4"
+                    data-wow-delay="0.1s"
+                  >
                     <div className="member">
                       <img src={team2} className="img-fluid" alt="" />
                       <div className="member-info">
@@ -99,13 +123,22 @@ export default function About() {
                           <span>Front End Developer</span>
                         </div>
                         <div className="social">
-                          <a href="https://www.facebook.com/indri.js.7/" target="blank">
+                          <a
+                            href="https://www.facebook.com/indri.js.7/"
+                            target="blank"
+                          >
                             <i className="bi bi-facebook"></i>
                           </a>
-                          <a href="https://instagram.com/chika.aul?igshid=YmMyMTA2M2Y=" target="blank">
+                          <a
+                            href="https://instagram.com/chika.aul?igshid=YmMyMTA2M2Y="
+                            target="blank"
+                          >
                             <i className="bi bi-instagram"></i>
                           </a>
-                          <a href="https://www.linkedin.com/in/chika-aulia-zahwa-b8ba96227" target="_blank">
+                          <a
+                            href="https://www.linkedin.com/in/chika-aulia-zahwa-b8ba96227"
+                            target="_blank"
+                          >
                             <i className="bi bi-linkedin"></i>
                           </a>
                         </div>
@@ -113,7 +146,10 @@ export default function About() {
                     </div>
                   </div>{" "}
                   {/* End Member Item */}
-                  <div className="col-xl-4 col-lg-4 col-md-4" data-wow-delay="0.2s">
+                  <div
+                    className="col-xl-4 col-lg-4 col-md-4"
+                    data-wow-delay="0.2s"
+                  >
                     <div className="member">
                       <img src={team1} className="img-fluid" alt="" />
                       <div className="member-info">
@@ -129,10 +165,16 @@ export default function About() {
                           >
                             <i className="bi bi-facebook" target="_blank"></i>
                           </a>
-                          <a href="https://www.instagram.com/rohendi_25/" target="_blank">
+                          <a
+                            href="https://www.instagram.com/rohendi_25/"
+                            target="_blank"
+                          >
                             <i className="bi bi-instagram"></i>
                           </a>
-                          <a href="https://www.linkedin.com/in/rohendi-525561244/" target="_blank">
+                          <a
+                            href="https://www.linkedin.com/in/rohendi-525561244/"
+                            target="_blank"
+                          >
                             <i className="bi bi-linkedin"></i>
                           </a>
                         </div>
@@ -140,7 +182,10 @@ export default function About() {
                     </div>
                   </div>{" "}
                   {/* End Member Item */}
-                  <div className="col-xl-4 col-lg-4 col-md-4" data-wow-delay="0.2s">
+                  <div
+                    className="col-xl-4 col-lg-4 col-md-4"
+                    data-wow-delay="0.2s"
+                  >
                     <div className="member">
                       <img src={team4} className="img-fluid" alt="" />
                       <div className="member-info">
@@ -152,7 +197,10 @@ export default function About() {
                           <a href="" target="_blank">
                             <i className="bi bi-facebook" target="_blank"></i>
                           </a>
-                          <a href="https://instagram.com/aaannnnwar?igshid=MzNlNGNkZWQ4Mg==" target="_blank">
+                          <a
+                            href="https://instagram.com/aaannnnwar?igshid=MzNlNGNkZWQ4Mg=="
+                            target="_blank"
+                          >
                             <i className="bi bi-instagram"></i>
                           </a>
                           <a href="" target="_blank">
@@ -163,7 +211,10 @@ export default function About() {
                     </div>
                   </div>{" "}
                   {/* End Member Item */}
-                  <div className="col-xl-4 col-lg-4 col-md-4" data-wow-delay="0.2s">
+                  <div
+                    className="col-xl-4 col-lg-4 col-md-4"
+                    data-wow-delay="0.2s"
+                  >
                     <div className="member">
                       <img src={team5} className="img-fluid" alt="" />
                       <div className="member-info">
@@ -186,7 +237,10 @@ export default function About() {
                     </div>
                   </div>{" "}
                   {/* End Member Item */}
-                  <div className="col-xl-4 col-lg-4 col-md-4" data-wow-delay="0.2s">
+                  <div
+                    className="col-xl-4 col-lg-4 col-md-4"
+                    data-wow-delay="0.2s"
+                  >
                     <div className="member">
                       <img src={team6} className="img-fluid" alt="" />
                       <div className="member-info">

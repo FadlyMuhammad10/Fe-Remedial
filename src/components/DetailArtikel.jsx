@@ -37,7 +37,7 @@ export default function DetailArtikel() {
               <div className="col-11">
                 <ol>
                   <li>
-                    <Link to="/home">Beranda</Link>
+                    <Link to="/">Beranda</Link>
                   </li>
                   <li>
                     <Link to="/artikel">Artikel</Link>

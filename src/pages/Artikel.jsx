@@ -27,7 +27,7 @@ export default function Artikel() {
               <div className="col-11 col-xl-10">
                 <ol>
                   <li>
-                    <Link to="/home">Beranda</Link>
+                    <Link to="/">Beranda</Link>
                   </li>
                   <li>Artikel</li>
                 </ol>

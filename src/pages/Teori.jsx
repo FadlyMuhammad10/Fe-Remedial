@@ -19,7 +19,7 @@ export default function Teori() {
               <div className="col-11 col-xl-10">
                 <ol>
                   <li>
-                    <Link to="/home">Beranda</Link>
+                    <Link to="/">Beranda</Link>
                   </li>
                   <li>Teori Seni</li>
                 </ol>
@@ -46,12 +46,21 @@ export default function Teori() {
                 <div className="col-12 col-sm-12 col-md-8 col-lg-8">
                   <img src={teori} width="100%" height="450" alt="" />
                   <h1 className="mt-3">
-                    <strong>Teori Mimesis dan Kreasi (Plato dan Aristoteles)</strong>
+                    <strong>
+                      Teori Mimesis dan Kreasi (Plato dan Aristoteles)
+                    </strong>
                   </h1>
                   <p>
-                    Mimesis adalah teori yang menganggap semua karya seni sebagai tiruan alam atau kehidupan. Bahkan kata mimesis sendiri dalam bahasa Yunani secara tersirat bermakna “tiruan”. Mimesis merupakan teori yang telah lama
-                    diajukan oleh salah satu pelopor filosof di dunia ini, yaitu Plato. Mengapa demikian? Bukankah seandainya ketika kita melukiskan pemandangan alam, proses penciptaanya tetap melibatkan imajinasi kita sendiri? Seandainya
-                    kita menggambarkan suatu peristiwa dalam karya sastra, tetap akan melibatkan sudut pandang kita sendiri?
+                    Mimesis adalah teori yang menganggap semua karya seni
+                    sebagai tiruan alam atau kehidupan. Bahkan kata mimesis
+                    sendiri dalam bahasa Yunani secara tersirat bermakna
+                    “tiruan”. Mimesis merupakan teori yang telah lama diajukan
+                    oleh salah satu pelopor filosof di dunia ini, yaitu Plato.
+                    Mengapa demikian? Bukankah seandainya ketika kita melukiskan
+                    pemandangan alam, proses penciptaanya tetap melibatkan
+                    imajinasi kita sendiri? Seandainya kita menggambarkan suatu
+                    peristiwa dalam karya sastra, tetap akan melibatkan sudut
+                    pandang kita sendiri?
                   </p>
                   <div id="seni"></div>
                 </div>
@@ -65,14 +74,24 @@ export default function Teori() {
                       <div className="fundamental-item d-flex">
                         <img src={satu} className="fundamental-img" alt="" />
                         <h3>
-                          <a href="#!">Seni Rupa Murni: Pengertian, Batasan, Fungsi & Contoh</a>
+                          <a href="#!">
+                            Seni Rupa Murni: Pengertian, Batasan, Fungsi &
+                            Contoh
+                          </a>
                         </h3>
                       </div>
                       <div className="col">
                         <div className="fundamental-item d-flex">
-                          <img src={patung} className="fundamental-img" alt="" />
+                          <img
+                            src={patung}
+                            className="fundamental-img"
+                            alt=""
+                          />
                           <h3>
-                            <a href="#!">Pengertian seni patung, fungsi, teknik, alat & bahan</a>
+                            <a href="#!">
+                              Pengertian seni patung, fungsi, teknik, alat &
+                              bahan
+                            </a>
                           </h3>
                         </div>
                       </div>
@@ -80,7 +99,10 @@ export default function Teori() {
                         <div className="fundamental-item d-flex">
                           <img src={empat} className="fundamental-img" alt="" />
                           <h3>
-                            <a href="#!">Perpaduan Warna Harmonis menggunakan Teori Warna & Seni</a>
+                            <a href="#!">
+                              Perpaduan Warna Harmonis menggunakan Teori Warna &
+                              Seni
+                            </a>
                           </h3>
                         </div>
                       </div>

@@ -65,7 +65,7 @@ export default function Pembayaran(props) {
               <div className="col-11 col-xl-10">
                 <ol>
                   <li>
-                    <Link to="/home">Beranda</Link>
+                    <Link to="/">Beranda</Link>
                   </li>
                   <li>
                     <Link to="/program-offline">Kelas Offline</Link>
