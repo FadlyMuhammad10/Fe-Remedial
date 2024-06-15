@@ -39,7 +39,6 @@ export default function Home() {
 
   useEffect(() => {
     axios.get(`${BASE_URL}/api/v1/landingpage/`).then((res) => {
-      console.log(res);
       setKelas(res.data.data);
     });
   }, []);
@@ -108,7 +107,7 @@ export default function Home() {
                       <div className="entry-meta">
                         <time
                           className="entry-date published updated"
-                          datetime="2022-01-09T19:27:23+07:00"
+                          dateTime="2022-01-09T19:27:23+07:00"
                         >
                           09-01-2022
                         </time>
@@ -125,7 +124,7 @@ export default function Home() {
                       <div className="entry-meta">
                         <time
                           className="entry-date published updated"
-                          datetime="2021-12-21T16:28:38+07:00"
+                          dateTime="2021-12-21T16:28:38+07:00"
                         >
                           21-12-2021
                         </time>
@@ -139,7 +138,7 @@ export default function Home() {
                       <div className="entry-meta">
                         <time
                           className="entry-date published updated"
-                          datetime="2022-04-21T16:28:38+07:00"
+                          dateTime="2022-04-21T16:28:38+07:00"
                         >
                           21-04-2022
                         </time>
@@ -161,7 +160,7 @@ export default function Home() {
                       </h3>
                       <time
                         className="entry-date published updated"
-                        datetime="2021-01-09T19:27:23+07:00"
+                        dateTime="2021-01-09T19:27:23+07:00"
                       >
                         09-01-2021
                       </time>
@@ -175,10 +174,12 @@ export default function Home() {
                         </p>
                       </h3>
                       <div className="entry-meta">
-                        {/* <time className="entry-date published updated"
-                                         datetime="2021-09-11T16:28:38+07:00">
-                                         11-09-2021
-                                     </time> */}
+                        <time
+                          className="entry-date published updated"
+                          dateTime="2021-09-11T16:28:38+07:00"
+                        >
+                          11-09-2021
+                        </time>
                       </div>
                     </div>
                     <div className="seni-item mt-4">
@@ -187,10 +188,12 @@ export default function Home() {
                         <p> Musik Tradisional Beserta Alat Musiknya</p>
                       </h3>
                       <div className="entry-meta">
-                        {/* <time className="entry-date published updated"
-                                         datetime="2022-04-27T16:28:38+07:00">
-                                         27-04-2022
-                                     </time> */}
+                        <time
+                          className="entry-date published updated"
+                          dateTime="2022-04-27T16:28:38+07:00"
+                        >
+                          27-04-2022
+                        </time>
                       </div>
                     </div>
                   </div>

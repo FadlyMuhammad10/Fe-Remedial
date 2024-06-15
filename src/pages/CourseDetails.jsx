@@ -37,7 +37,7 @@ const CourseDetails = () => {
         },
       }
     );
-    console.log(data);
+
     setIsBought(data.isBought);
   };
 

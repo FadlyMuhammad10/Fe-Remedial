@@ -8,7 +8,7 @@ export const postSignUp = (data) => async (dispatch) => {
         "Content-Type": "application/json",
       },
     });
-    console.log(res);
+    // console.log(res);
     if (res && res.data && res.data.message === "success register") {
       localStorage.setItem("register", "success");
     }
@@ -24,7 +24,7 @@ export const postLogin = (data) => async (dispatch) => {
         "Content-Type": "application/json",
       },
     });
-    console.log(res);
+    // console.log(res);
     if (res && res.data && res.data.token) {
       localStorage.setItem("token", res?.data?.token);
       const nama = res.data.nama_lengkap;

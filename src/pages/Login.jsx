@@ -25,15 +25,15 @@ export default function Login() {
       // alamat: alamat,
     };
 
-    console.log(data);
+    // console.log(data);
 
     dispatch(postLogin(data));
 
     setTimeout(() => {
       const token = localStorage.getItem("token");
-      console.log("token= ", token);
+      // console.log("token= ", token);
       if (token !== null && token !== undefined && token !== "undefined") {
-        console.log(token);
+        // console.log(token);
         navigate("/home");
         // localStorage.removeItem("token");
       }
@@ -42,7 +42,7 @@ export default function Login() {
 
   useEffect(() => {
     const token = localStorage.getItem("token");
-    console.log("token= ", token);
+    // console.log("token= ", token);
     if (token !== null && token !== undefined && token !== "undefined") {
       navigate("/home");
     }

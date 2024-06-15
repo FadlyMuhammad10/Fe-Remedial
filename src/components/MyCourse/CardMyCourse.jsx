@@ -4,7 +4,7 @@ import { FaRegLightbulb } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const CardMyCourse = ({ items }) => {
-  console.log(items);
+  // console.log(items);
   const styleCard = {
     backgroundImage: `url(${items.image_url.name})`,
     borderTopLeftRadius: "25px",

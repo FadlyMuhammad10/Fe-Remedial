@@ -12,16 +12,25 @@ export default function Header() {
   const [dropProfil, setDropProfil] = useState(false);
 
   const nama = localStorage.getItem("nama_lengkap");
+  const token = localStorage.getItem("token");
   const navigate = useNavigate();
   const handleLogout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("nama_lengkap");
     localStorage.removeItem("email");
     localStorage.removeItem("alamat");
-    navigate("/");
+    localStorage.removeItem("user_id");
+    navigate("/home");
   };
   const handleMyCourse = () => {
     navigate("/my-course");
+  };
+
+  const handleDaftar = () => {
+    navigate("/register");
+  };
+  const handleMasuk = () => {
+    navigate("/");
   };
 
   const handleClick = () => {
@@ -117,33 +126,46 @@ export default function Header() {
                 </NavLink>
               </li>
 
-              <li className={dropProfil ? "dropdown active" : "dropdown"}>
-                <div className="row ms-3" onClick={activeProfile}>
-                  <VscAccount className="col" fontSize="2rem" color="white" />
-                  {nama && (
-                    <div className="col align-self-center text-white p-0">
-                      {nama}
-                    </div>
-                  )}
-                  <IoIosArrowDown
-                    className="col align-self-center p-0"
-                    fontSize="1.2rem"
-                    color="white"
-                  />
+              {token ? (
+                <li className={dropProfil ? "dropdown active" : "dropdown"}>
+                  <div className="row ms-3" onClick={activeProfile}>
+                    <VscAccount className="col" fontSize="2rem" color="white" />
+                    {nama && (
+                      <div className="col align-self-center text-white p-0">
+                        {nama}
+                      </div>
+                    )}
+                    <IoIosArrowDown
+                      className="col align-self-center p-0"
+                      fontSize="1.2rem"
+                      color="white"
+                    />
+                  </div>
+                  <ul className="rounded">
+                    <li>
+                      <div className="myCourse ms-4" onClick={handleMyCourse}>
+                        My Course
+                      </div>
+                    </li>
+                    <li>
+                      <div className="logOut ms-4" onClick={handleLogout}>
+                        Logout
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              ) : (
+                <div>
+                  <div>
+                    <button className="reg" onClick={handleDaftar}>
+                      Daftar
+                    </button>
+                    <button className="log" onClick={handleMasuk}>
+                      Masuk
+                    </button>
+                  </div>
                 </div>
-                <ul className="rounded">
-                  <li>
-                    <div className="myCourse ms-4" onClick={handleMyCourse}>
-                      My Course
-                    </div>
-                  </li>
-                  <li>
-                    <div className="logOut ms-4" onClick={handleLogout}>
-                      Logout
-                    </div>
-                  </li>
-                </ul>
-              </li>
+              )}
             </ul>
 
             <div id="mobile" className="ms-4" onClick={handleClick}>

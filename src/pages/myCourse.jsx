@@ -20,7 +20,7 @@ export default function MyCourse() {
         },
       })
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         setKelas(res.data.data.kelas_id);
       });
   }, []);
