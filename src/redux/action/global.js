@@ -1,7 +1,7 @@
 import axios from "axios";
 import { BASE_URL } from "../../config";
 
-export const postSignUp = (data) => async (dispatch) => {
+export const postSignUp = (data) => async () => {
   try {
     const res = await axios.post(`${BASE_URL}/user/register`, data, {
       headers: {
@@ -17,7 +17,7 @@ export const postSignUp = (data) => async (dispatch) => {
   }
 };
 
-export const postLogin = (data) => async (dispatch) => {
+export const postLogin = (data) => async () => {
   try {
     const res = await axios.post(`${BASE_URL}/user/login`, data, {
       headers: {

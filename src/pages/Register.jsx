@@ -1,9 +1,11 @@
 import "../assets/css/style.css";
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { postSignUp } from "../redux/action";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Register() {
   const dispatch = useDispatch();
@@ -56,11 +58,20 @@ export default function Register() {
       const register = localStorage.getItem("register");
       // console.log("register= ",register)
       if (register === "success") {
-        // console.log(register)
-        navigate("/login");
+        toast.success("Registrasi Berhasil!", { autoClose: 1000 });
+
+        setTimeout(() => {
+          navigate("/login");
+        }, 1000);
         localStorage.removeItem("register");
+      } else {
+        toast.error("Registrasi Gagal!", { autoClose: 1000 });
+
+        setTimeout(() => {
+          navigate("/register");
+        }, 1000);
       }
-    }, 2000);
+    }, 1000);
   };
   return (
     <>

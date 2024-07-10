@@ -1,11 +1,11 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 // import { About } from "./assets/page/About";
 // import { Register } from "./assets/page/Register";
 // import { Login } from "./assets/page/Login";
 // import "./App.css";
 
-import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
@@ -17,7 +17,6 @@ import Fundamental from "./pages/Fundamental";
 import Teori from "./pages/Teori";
 import Praktik from "./pages/Praktik";
 import Pembayaran from "./pages/Pembayaran";
-import StatusBayar from "./pages/StatusBayar";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 import Kelas_Offline from "./pages/Kelas_Offline";
@@ -48,6 +47,7 @@ function App() {
             <Route path="/artikel/:id" element={<DetailArtikel />} />
             <Route path="/course-details/:id" element={<CourseDetails />} />
           </Routes>
+          <ToastContainer />
           <Footer />
         </Router>
       </Provider>

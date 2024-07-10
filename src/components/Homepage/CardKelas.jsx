@@ -1,6 +1,5 @@
 import React from "react";
-import { BsStarFill, BsFillFilePersonFill } from "react-icons/bs";
-import { FaRegLightbulb } from "react-icons/fa";
+import { BsFillFilePersonFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 const CardKelas = ({ items }) => {

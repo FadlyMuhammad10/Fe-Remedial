@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { postLogin } from "../redux/action";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 export default function Login() {
   const dispatch = useDispatch();
   const [email, setEmail] = useState("");
-  const [alamat, setAlamat] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const handleEmailChange = (event) => {
@@ -34,10 +34,17 @@ export default function Login() {
       // console.log("token= ", token);
       if (token !== null && token !== undefined && token !== "undefined") {
         // console.log(token);
+
         navigate("/");
         // localStorage.removeItem("token");
+      } else {
+        toast.error("Login Gagal!", { autoClose: 1000 });
+
+        setTimeout(() => {
+          navigate("/login");
+        }, 1000);
       }
-    }, 2000);
+    }, 1000);
   };
 
   useEffect(() => {

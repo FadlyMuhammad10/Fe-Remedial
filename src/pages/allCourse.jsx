@@ -1,11 +1,10 @@
 import "../assets/css/style.css";
-import Footer from "../components/Footer";
 import Header from "../components/Header";
 
 import React, { useEffect, useState } from "react";
 
-import CardKelas from "../components/Homepage/CardKelas";
 import axios from "axios";
+import CardKelas from "../components/Homepage/CardKelas";
 import { BASE_URL } from "../config";
 
 export default function AllCourse() {
